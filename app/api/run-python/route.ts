@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import path from 'path'
-import fs from 'fs'
-import { parse } from 'csv-parse/sync'
 import initRDKitModule from '@rdkit/rdkit'
+import { supabase } from '@/lib/supabase'
 
-type CsvRow = Record<string, string>
+type PermeabilityRow = {
+  PUBCHEM_SID: string | null
+  PUBCHEM_CID: string | null
+  SMILES_ISO: string
+  PUBCHEM_ACTIVITY_OUTCOME: string | null
+  Permeability: string | null
+  [key: string]: string | null | undefined
+}
 
 let rdkitPromise: ReturnType<typeof initRDKitModule> | null = null
 function getRDKit() {
@@ -70,34 +76,53 @@ export async function POST(request: NextRequest) {
     }
     const queryFp = queryMol.get_morgan_fp('2')
 
-    const csvPath = path.resolve('/Users/parkergurney/Development/adme-web/permeability.csv')
-    const csvContent = fs.readFileSync(csvPath, 'utf-8')
-    const records = parse(csvContent, { columns: true, skip_empty_lines: true }) as CsvRow[]
+    if (!supabase) {
+      return NextResponse.json({ error: 'Supabase not configured' }, { status: 500 })
+    }
+
+    const { data: records, error: dbError } = await supabase
+      .from('permeability')
+      .select('*')
+
+    if (dbError) {
+      return NextResponse.json({ error: 'Database error: ' + dbError.message }, { status: 500 })
+    }
+
+    if (!records || records.length === 0) {
+      return NextResponse.json({ error: 'No data found in database' }, { status: 404 })
+    }
 
     const results: Array<Record<string, any>> = []
     for (let i = 0; i < records.length; i++) {
-      const row = records[i]
-      const s = row['SMILES_ISO']
+      const row = records[i] as PermeabilityRow
+      const s = row.SMILES_ISO
       if (!s) continue
-      const mol = RDKit.get_mol(s)
-      if (!mol || mol.is_valid?.() === false) continue
-      const fp = mol.get_morgan_fp('2')
-      const sim = tanimotoFromFingerprints(queryFp, fp, RDKit)
-      results.push({
-        index: i,
-        SMILES_ISO: s,
-        similarity: Number(sim),
-        PUBCHEM_SID: row['PUBCHEM_SID'],
-        PUBCHEM_CID: row['PUBCHEM_CID'],
-        Permeability: row['Permeability'],
-        Outcome: row['PUBCHEM_ACTIVITY_OUTCOME'],
-      })
+      
+      try {
+        const mol = RDKit.get_mol(s)
+        if (!mol || mol.is_valid?.() === false) continue
+        const fp = mol.get_morgan_fp('2')
+        const sim = tanimotoFromFingerprints(queryFp, fp, RDKit)
+        results.push({
+          index: i,
+          SMILES_ISO: s,
+          similarity: Number(sim),
+          PUBCHEM_SID: row.PUBCHEM_SID,
+          PUBCHEM_CID: row.PUBCHEM_CID,
+          Permeability: row.Permeability,
+          Outcome: row.PUBCHEM_ACTIVITY_OUTCOME,
+        })
+      } catch (err) {
+        // Skip invalid molecules
+        continue
+      }
     }
 
     results.sort((a, b) => b.similarity - a.similarity)
     const top5 = results.slice(0, 5)
     return NextResponse.json({ results: top5 }, { status: 200 })
   } catch (error: any) {
+    console.error(error)
     return NextResponse.json({ error: error?.message || 'Unexpected error' }, { status: 500 })
   }
 }

@@ -81,8 +81,8 @@ export default function ProjectSidebar({
 															<Collapsible defaultOpen className="group/query w-full">
 																{/* Query row as the trigger */}
 																<CollapsibleTrigger asChild>
-																	<SidebarMenuButton size="sm" className="w-full">
-																		<Search className="size-3.5" />
+																	<SidebarMenuButton className="w-full">
+																		<Search />
 																		<span className="truncate">{q.title}</span>
 																		<ChevronRight className="ml-auto size-3.5 transition group-data-[state=open]/query:rotate-90" />
 																	</SidebarMenuButton>
@@ -118,16 +118,25 @@ export default function ProjectSidebar({
 													<SidebarMenuSubItem>
 														<Button
 															variant="ghost"
-															size="sm"
-															className="w-full justify-start"
+															className="w-full justify-start font-normal"
 															onClick={() => onNewQuery?.(project.id)}
 														>
-															<Plus className="size-4 mr-2" />
+															<Plus />
 															New Query
 														</Button>
 													</SidebarMenuSubItem>
 												</SidebarMenuSub>
 											</CollapsibleContent>
+										</SidebarMenuItem>
+										<SidebarMenuItem>
+											<Button
+												variant="ghost"
+												className="w-full justify-start font-normal"
+												onClick={() => onNewQuery?.(project.id)}
+											>
+												<Plus />
+												New Project
+											</Button>
 										</SidebarMenuItem>
 									</Collapsible>
 								))}
