@@ -11,33 +11,35 @@ function ResultsContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   
-  const [projects, setProjects] = useState<Project[]>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('adme-projects')
-      if (stored) {
-        try {
-          return JSON.parse(stored)
-        } catch {
-          return [{ id: 'p1', name: 'Project 1', queries: [] }]
-        }
-      }
-    }
-    return [{ id: 'p1', name: 'Project 1', queries: [] }]
-  })
+  // Always start with default values to avoid hydration mismatch
+  const [projects, setProjects] = useState<Project[]>([
+    { id: 'p1', name: 'Project 1', queries: [] },
+  ])
 
-  const [resultsByResultId, setResultsByResultId] = useState<Record<string, ApiResponse>>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('adme-results')
-      if (stored) {
-        try {
-          return JSON.parse(stored)
-        } catch {
-          return {}
-        }
+  const [resultsByResultId, setResultsByResultId] = useState<Record<string, ApiResponse>>({})
+  
+  // Load from localStorage only after mount (client-side only)
+  useEffect(() => {
+    const storedProjects = localStorage.getItem('adme-projects')
+    if (storedProjects) {
+      try {
+        const parsed = JSON.parse(storedProjects)
+        setProjects(parsed)
+      } catch {
+        // Keep default
       }
     }
-    return {}
-  })
+    
+    const storedResults = localStorage.getItem('adme-results')
+    if (storedResults) {
+      try {
+        const parsed = JSON.parse(storedResults)
+        setResultsByResultId(parsed)
+      } catch {
+        // Keep default
+      }
+    }
+  }, [])
 
   // Initialize selection from URL params
   const [selection, setSelection] = useState<Selection>(() => {
@@ -64,20 +66,6 @@ function ResultsContent() {
     }
   }, [searchParams])
   
-  // Sync results from localStorage when component mounts or projects change
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('adme-results')
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored)
-          setResultsByResultId(parsed)
-        } catch {
-          // Ignore parse errors
-        }
-      }
-    }
-  }, [])
 
   // Update URL when selection changes
   const handleSelectionChange = (newSelection: Selection) => {
@@ -127,7 +115,7 @@ function ResultsContent() {
       />
 
       <SidebarInset>
-        <div className="flex min-h-screen w-full flex-col">
+        <div className="flex w-full flex-col">
           <header className="flex h-12 items-center gap-2 border-b px-4">
             <SidebarTrigger />
             <span className="text-sm font-medium">{headerTitle}</span>
@@ -175,7 +163,7 @@ function ResultsContent() {
 export default function ResultsPage() {
   return (
     <Suspense fallback={
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex items-center justify-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
       </div>
     }>

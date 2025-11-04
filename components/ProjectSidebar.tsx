@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import {
 	Sidebar as ShadSidebar,
 	SidebarHeader,
@@ -44,6 +44,18 @@ export default function ProjectSidebar({
 	onOpenResult,
 	currentUser,
 }: ProjectSidebarProps) {
+	// Track open state for projects and queries to avoid hydration issues
+	const [openProjects, setOpenProjects] = useState<Set<string>>(new Set())
+	const [openQueries, setOpenQueries] = useState<Set<string>>(new Set())
+	
+	// Initialize open state after mount to avoid hydration mismatch
+	useEffect(() => {
+		const projectIds = new Set(projects.map(p => p.id))
+		setOpenProjects(projectIds)
+		const queryIds = new Set(projects.flatMap(p => p.queries.map(q => q.id)))
+		setOpenQueries(queryIds)
+	}, [projects])
+
 	return (
 
 		<ShadSidebar variant="inset">
@@ -64,91 +76,126 @@ export default function ProjectSidebar({
 							<EmptyState />
 						) : (
 							<SidebarMenu>
-								{projects.map((project) => (
-									<Collapsible key={project.id} defaultOpen className="group/project">
-										<SidebarMenuItem className=''>
-											{/* Level 1: projects */}
-											<CollapsibleTrigger asChild>
-												<SidebarMenuButton>
-													<Folder />
-													<span className="truncate">{project.name}</span>
-													<ChevronRight className="ml-auto size-4 transition group-data-[state=open]/project:rotate-90" />
-												</SidebarMenuButton>
-											</CollapsibleTrigger>
+								{projects.map((project) => {
+									const isProjectOpen = openProjects.has(project.id)
+									return (
+										<Collapsible 
+											key={project.id} 
+											open={isProjectOpen}
+											onOpenChange={(open) => {
+												setOpenProjects(prev => {
+													const next = new Set(prev)
+													if (open) {
+														next.add(project.id)
+													} else {
+														next.delete(project.id)
+													}
+													return next
+												})
+											}}
+											className="group/project"
+										>
+											<SidebarMenuItem className=''>
+												{/* Level 1: projects */}
+												<CollapsibleTrigger asChild>
+													<SidebarMenuButton>
+														<Folder />
+														<span className="truncate">{project.name}</span>
+														<ChevronRight className="ml-auto size-4 transition group-data-[state=open]/project:rotate-90" />
+													</SidebarMenuButton>
+												</CollapsibleTrigger>
 
-											<CollapsibleContent>
-												{/* Level 2: queries under this project */}
-												<SidebarMenuSub className="">
-													{project.queries.map((q) => (
-														<SidebarMenuSubItem key={q.id} className="p-0">
-															<Collapsible defaultOpen className="group/query w-full">
-																{/* Query row as the trigger */}
-																<CollapsibleTrigger asChild>
-																	<SidebarMenuButton className="w-full">
-																		<Search />
-																		<span className="truncate">{q.title}</span>
-																		<ChevronRight className="ml-auto size-3.5 transition group-data-[state=open]/query:rotate-90" />
-																	</SidebarMenuButton>
-																</CollapsibleTrigger>
+												<CollapsibleContent>
+													{/* Level 2: queries under this project */}
+													<SidebarMenuSub className="">
+														{project.queries.map((q) => {
+															const isQueryOpen = openQueries.has(q.id)
+															return (
+																<SidebarMenuSubItem key={q.id} className="p-0">
+																	<Collapsible 
+																		open={isQueryOpen}
+																		onOpenChange={(open) => {
+																			setOpenQueries(prev => {
+																				const next = new Set(prev)
+																				if (open) {
+																					next.add(q.id)
+																				} else {
+																					next.delete(q.id)
+																				}
+																				return next
+																			})
+																		}}
+																		className="group/query w-full"
+																	>
+																		{/* Query row as the trigger */}
+																		<CollapsibleTrigger asChild>
+																			<SidebarMenuButton className="w-full">
+																				<Search />
+																				<span className="truncate">{q.title}</span>
+																				<ChevronRight className="ml-auto size-3.5 transition group-data-[state=open]/query:rotate-90" />
+																			</SidebarMenuButton>
+																		</CollapsibleTrigger>
 
-																{/* Level 3: results under this query */}
-																<CollapsibleContent>
-																	<SidebarMenuSub>
-																		{q.results.length === 0 ? (
-																			<SidebarMenuSubItem>
-																				<span className="text-xs text-muted-foreground">No results</span>
-																			</SidebarMenuSubItem>
-																		) : (
-																			q.results.map((r) => (
-																				<SidebarMenuSubItem key={r.id}>
-																					<Button
-																						variant="ghost"
-																						className={cn(
-																							"w-full justify-start h-7 px-2 text-xs min-w-0",
-																							selection?.projectId === project.id && 
-																							selection?.queryId === q.id && 
-																							selection?.resultId === r.id &&
-																							"bg-sidebar-accent text-sidebar-accent-foreground font-medium"
-																						)}
-																						onClick={() => onOpenResult?.(project.id, q.id, r.id)}
-																					>
-																						<span className="truncate">{r.label}</span>
-																					</Button>
-																				</SidebarMenuSubItem>
-																			))
-																		)}
-																	</SidebarMenuSub>
-																</CollapsibleContent>
-															</Collapsible>
+																		{/* Level 3: results under this query */}
+																		<CollapsibleContent>
+																			<SidebarMenuSub>
+																				{q.results.length === 0 ? (
+																					<SidebarMenuSubItem>
+																						<span className="text-xs text-muted-foreground">No results</span>
+																					</SidebarMenuSubItem>
+																				) : (
+																					q.results.map((r) => (
+																						<SidebarMenuSubItem key={r.id}>
+																							<Button
+																								variant="ghost"
+																								className={cn(
+																									"w-full justify-start h-7 px-2 text-xs min-w-0",
+																									selection?.projectId === project.id && 
+																									selection?.queryId === q.id && 
+																									selection?.resultId === r.id &&
+																									"bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+																								)}
+																								onClick={() => onOpenResult?.(project.id, q.id, r.id)}
+																							>
+																								<span className="truncate">{r.label}</span>
+																							</Button>
+																						</SidebarMenuSubItem>
+																					))
+																				)}
+																			</SidebarMenuSub>
+																		</CollapsibleContent>
+																	</Collapsible>
+																</SidebarMenuSubItem>
+															)
+														})}
+
+														{/* Add query button lives with the queries */}
+														<SidebarMenuSubItem>
+															<Button
+																variant="ghost"
+																className="w-full justify-start font-normal"
+																onClick={() => onNewQuery?.(project.id)}
+															>
+																<Plus />
+																New Query
+															</Button>
 														</SidebarMenuSubItem>
-													))}
-
-													{/* Add query button lives with the queries */}
-													<SidebarMenuSubItem>
-														<Button
-															variant="ghost"
-															className="w-full justify-start font-normal"
-															onClick={() => onNewQuery?.(project.id)}
-														>
-															<Plus />
-															New Query
-														</Button>
-													</SidebarMenuSubItem>
-												</SidebarMenuSub>
-											</CollapsibleContent>
-										</SidebarMenuItem>
-										<SidebarMenuItem>
-											<Button
-												variant="ghost"
-												className="w-full justify-start font-normal"
-												onClick={() => onNewQuery?.(project.id)}
-											>
-												<Plus />
-												New Project
-											</Button>
-										</SidebarMenuItem>
-									</Collapsible>
-								))}
+													</SidebarMenuSub>
+												</CollapsibleContent>
+											</SidebarMenuItem>
+											<SidebarMenuItem>
+												<Button
+													variant="ghost"
+													className="w-full justify-start font-normal"
+													onClick={() => onNewQuery?.(project.id)}
+												>
+													<Plus />
+													New Project
+												</Button>
+											</SidebarMenuItem>
+										</Collapsible>
+									)
+								})}
 							</SidebarMenu>
 						)}
 					</SidebarGroupContent>

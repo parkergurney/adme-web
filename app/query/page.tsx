@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import ProjectSidebar from '@/components/ProjectSidebar'
@@ -12,20 +12,23 @@ export default function QueryPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  // Load projects from localStorage or use default
-  const [projects, setProjects] = useState<Project[]>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('adme-projects')
-      if (stored) {
-        try {
-          return JSON.parse(stored)
-        } catch {
-          return [{ id: 'p1', name: 'Project 1', queries: [] }]
-        }
+  // Always start with default values to avoid hydration mismatch
+  const [projects, setProjects] = useState<Project[]>([
+    { id: 'p1', name: 'Project 1', queries: [] },
+  ])
+  
+  // Load from localStorage only after mount (client-side only)
+  useEffect(() => {
+    const stored = localStorage.getItem('adme-projects')
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored)
+        setProjects(parsed)
+      } catch {
+        // Keep default
       }
     }
-    return [{ id: 'p1', name: 'Project 1', queries: [] }]
-  })
+  }, [])
 
   const currentProject = projects[0]
 
