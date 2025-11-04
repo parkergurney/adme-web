@@ -18,10 +18,12 @@ import { Separator } from "@/components/ui/separator"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Folder, Search, ChevronRight, Plus } from "lucide-react"
-import type { Project, Query, QueryResult } from "@/types"
+import { cn } from "@/lib/utils"
+import type { Project, Query, QueryResult, Selection } from "@/types"
 
 export type ProjectSidebarProps = {
 	projects: Project[]
+	selection?: Selection
 	onNewProject?: () => void
 	onPinProject?: () => void
 	onNewQuery?: (projectId: string) => void
@@ -35,6 +37,7 @@ const EmptyState = () => (
 
 export default function ProjectSidebar({
 	projects,
+	selection,
 	onNewProject,
 	onPinProject,
 	onNewQuery,
@@ -63,7 +66,7 @@ export default function ProjectSidebar({
 							<SidebarMenu>
 								{projects.map((project) => (
 									<Collapsible key={project.id} defaultOpen className="group/project">
-										<SidebarMenuItem>
+										<SidebarMenuItem className=''>
 											{/* Level 1: projects */}
 											<CollapsibleTrigger asChild>
 												<SidebarMenuButton>
@@ -75,7 +78,7 @@ export default function ProjectSidebar({
 
 											<CollapsibleContent>
 												{/* Level 2: queries under this project */}
-												<SidebarMenuSub>
+												<SidebarMenuSub className="">
 													{project.queries.map((q) => (
 														<SidebarMenuSubItem key={q.id} className="p-0">
 															<Collapsible defaultOpen className="group/query w-full">
@@ -100,10 +103,16 @@ export default function ProjectSidebar({
 																				<SidebarMenuSubItem key={r.id}>
 																					<Button
 																						variant="ghost"
-																						className="w-full justify-start h-7 px-2 text-xs"
+																						className={cn(
+																							"w-full justify-start h-7 px-2 text-xs min-w-0",
+																							selection?.projectId === project.id && 
+																							selection?.queryId === q.id && 
+																							selection?.resultId === r.id &&
+																							"bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+																						)}
 																						onClick={() => onOpenResult?.(project.id, q.id, r.id)}
 																					>
-																						{r.label}
+																						<span className="truncate">{r.label}</span>
 																					</Button>
 																				</SidebarMenuSubItem>
 																			))

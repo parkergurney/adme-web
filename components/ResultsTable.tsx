@@ -11,13 +11,11 @@ import type { SimilarityResult } from '@/types'
 
 interface ResultsTableProps {
   results: SimilarityResult[]
-  title?: string
 }
 
-const ResultsTable = ({ results, title }: ResultsTableProps) => {
+const ResultsTable = ({ results }: ResultsTableProps) => {
   return (
     <>
-      {title && <h1 className="text-2xl font-bold mb-4">{title}</h1>}
       <div className="border rounded-md overflow-auto">
         <Table>
           <TableHeader>

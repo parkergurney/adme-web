@@ -1,91 +1,89 @@
 'use client'
-import React, { useMemo, useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { SidebarProvider, SidebarTrigger, SidebarInset } from '@/components/ui/sidebar'
 import ProjectSidebar from '@/components/ProjectSidebar'
-import InputForm from '@/components/InputForm'
 import ResultsTable from '@/components/ResultsTable'
-import type { Project, Query, QueryResult, ApiResponse, Selection } from '@/types'
+import { Button } from '@/components/ui/button'
+import type { Project, ApiResponse, Selection } from '@/types'
 
-export default function Page() {
-  const [smiles, setSMILES] = useState('')
-  const [projects, setProjects] = useState<Project[]>([
-    { id: 'p1', name: 'Project 1', queries: [] },
-  ])
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [selection, setSelection] = useState<Selection>(null)
-
-  // Store tables for each result id that lives in the sidebar
-  const [resultsByResultId, setResultsByResultId] = useState<Record<string, ApiResponse>>({})
-
-  const currentProject = projects[0]
-
-  const nextQueryTitle = useMemo(() => {
-    const n = (currentProject?.queries.length ?? 0) + 1
-    return `Query ${n}`
-  }, [currentProject])
-
-  const runSingle = async (one: string): Promise<ApiResponse> => {
-    const response = await fetch('/api/run-python', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ smiles: one }),
-    })
-    if (!response.ok) throw new Error(`API error ${response.status}`)
-    return response.json()
-  }
-
-  const handleBatchSubmit = async () => {
-    const lines = smiles
-      .split('\n')
-      .map(s => s.trim())
-      .filter(Boolean)
-
-    if (lines.length === 0) return
-
-    setIsLoading(true)
-    setError(null)
-
-    try {
-      // Run all inputs in parallel
-      const batch = await Promise.all(lines.map(runSingle))
-
-      // Build query results for the sidebar
-      const newResults: QueryResult[] = lines.map((s, i) => {
-        const id = `r_${Date.now()}_${i}`
-        return { id, label: s }
-      })
-
-      // Map resultId to its table data
-      const newMap: Record<string, ApiResponse> = {}
-      newResults.forEach((r, i) => {
-        newMap[r.id] = batch[i]
-      })
-
-      // Create the new query
-      const newQuery: Query = {
-        id: `q_${Date.now()}`,
-        title: nextQueryTitle,
-        results: newResults,
-      }
-
-      // Insert into the first project for now
-      setProjects(prev => {
-        const copy = [...prev]
-        const idx = copy.findIndex(p => p.id === currentProject.id)
-        if (idx >= 0) {
-          copy[idx] = { ...copy[idx], queries: [newQuery, ...copy[idx].queries] }
+export default function ResultsPage() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  
+  const [projects, setProjects] = useState<Project[]>(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('adme-projects')
+      if (stored) {
+        try {
+          return JSON.parse(stored)
+        } catch {
+          return [{ id: 'p1', name: 'Project 1', queries: [] }]
         }
-        return copy
-      })
+      }
+    }
+    return [{ id: 'p1', name: 'Project 1', queries: [] }]
+  })
 
-      // Save tables and update selection to the first result of this query
-      setResultsByResultId(prev => ({ ...prev, ...newMap }))
-      setSelection({ projectId: currentProject.id, queryId: newQuery.id, resultId: newResults[0].id })
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Something went wrong')
-    } finally {
-      setIsLoading(false)
+  const [resultsByResultId, setResultsByResultId] = useState<Record<string, ApiResponse>>(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('adme-results')
+      if (stored) {
+        try {
+          return JSON.parse(stored)
+        } catch {
+          return {}
+        }
+      }
+    }
+    return {}
+  })
+
+  // Initialize selection from URL params
+  const [selection, setSelection] = useState<Selection>(() => {
+    const projectId = searchParams.get('projectId')
+    const queryId = searchParams.get('queryId')
+    const resultId = searchParams.get('resultId')
+    
+    if (projectId && queryId && resultId) {
+      return { projectId, queryId, resultId }
+    }
+    return null
+  })
+
+  // Update selection when URL params change
+  useEffect(() => {
+    const projectId = searchParams.get('projectId')
+    const queryId = searchParams.get('queryId')
+    const resultId = searchParams.get('resultId')
+    
+    if (projectId && queryId && resultId) {
+      setSelection({ projectId, queryId, resultId })
+    } else {
+      setSelection(null)
+    }
+  }, [searchParams])
+  
+  // Sync results from localStorage when component mounts or projects change
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('adme-results')
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored)
+          setResultsByResultId(parsed)
+        } catch {
+          // Ignore parse errors
+        }
+      }
+    }
+  }, [])
+
+  // Update URL when selection changes
+  const handleSelectionChange = (newSelection: Selection) => {
+    setSelection(newSelection)
+    if (newSelection) {
+      router.push(`/?projectId=${newSelection.projectId}&queryId=${newSelection.queryId}&resultId=${newSelection.resultId}`)
     }
   }
 
@@ -94,17 +92,37 @@ export default function Page() {
     ? resultsByResultId[selection.resultId] ?? null
     : null
 
+  // Get the title for the selected result
+  const selectedResultTitle = selection
+    ? projects
+        .find(p => p.id === selection.projectId)
+        ?.queries.find(q => q.id === selection.queryId)
+        ?.results.find(r => r.id === selection.resultId)?.label
+    : null
+
+  const currentProject = projects[0]
+  const headerTitle = selectedResultTitle
+    ? `Results for ${selectedResultTitle}`
+    : currentProject?.name ?? 'No project'
+
   return (
     <SidebarProvider>
       <ProjectSidebar
         projects={projects}
+        selection={selection}
         onNewProject={() => {
           const id = `p_${Date.now()}`
-          setProjects(prev => [...prev, { id, name: `Project ${prev.length + 1}`, queries: [] }])
+          const newProjects = [...projects, { id, name: `Project ${projects.length + 1}`, queries: [] }]
+          setProjects(newProjects)
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('adme-projects', JSON.stringify(newProjects))
+          }
         }}
         onPinProject={() => {}}
-        onNewQuery={() => {}}
-        onOpenResult={(pid, qid, rid) => setSelection({ projectId: pid, queryId: qid, resultId: rid })}
+        onNewQuery={() => {
+          router.push('/query')
+        }}
+        onOpenResult={(pid, qid, rid) => handleSelectionChange({ projectId: pid, queryId: qid, resultId: rid })}
         currentUser={{ name: 'User' }}
       />
 
@@ -112,49 +130,41 @@ export default function Page() {
         <div className="flex min-h-screen w-full flex-col">
           <header className="flex h-12 items-center gap-2 border-b px-4">
             <SidebarTrigger />
-            <span className="text-sm font-medium">{currentProject?.name ?? 'No project'}</span>
+            <span className="text-sm font-medium">{headerTitle}</span>
           </header>
 
           <main className="flex-1 p-4 overflow-auto">
-            <InputForm
-              smiles={smiles}
-              setSMILES={setSMILES}
-              onSubmit={handleBatchSubmit}
-              isLoading={isLoading}
-            />
-
-            {error && (
-              <div className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-md">
-                <p className="text-sm text-destructive">{error}</p>
+            {!selection && (
+              <div className="max-w-2xl mx-auto text-center py-12">
+                <h1 className="text-2xl font-bold mb-4">No Results Selected</h1>
+                <p className="text-muted-foreground mb-6">
+                  Select a result from the sidebar to view its data, or create a new query.
+                </p>
+                <Button onClick={() => router.push('/query')}>
+                  Create New Query
+                </Button>
               </div>
             )}
 
-            <div className="mt-6">
-              {isLoading && (
-                <div className="flex items-center gap-2">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
-                  <p className="text-sm text-muted-foreground">Running batch</p>
-                </div>
-              )}
-
-              {!isLoading && selection && selectedData && (
+            {selection && selectedData && (
+              <div className="max-w-6xl mx-auto">
                 <ResultsTable
                   results={selectedData.results}
-                  title={`Results for ${
-                    projects
-                      .find(p => p.id === selection.projectId)
-                      ?.queries.find(q => q.id === selection.queryId)
-                      ?.results.find(r => r.id === selection.resultId)?.label
-                  }`}
                 />
-              )}
+              </div>
+            )}
 
-              {!isLoading && !selection && (
-                <h1 className="text-2xl font-bold">
-                  Submit a batch to create a query, then pick a result in the sidebar
-                </h1>
-              )}
-            </div>
+            {selection && !selectedData && (
+              <div className="max-w-2xl mx-auto text-center py-12">
+                <h1 className="text-2xl font-bold mb-4">No Data Available</h1>
+                <p className="text-muted-foreground mb-6">
+                  The selected result data could not be found.
+                </p>
+                <Button onClick={() => router.push('/query')}>
+                  Create New Query
+                </Button>
+              </div>
+            )}
           </main>
         </div>
       </SidebarInset>
