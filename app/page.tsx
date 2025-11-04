@@ -1,161 +1,163 @@
 'use client'
-import React from 'react'
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
+import React, { useMemo, useState } from 'react'
 import { SidebarProvider, SidebarTrigger, SidebarInset } from '@/components/ui/sidebar'
 import ProjectSidebar from '@/components/ProjectSidebar'
-import {
-	Table,
-	TableBody,
-	TableCell,
-	TableHead,
-	TableHeader,
-	TableRow,
-} from "@/components/ui/table"
 import InputForm from '@/components/InputForm'
+import ResultsTable from '@/components/ResultsTable'
+import type { Project, Query, QueryResult, ApiResponse, Selection } from '@/types'
 
-// Types
-export type QueryResult = { id: string; label: string; onSelect?: (id: string) => void }
-export type Query = { id: string; title: string; results: QueryResult[] }
-export type Project = { id: string; name: string; queries: Query[]; pinned?: boolean }
-type SimilarityResult = {
-	index: number
-	SMILES_ISO: string
-	similarity: number
-	PUBCHEM_SID?: string
-	PUBCHEM_CID?: string
-	Permeability?: string
-	Outcome?: string
+export default function Page() {
+  const [smiles, setSMILES] = useState('')
+  const [projects, setProjects] = useState<Project[]>([
+    { id: 'p1', name: 'Project 1', queries: [] },
+  ])
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [selection, setSelection] = useState<Selection>(null)
+
+  // Store tables for each result id that lives in the sidebar
+  const [resultsByResultId, setResultsByResultId] = useState<Record<string, ApiResponse>>({})
+
+  const currentProject = projects[0]
+
+  const nextQueryTitle = useMemo(() => {
+    const n = (currentProject?.queries.length ?? 0) + 1
+    return `Query ${n}`
+  }, [currentProject])
+
+  const runSingle = async (one: string): Promise<ApiResponse> => {
+    const response = await fetch('/api/run-python', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ smiles: one }),
+    })
+    if (!response.ok) throw new Error(`API error ${response.status}`)
+    return response.json()
+  }
+
+  const handleBatchSubmit = async () => {
+    const lines = smiles
+      .split('\n')
+      .map(s => s.trim())
+      .filter(Boolean)
+
+    if (lines.length === 0) return
+
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      // Run all inputs in parallel
+      const batch = await Promise.all(lines.map(runSingle))
+
+      // Build query results for the sidebar
+      const newResults: QueryResult[] = lines.map((s, i) => {
+        const id = `r_${Date.now()}_${i}`
+        return { id, label: s }
+      })
+
+      // Map resultId to its table data
+      const newMap: Record<string, ApiResponse> = {}
+      newResults.forEach((r, i) => {
+        newMap[r.id] = batch[i]
+      })
+
+      // Create the new query
+      const newQuery: Query = {
+        id: `q_${Date.now()}`,
+        title: nextQueryTitle,
+        results: newResults,
+      }
+
+      // Insert into the first project for now
+      setProjects(prev => {
+        const copy = [...prev]
+        const idx = copy.findIndex(p => p.id === currentProject.id)
+        if (idx >= 0) {
+          copy[idx] = { ...copy[idx], queries: [newQuery, ...copy[idx].queries] }
+        }
+        return copy
+      })
+
+      // Save tables and update selection to the first result of this query
+      setResultsByResultId(prev => ({ ...prev, ...newMap }))
+      setSelection({ projectId: currentProject.id, queryId: newQuery.id, resultId: newResults[0].id })
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Something went wrong')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  // Data for the currently selected result
+  const selectedData: ApiResponse | null = selection
+    ? resultsByResultId[selection.resultId] ?? null
+    : null
+
+  return (
+    <SidebarProvider>
+      <ProjectSidebar
+        projects={projects}
+        onNewProject={() => {
+          const id = `p_${Date.now()}`
+          setProjects(prev => [...prev, { id, name: `Project ${prev.length + 1}`, queries: [] }])
+        }}
+        onPinProject={() => {}}
+        onNewQuery={() => {}}
+        onOpenResult={(pid, qid, rid) => setSelection({ projectId: pid, queryId: qid, resultId: rid })}
+        currentUser={{ name: 'User' }}
+      />
+
+      <SidebarInset>
+        <div className="flex min-h-screen w-full flex-col">
+          <header className="flex h-12 items-center gap-2 border-b px-4">
+            <SidebarTrigger />
+            <span className="text-sm font-medium">{currentProject?.name ?? 'No project'}</span>
+          </header>
+
+          <main className="flex-1 p-4 overflow-auto">
+            <InputForm
+              smiles={smiles}
+              setSMILES={setSMILES}
+              onSubmit={handleBatchSubmit}
+              isLoading={isLoading}
+            />
+
+            {error && (
+              <div className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-md">
+                <p className="text-sm text-destructive">{error}</p>
+              </div>
+            )}
+
+            <div className="mt-6">
+              {isLoading && (
+                <div className="flex items-center gap-2">
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
+                  <p className="text-sm text-muted-foreground">Running batch</p>
+                </div>
+              )}
+
+              {!isLoading && selection && selectedData && (
+                <ResultsTable
+                  results={selectedData.results}
+                  title={`Results for ${
+                    projects
+                      .find(p => p.id === selection.projectId)
+                      ?.queries.find(q => q.id === selection.queryId)
+                      ?.results.find(r => r.id === selection.resultId)?.label
+                  }`}
+                />
+              )}
+
+              {!isLoading && !selection && (
+                <h1 className="text-2xl font-bold">
+                  Submit a batch to create a query, then pick a result in the sidebar
+                </h1>
+              )}
+            </div>
+          </main>
+        </div>
+      </SidebarInset>
+    </SidebarProvider>
+  )
 }
-type ApiResponse = { results: SimilarityResult[] }
-
-const page = () => {
-	const [smiles, setSMILES] = useState('')
-	const [data, setData] = useState<ApiResponse | null>(null)
-	const [isLoading, setIsLoading] = useState(false)
-	const [error, setError] = useState<string | null>(null)
-
-	const projects = [
-		{
-			id: "1",
-			name: "Project 1",
-			queries: [
-				{ id: "q1", title: "Query 1 Results", results: [] },
-			],
-		},
-	]
-
-
-	const handleClick = async () => {
-		if (!smiles.trim()) {
-			return
-		}
-
-		setIsLoading(true)
-		setError(null)
-
-		try {
-			const response = await fetch('/api/run-python', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ smiles }),
-			})
-
-			if (!response.ok) {
-				throw new Error(`API error: ${response.statusText}`)
-			}
-
-			const json: ApiResponse = await response.json()
-			setData(json)
-		} catch (err) {
-			setError(err instanceof Error ? err.message : 'An error occurred')
-			setData(null)
-		} finally {
-			setIsLoading(false)
-		}
-	}
-
-	return (
-		<SidebarProvider>
-			<ProjectSidebar
-				projects={projects}
-				onNewProject={() => {/* open create flow */ }}
-				onPinProject={() => {/* pin current project */ }}
-				onNewQuery={(pid) => {/* add query for pid */ }}
-				onOpenResult={(pid, qid, rid) => {/* navigate to result */ }}
-				currentUser={{ name: "User" }}
-			/>
-			<SidebarInset>
-				<div className="flex h-full w-full flex-col">
-					<header className="flex h-12 items-center gap-2 border-b px-4">
-						<SidebarTrigger />
-						<span className="text-sm font-medium">{projects[0].name}</span>
-					</header>
-
-					<main className="flex-1 p-4 overflow-auto">
-						<div className="max-w-xl w-full flex flex-col gap-3">
-							<InputForm 
-								smiles={smiles} 
-								setSMILES={setSMILES} 
-								handleClick={handleClick}
-								isLoading={isLoading}
-							/>
-						</div>
-
-						{error && (
-							<div className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-md">
-								<p className="text-sm text-destructive">{error}</p>
-							</div>
-						)}
-
-						<div className="mt-6">
-							{isLoading ? (
-								<div className="flex items-center gap-2">
-									<div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
-									<p className="text-sm text-muted-foreground">Searching for similar molecules...</p>
-								</div>
-							) : data ? (
-								<>
-									<h1 className="text-2xl font-bold mb-4">Results ({data.results.length})</h1>
-									<div className="border rounded-md overflow-auto">
-										<Table>
-											<TableHeader>
-												<TableRow>
-													<TableHead>Chemical Structure</TableHead>
-													<TableHead>Tanimoto Score</TableHead>
-													<TableHead>Permeability</TableHead>
-												</TableRow>
-											</TableHeader>
-											<TableBody>
-												{data.results.length > 0 ? (
-													data.results.map((r) => (
-														<TableRow key={r.index}>
-															<TableCell className="font-mono text-sm">{r.SMILES_ISO}</TableCell>
-															<TableCell>{r.similarity.toFixed(4)}</TableCell>
-															<TableCell>{r.Permeability || 'N/A'}</TableCell>
-														</TableRow>
-													))
-												) : (
-													<TableRow>
-														<TableCell colSpan={3} className="text-center text-muted-foreground">
-															No results found
-														</TableCell>
-													</TableRow>
-												)}
-											</TableBody>
-										</Table>
-									</div>
-								</>
-							) : (
-								<h1 className="text-2xl font-bold">Enter a SMILES string to find similar molecules</h1>
-							)}
-						</div>
-					</main>
-				</div>
-			</SidebarInset>
-		</SidebarProvider>
-	)
-}
-
-export default page

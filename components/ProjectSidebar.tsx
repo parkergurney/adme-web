@@ -17,8 +17,8 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/component
 import { Separator } from "@/components/ui/separator"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { Folder, Home, Pin, Search, ChevronRight, Plus } from "lucide-react"
-import type { Project, Query, QueryResult } from "@/app/page"
+import { Folder, Search, ChevronRight, Plus } from "lucide-react"
+import type { Project, Query, QueryResult } from "@/types"
 
 export type ProjectSidebarProps = {
 	projects: Project[]
