@@ -1,18 +1,23 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+import { SidebarProvider, SidebarTrigger, SidebarInset } from '@/components/ui/sidebar'
+import ProjectSidebar from '@/components/ProjectSidebar'
 import {
 	Table,
 	TableBody,
-	TableCaption,
 	TableCell,
 	TableHead,
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table"
 
+// Types
+export type QueryResult = { id: string; label: string; onSelect?: (id: string) => void }
+export type Query = { id: string; title: string; results: QueryResult[] }
+export type Project = { id: string; name: string; queries: Query[]; pinned?: boolean }
 type SimilarityResult = {
 	index: number
 	SMILES_ISO: string
@@ -22,13 +27,25 @@ type SimilarityResult = {
 	Permeability?: string
 	Outcome?: string
 }
+type ApiResponse = { results: SimilarityResult[] }
 
-type ApiResponse = {
-	results: SimilarityResult[]
-}
 const page = () => {
+	const [projects, setProjects] = useState<Project[]>([])
 	const [smiles, setSMILES] = useState('')
 	const [data, setData] = useState<ApiResponse | null>(null)
+
+
+	useEffect(() => {
+		setProjects([
+			{
+				id: "1",
+				name: "Project 1",
+				queries: [
+					{ id: "q1", title: "Query 1 Results", results: [] },
+				],
+			},
+		])
+	}, [])
 
 	const handleClick = async () => {
 		const response = await fetch('/api/run-python', {
@@ -38,44 +55,66 @@ const page = () => {
 		})
 		const json: ApiResponse = await response.json()
 		setData(json)
-		console.log(json)
 	}
+
 	return (
-		<div className="flex flex-col items-center h-screen p-4">
-			<div className="max-w-md w-full h-1/2 flex flex-col gap-2 items-center justify-center">
-				<Textarea placeholder="Enter SMILES" value={smiles} onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setSMILES(e.target.value)} />
-				<Button onClick={handleClick}>Submit</Button>
-			</div>
-			<div className="h-1/2">
-				{data ? (
-					<div className="flex flex-col gap-2 w-full h-full">
-						<h1 className="text-2xl font-bold">Results</h1>
-						<Table>
-							<TableHeader>
-								<TableRow>
-									<TableHead>Chemical Structure</TableHead>
-									<TableHead>Tanimoto Score</TableHead>
-									<TableHead>Permeability</TableHead>
-								</TableRow>
-							</TableHeader>
-							<TableBody>
-								{data.results.map((result) => (
-									<TableRow key={result.index}>
-									<TableCell>{result.SMILES_ISO}</TableCell>
-									<TableCell>{result.similarity}</TableCell>
-									<TableCell>{result.Permeability}</TableCell>
-									</TableRow>
-								))}
-							</TableBody>
-						</Table>
-					</div>
-				) : (
-					<div>
-						<h1 className="text-2xl font-bold">Enter a SMILES string to find similar molecules</h1>
-					</div>
-				)}
-			</div>
-		</div>
+		<SidebarProvider>
+			<ProjectSidebar
+				projects={projects}
+				onNewProject={() => {/* open create flow */ }}
+				onPinProject={() => {/* pin current project */ }}
+				onNewQuery={(pid) => {/* add query for pid */ }}
+				onOpenResult={(pid, qid, rid) => {/* navigate to result */ }}
+				currentUser={{ name: "User" }}
+			/>
+			<SidebarInset>
+				<div className="flex h-full w-full flex-col">
+					<header className="flex h-12 items-center gap-2 border-b px-4">
+						<SidebarTrigger />
+						<span className="text-sm font-medium">App</span>
+					</header>
+
+					<main className="flex-1 p-4">
+						<div className="max-w-xl w-full flex flex-col gap-3">
+							<Textarea
+								placeholder="Enter SMILES"
+								value={smiles}
+								onChange={(e) => setSMILES(e.target.value)}
+							/>
+							<Button onClick={handleClick}>Submit</Button>
+						</div>
+
+						<div className="mt-6">
+							{data ? (
+								<>
+									<h1 className="text-2xl font-bold">Results</h1>
+									<Table>
+										<TableHeader>
+											<TableRow>
+												<TableHead>Chemical Structure</TableHead>
+												<TableHead>Tanimoto Score</TableHead>
+												<TableHead>Permeability</TableHead>
+											</TableRow>
+										</TableHeader>
+										<TableBody>
+											{data.results.map((r) => (
+												<TableRow key={r.index}>
+													<TableCell>{r.SMILES_ISO}</TableCell>
+													<TableCell>{r.similarity}</TableCell>
+													<TableCell>{r.Permeability}</TableCell>
+												</TableRow>
+											))}
+										</TableBody>
+									</Table>
+								</>
+							) : (
+								<h1 className="text-2xl font-bold">Enter a SMILES string to find similar molecules</h1>
+							)}
+						</div>
+					</main>
+				</div>
+			</SidebarInset>
+		</SidebarProvider>
 	)
 }
 
