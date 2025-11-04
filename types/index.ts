@@ -7,6 +7,7 @@ export type SimilarityResult = {
   PUBCHEM_CID?: string
   Permeability?: string
   Outcome?: string
+  imageData?: string // SVG string for molecule drawing
 }
 
 export type ApiResponse = {

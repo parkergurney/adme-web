@@ -2,6 +2,7 @@ declare module '@rdkit/rdkit' {
   export type RDKitMol = {
     is_valid?: () => boolean
     get_morgan_fp: (radius?: number | string, nBits?: number) => any
+    get_svg?: (width?: number, height?: number) => string
   }
 
   export type RDKitModule = {

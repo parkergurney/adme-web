@@ -103,6 +103,18 @@ export async function POST(request: NextRequest) {
         if (!mol || mol.is_valid?.() === false) continue
         const fp = mol.get_morgan_fp('2')
         const sim = tanimotoFromFingerprints(queryFp, fp, RDKit)
+        
+        // Generate SVG image for the molecule
+        let imageData: string | undefined
+        try {
+          if (mol.get_svg) {
+            imageData = mol.get_svg(300, 300)
+          }
+        } catch (svgErr) {
+          // If SVG generation fails, continue without image
+          console.warn('Failed to generate SVG for molecule:', s, svgErr)
+        }
+        
         results.push({
           index: i,
           SMILES_ISO: s,
@@ -111,6 +123,7 @@ export async function POST(request: NextRequest) {
           PUBCHEM_CID: row.PUBCHEM_CID,
           Permeability: row.Permeability,
           Outcome: row.PUBCHEM_ACTIVITY_OUTCOME,
+          imageData,
         })
       } catch (err) {
         // Skip invalid molecules
