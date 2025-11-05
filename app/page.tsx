@@ -6,6 +6,7 @@ import ProjectSidebar from '@/components/ProjectSidebar'
 import ResultsTable from '@/components/ResultsTable'
 import { Button } from '@/components/ui/button'
 import type { Project, ApiResponse, Selection } from '@/types'
+import Header from '@/components/Header'
 
 function ResultsContent() {
   const router = useRouter()
@@ -116,10 +117,7 @@ function ResultsContent() {
 
       <SidebarInset>
         <div className="flex w-full flex-col">
-          <header className="flex h-12 items-center gap-2 border-b px-4">
-            <SidebarTrigger />
-            <span className="text-sm font-medium">{headerTitle}</span>
-          </header>
+					<Header headerTitle={headerTitle} />
 
           <main className="flex-1 p-4 overflow-auto">
             {!selection && (

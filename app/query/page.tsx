@@ -5,6 +5,8 @@ import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import ProjectSidebar from '@/components/ProjectSidebar'
 import InputForm from '@/components/InputForm'
 import type { Project, Query, QueryResult, ApiResponse } from '@/types'
+import Header from '@/components/Header'
+import { Spinner } from '@/components/ui/spinner'
 
 export default function QueryPage() {
   const router = useRouter()
@@ -37,16 +39,6 @@ export default function QueryPage() {
     return `Query ${n}`
   }, [currentProject])
 
-  const runSingle = async (one: string): Promise<ApiResponse> => {
-    const response = await fetch('/api/run-python', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ smiles: one }),
-    })
-    if (!response.ok) throw new Error(`API error ${response.status}`)
-    return response.json()
-  }
-
   const handleBatchSubmit = async () => {
     const lines = smiles
       .split('\n')
@@ -59,8 +51,26 @@ export default function QueryPage() {
     setError(null)
 
     try {
-      // Run all inputs in parallel
-      const batch = await Promise.all(lines.map(runSingle))
+      // Send all SMILES as an array in a single request
+      const response = await fetch('/api/run-python', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ smiles: lines }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: `API error ${response.status}` }))
+        throw new Error(errorData.error || `API error ${response.status}`)
+      }
+
+      const batchResponse = await response.json()
+      const batch: ApiResponse[] = batchResponse.results || []
+
+      // Handle errors if any
+      if (batchResponse.errors && batchResponse.errors.length > 0) {
+        const errorMessages = batchResponse.errors.map((e: any) => `${e.smiles}: ${e.error}`).join(', ')
+        setError(`Some queries failed: ${errorMessages}`)
+      }
 
       // Build query results for the sidebar
       const newResults: QueryResult[] = lines.map((s, i) => {
@@ -71,7 +81,8 @@ export default function QueryPage() {
       // Map resultId to its table data
       const newMap: Record<string, ApiResponse> = {}
       newResults.forEach((r, i) => {
-        newMap[r.id] = batch[i]
+        // Use the corresponding result from the batch, or empty result if index is out of bounds
+        newMap[r.id] = batch[i] || { results: [] }
       })
 
       // Create the new query
@@ -133,15 +144,13 @@ export default function QueryPage() {
       />
 
       <SidebarInset>
-        <div className="flex min-h-screen w-full flex-col">
-          <header className="flex h-12 items-center gap-2 border-b px-4">
-            <span className="text-sm font-medium">Create New Query</span>
-          </header>
+        <div className="flex h-full w-full flex-col">
+					<Header headerTitle="Create New Query" />
 
           <main className="flex-1 p-4 overflow-auto">
-            <div className="max-w-2xl mx-auto">
-              <h1 className="text-2xl font-bold mb-6">Enter SMILES Strings</h1>
-              
+            <div className="max-w-4xl mx-auto h-full">
+              <h1 className="text-2xl font-bold mb-2">Enter chemical compounds</h1>
+              <p className="text-sm text-muted-foreground mb-6">Use SMILES format, enter one compound per line for batch processing</p>
               <InputForm
                 smiles={smiles}
                 setSMILES={setSMILES}
@@ -152,13 +161,6 @@ export default function QueryPage() {
               {error && (
                 <div className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-md">
                   <p className="text-sm text-destructive">{error}</p>
-                </div>
-              )}
-
-              {isLoading && (
-                <div className="mt-6 flex items-center gap-2">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
-                  <p className="text-sm text-muted-foreground">Running batch query...</p>
                 </div>
               )}
             </div>

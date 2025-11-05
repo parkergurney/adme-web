@@ -187,7 +187,7 @@ export default function ProjectSidebar({
 												<Button
 													variant="ghost"
 													className="w-full justify-start font-normal"
-													onClick={() => onNewQuery?.(project.id)}
+													onClick={() => {}}
 												>
 													<Plus />
 													New Project
