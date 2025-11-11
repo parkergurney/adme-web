@@ -1,39 +1,55 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
+import { useRouter } from "next/navigation"
 import {
 	Sidebar as ShadSidebar,
 	SidebarHeader,
 	SidebarContent,
 	SidebarFooter,
-	SidebarMenu,
 	SidebarMenuItem,
 	SidebarMenuButton,
-	SidebarGroup,
-	SidebarGroupContent,
-	SidebarGroupLabel,
-	SidebarMenuSub,
-	SidebarMenuSubItem,
+	SidebarMenu,
 } from "@/components/ui/sidebar"
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
+import Image from "next/image"
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Separator } from "@/components/ui/separator"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Folder, Search, ChevronRight, Plus } from "lucide-react"
-import { cn } from "@/lib/utils"
-import type { Project, Query, QueryResult, Selection } from "@/types"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Folder, Settings, Pencil, List, ChevronDown } from "lucide-react"
+import type { Project } from "@/types"
 
-export type ProjectSidebarProps = {
-	projects: Project[]
-	selection?: Selection
+// Fallback projects if none are provided
+const fallbackProjects: Project[] = [
+	{ id: 'p1', name: 'Project 1', results: [] },
+	{ id: 'p2', name: 'Project 2', results: [] },
+	{ id: 'p3', name: 'Project 3', results: [] },
+]
+
+const items = [
+	{
+		label: 'Projects',
+		icon: List,
+		href: '/projects',
+	},
+	{
+		label: 'Create New Query',
+		icon: Pencil,
+		href: '/query',
+	},
+	{
+		label: 'Settings',
+		icon: Settings,
+		href: '/settings',
+	},
+]
+
+interface ProjectSidebarProps {
+	projects?: Project[]
+	selection?: any
 	onNewProject?: () => void
 	onPinProject?: () => void
-	onNewQuery?: (projectId: string) => void
-	onOpenResult?: (projectId: string, queryId: string, resultId: string) => void
-	currentUser?: { name: string; avatarUrl?: string }
+	onNewQuery?: () => void
+	onOpenResult?: (projectId: string, resultId: string) => void
+	currentUser?: { name: string }
 }
-
-const EmptyState = () => (
-	<div className="text-sm text-muted-foreground px-2 py-1.5">No items</div>
-)
 
 export default function ProjectSidebar({
 	projects,
@@ -44,178 +60,81 @@ export default function ProjectSidebar({
 	onOpenResult,
 	currentUser,
 }: ProjectSidebarProps) {
-	// Track open state for projects and queries to avoid hydration issues
-	const [openProjects, setOpenProjects] = useState<Set<string>>(new Set())
-	const [openQueries, setOpenQueries] = useState<Set<string>>(new Set())
-	
-	// Initialize open state after mount to avoid hydration mismatch
-	useEffect(() => {
-		const projectIds = new Set(projects.map(p => p.id))
-		setOpenProjects(projectIds)
-		const queryIds = new Set(projects.flatMap(p => p.queries.map(q => q.id)))
-		setOpenQueries(queryIds)
-	}, [projects])
+	const router = useRouter()
+	// Use projects from props, fallback to hardcoded projects if none provided
+	const displayProjects = projects && projects.length > 0 ? projects : fallbackProjects
+	const currentProject = displayProjects[0]
+	const handleProjectSelect = () => {}
 
 	return (
-
 		<ShadSidebar variant="inset">
-			<SidebarHeader className="px-4 py-3">
+			<SidebarHeader className="px-4 py-3 pb-10">
 				<div className="flex items-center gap-2">
-					<Folder />
-					<span className="font-semibold tracking-tight">ADME</span>
+					<Image src="/logo.svg" alt="Athena" width={20} height={20} />
+					<span className="font-semibold tracking-tight">Athena</span>
 				</div>
 			</SidebarHeader>
 
 			<SidebarContent>
+				<SidebarMenu className='gap-y-2 px-2'>
+					<SidebarMenuItem>
+						<SidebarMenuButton onClick={() => router.push('/')}>
+							<Folder />
+							<span>All Projects</span>
+						</SidebarMenuButton>
+					</SidebarMenuItem>
 
-				{/* Projects */}
-				<SidebarGroup>
-					<SidebarGroupLabel>Projects</SidebarGroupLabel>
-					<SidebarGroupContent>
-						{projects.length === 0 ? (
-							<EmptyState />
-						) : (
-							<SidebarMenu>
-								{projects.map((project) => {
-									const isProjectOpen = openProjects.has(project.id)
-									return (
-										<Collapsible 
-											key={project.id} 
-											open={isProjectOpen}
-											onOpenChange={(open) => {
-												setOpenProjects(prev => {
-													const next = new Set(prev)
-													if (open) {
-														next.add(project.id)
-													} else {
-														next.delete(project.id)
-													}
-													return next
-												})
-											}}
-											className="group/project"
+					<Separator />
+
+					{/* Project switcher dropdown */}
+					<SidebarMenuItem>
+						<DropdownMenu>
+							<DropdownMenuTrigger asChild>
+								<SidebarMenuButton className="w-full">
+									<span className="truncate">
+										{currentProject?.name ?? "Select a project"}
+									</span>
+									<ChevronDown className="ml-auto size-4" />
+								</SidebarMenuButton>
+							</DropdownMenuTrigger>
+							<DropdownMenuContent align="start" className="w-56">
+								{displayProjects.length === 0 ? (
+									<DropdownMenuItem disabled>No projects</DropdownMenuItem>
+								) : (
+									displayProjects.map(p => (
+										<DropdownMenuItem
+											key={p.id}
+											onClick={handleProjectSelect}
 										>
-											<SidebarMenuItem className=''>
-												{/* Level 1: projects */}
-												<CollapsibleTrigger asChild>
-													<SidebarMenuButton>
-														<Folder />
-														<span className="truncate">{project.name}</span>
-														<ChevronRight className="ml-auto size-4 transition group-data-[state=open]/project:rotate-90" />
-													</SidebarMenuButton>
-												</CollapsibleTrigger>
+											{p.name}
+										</DropdownMenuItem>
+									))
+								)}
+							</DropdownMenuContent>
+						</DropdownMenu>
+					</SidebarMenuItem>
 
-												<CollapsibleContent>
-													{/* Level 2: queries under this project */}
-													<SidebarMenuSub className="">
-														{project.queries.map((q) => {
-															const isQueryOpen = openQueries.has(q.id)
-															return (
-																<SidebarMenuSubItem key={q.id} className="p-0">
-																	<Collapsible 
-																		open={isQueryOpen}
-																		onOpenChange={(open) => {
-																			setOpenQueries(prev => {
-																				const next = new Set(prev)
-																				if (open) {
-																					next.add(q.id)
-																				} else {
-																					next.delete(q.id)
-																				}
-																				return next
-																			})
-																		}}
-																		className="group/query w-full"
-																	>
-																		{/* Query row as the trigger */}
-																		<CollapsibleTrigger asChild>
-																			<SidebarMenuButton className="w-full">
-																				<Search />
-																				<span className="truncate">{q.title}</span>
-																				<ChevronRight className="ml-auto size-3.5 transition group-data-[state=open]/query:rotate-90" />
-																			</SidebarMenuButton>
-																		</CollapsibleTrigger>
-
-																		{/* Level 3: results under this query */}
-																		<CollapsibleContent>
-																			<SidebarMenuSub>
-																				{q.results.length === 0 ? (
-																					<SidebarMenuSubItem>
-																						<span className="text-xs text-muted-foreground">No results</span>
-																					</SidebarMenuSubItem>
-																				) : (
-																					q.results.map((r) => (
-																						<SidebarMenuSubItem key={r.id}>
-																							<Button
-																								variant="ghost"
-																								className={cn(
-																									"w-full justify-start h-7 px-2 text-xs min-w-0",
-																									selection?.projectId === project.id && 
-																									selection?.queryId === q.id && 
-																									selection?.resultId === r.id &&
-																									"bg-sidebar-accent text-sidebar-accent-foreground font-medium"
-																								)}
-																								onClick={() => onOpenResult?.(project.id, q.id, r.id)}
-																							>
-																								<span className="truncate">{r.label}</span>
-																							</Button>
-																						</SidebarMenuSubItem>
-																					))
-																				)}
-																			</SidebarMenuSub>
-																		</CollapsibleContent>
-																	</Collapsible>
-																</SidebarMenuSubItem>
-															)
-														})}
-
-														{/* Add query button lives with the queries */}
-														<SidebarMenuSubItem>
-															<Button
-																variant="ghost"
-																className="w-full justify-start font-normal"
-																onClick={() => onNewQuery?.(project.id)}
-															>
-																<Plus />
-																New Query
-															</Button>
-														</SidebarMenuSubItem>
-													</SidebarMenuSub>
-												</CollapsibleContent>
-											</SidebarMenuItem>
-											<SidebarMenuItem>
-												<Button
-													variant="ghost"
-													className="w-full justify-start font-normal"
-													onClick={() => {}}
-												>
-													<Plus />
-													New Project
-												</Button>
-											</SidebarMenuItem>
-										</Collapsible>
-									)
-								})}
-							</SidebarMenu>
-						)}
-					</SidebarGroupContent>
-				</SidebarGroup>
-
-
-				<Separator />
+					{/* Navigation items */}
+					{items.map((item) => (
+						<SidebarMenuItem key={item.label}>
+							<SidebarMenuButton onClick={() => router.push(item.href)}>
+								<item.icon />
+								<span>{item.label}</span>
+							</SidebarMenuButton>
+						</SidebarMenuItem>
+					))}
+				</SidebarMenu>
 			</SidebarContent>
 
 			<SidebarFooter className="px-4 py-3">
 				<div className="flex items-center gap-3">
 					<Avatar className="size-7">
-						{currentUser?.avatarUrl ? (
-							<AvatarImage src={currentUser.avatarUrl} alt={currentUser.name} />
-						) : (
-							<AvatarFallback>{currentUser?.name?.[0] ?? "U"}</AvatarFallback>
-						)}
+						<AvatarFallback>
+							{currentUser?.name?.[0]?.toUpperCase() || 'U'}
+						</AvatarFallback>
 					</Avatar>
 					<div className="flex flex-col leading-tight">
-						<span className="text-sm font-medium">{currentUser?.name ?? "User"}</span>
+						<span className="text-sm font-medium">{currentUser?.name || 'User'}</span>
 						<span className="text-xs text-muted-foreground">Signed in</span>
 					</div>
 				</div>

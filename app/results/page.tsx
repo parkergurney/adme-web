@@ -58,7 +58,9 @@ function ResultsContent() {
   const handleSelectionChange = (newSelection: Selection) => {
     setSelection(newSelection)
     if (newSelection) {
-      router.push(`/?projectId=${newSelection.projectId}&resultId=${newSelection.resultId}`)
+      router.push(`/results?projectId=${newSelection.projectId}&resultId=${newSelection.resultId}`)
+    } else {
+      router.push('/results')
     }
   }
 
@@ -76,6 +78,9 @@ function ResultsContent() {
   const headerTitle = selectedResultTitle
     ? `Results for ${selectedResultTitle}`
     : currentProject?.name ?? 'No project'
+
+  // Get all results from the current project
+  const projectResults = currentProject?.results || []
 
   return (
     <SidebarProvider>
@@ -104,19 +109,68 @@ function ResultsContent() {
 
           <main className="flex-1 p-4 overflow-auto">
             {!selection && (
-              <div className="max-w-2xl mx-auto text-center py-12">
-                <h1 className="text-2xl font-bold mb-4">No Results Selected</h1>
-                <p className="text-muted-foreground mb-6">
-                  Select a result from the sidebar to view its data, or create a new query.
-                </p>
-                <Button onClick={() => router.push('/query')}>
-                  Create New Query
-                </Button>
+              <div className="max-w-6xl mx-auto">
+                {projectResults.length === 0 ? (
+                  <div className="text-center py-12">
+                    <h1 className="text-2xl font-bold mb-4">No Results Yet</h1>
+                    <p className="text-muted-foreground mb-6">
+                      This project doesn't have any results yet. Create a new query to get started.
+                    </p>
+                    <Button onClick={() => router.push('/query')}>
+                      Create New Query
+                    </Button>
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between mb-6">
+                      <h1 className="text-2xl font-bold">All Results</h1>
+                      <Button onClick={() => router.push('/query')}>
+                        Create New Query
+                      </Button>
+                    </div>
+                    <div className="grid gap-4">
+                      {projectResults.map((result) => (
+                        <div key={result.id} className="border rounded-lg p-4">
+                          <div className="flex items-center justify-between mb-3">
+                            <h3 className="font-medium text-lg">{result.label}</h3>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => handleSelectionChange({
+                                projectId: currentProject.id,
+                                resultId: result.id
+                              })}
+                            >
+                              View Details
+                            </Button>
+                          </div>
+                          {result.data && result.data.results && result.data.results.length > 0 ? (
+                            <div className="text-sm text-muted-foreground">
+                              {result.data.results.length} result(s) found
+                            </div>
+                          ) : (
+                            <div className="text-sm text-muted-foreground">
+                              No data available
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
             {selection && selectedData && (
               <div className="max-w-6xl mx-auto">
+                <div className="mb-4">
+                  <Button
+                    variant="outline"
+                    onClick={() => setSelection(null)}
+                  >
+                    ← Back to All Results
+                  </Button>
+                </div>
                 <ResultsTable
                   results={selectedData.results}
                 />

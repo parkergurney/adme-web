@@ -17,12 +17,21 @@ export type ApiResponse = {
 // UI State Types
 export type Selection = {
   projectId: string
-  queryId: string
   resultId: string
 } | null
 
-// Project/Query Types (re-exported from ProjectSidebar for convenience)
-export type QueryResult = { id: string; label: string; onSelect?: (id: string) => void }
-export type Query = { id: string; title: string; results: QueryResult[] }
-export type Project = { id: string; name: string; queries: Query[]; pinned?: boolean }
+// Project Result Type - each result represents one compound query
+export type ProjectResult = {
+  id: string
+  label: string // SMILES string
+  data: ApiResponse // The API response for this compound
+}
+
+// Project Type - simplified structure
+export type Project = { 
+  id: string
+  name: string
+  results: ProjectResult[]
+  pinned?: boolean
+}
 

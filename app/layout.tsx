@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "ADME Web",
-	description: "ADME Web",
+	title: "Athena",
+	description: "Evaluate chemical properties",
 };
 
 export default function RootLayout({
