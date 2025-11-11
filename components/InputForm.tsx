@@ -3,6 +3,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Button } from './ui/button'
 import { Textarea } from './ui/textarea'
 import { Spinner } from './ui/spinner'
+import compounds from '@/app/data/permeability.json'; // keep it in app/data
+
+
+const data = compounds;
 
 const PLACEHOLDER_ITEMS: readonly string[] = [
 	'C1=CC=C2C(=C1)C(=O)C(=C(C2=O)SCCO)SCCO\nC1=CC(=C(C=C1[N+](=O)[O-])Cl)NC(=O)C2=C(C=CC(=C2)Cl)O\nCOC1=C(C(=CC(=C1)/C=C(\C#N)/C(=O)C2=CC(=C(C=C2)O)O)I)O',
@@ -69,6 +73,8 @@ interface InputFormProps {
 	setSMILES: (val: string) => void
 	onSubmit: () => void | Promise<void>
 	isLoading?: boolean
+	
+	
 }
 
 const InputForm = ({ smiles, setSMILES, onSubmit, isLoading = false }: InputFormProps) => {

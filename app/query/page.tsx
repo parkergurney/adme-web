@@ -51,69 +51,97 @@ export default function QueryPage() {
     }
   }
 
-  const handleBatchSubmit = async () => {
-    const lines = smiles
-      .split('\n')
-      .map(s => s.trim())
-      .filter(Boolean)
+  // const handleBatchSubmit = async () => {
+  //   const lines = smiles
+  //     .split('\n')
+  //     .map(s => s.trim())
+  //     .filter(Boolean)
 
-    if (lines.length === 0) return
+  //   if (lines.length === 0) return
 
-    setIsLoading(true)
-    setError(null)
+  //   setIsLoading(true)
+  //   setError(null)
 
-    try {
-      const response = await fetch('/api/run-python', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ smiles: lines }),
-      })
-			console.log(response)
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ error: `API error ${response.status}` }))
-        throw new Error(errorData.error || `API error ${response.status}`)
-      }
+  //   try {
+  //     const response = await fetch('/api/run-python', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({ smiles: lines }),
+  //     })
+	// 		console.log(response)
+  //     if (!response.ok) {
+  //       const errorData = await response.json().catch(() => ({ error: `API error ${response.status}` }))
+  //       throw new Error(errorData.error || `API error ${response.status}`)
+  //     }
 
-      const batchResponse = await response.json()
-      const batch: ApiResponse[] = batchResponse.results || []
+  //     const batchResponse = await response.json()
+  //     const batch: ApiResponse[] = batchResponse.results || []
 
-      if (batchResponse.errors && batchResponse.errors.length > 0) {
-        const errorMessages = batchResponse.errors.map((e: any) => `${e.smiles}: ${e.error}`).join(', ')
-        setError(`Some queries failed: ${errorMessages}`)
-      }
+  //     if (batchResponse.errors && batchResponse.errors.length > 0) {
+  //       const errorMessages = batchResponse.errors.map((e: any) => `${e.smiles}: ${e.error}`).join(', ')
+  //       setError(`Some queries failed: ${errorMessages}`)
+  //     }
 
-      const newResults: ProjectResult[] = lines.map((s, i) => {
-        const id = `r_${Date.now()}_${i}`
-        return {
-          id,
-          label: s,
-          data: batch[i] || { results: [] }
-        }
-      })
+  //     const newResults: ProjectResult[] = lines.map((s, i) => {
+  //       const id = `r_${Date.now()}_${i}`
+  //       return {
+  //         id,
+  //         label: s,
+  //         data: batch[i] || { results: [] }
+  //       }
+  //     })
 
-      const updatedProjects = [...projects]
-      const idx = updatedProjects.findIndex(p => p.id === currentProject.id)
-      if (idx >= 0) {
-        const existingResults = updatedProjects[idx].results || []
-        updatedProjects[idx] = { 
-          ...updatedProjects[idx], 
-          results: [...newResults, ...existingResults] 
-        }
-      }
-      setProjects(updatedProjects)
+  //     const updatedProjects = [...projects]
+  //     const idx = updatedProjects.findIndex(p => p.id === currentProject.id)
+  //     if (idx >= 0) {
+  //       const existingResults = updatedProjects[idx].results || []
+  //       updatedProjects[idx] = { 
+  //         ...updatedProjects[idx], 
+  //         results: [...newResults, ...existingResults] 
+  //       }
+  //     }
+  //     setProjects(updatedProjects)
 
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('adme-projects', JSON.stringify(updatedProjects))
-      }
+  //     if (typeof window !== 'undefined') {
+  //       localStorage.setItem('adme-projects', JSON.stringify(updatedProjects))
+  //     }
 
-      const firstResultId = newResults[0].id
-      setIsLoading(false)
-      router.push(`/projects/results?projectId=${currentProject.id}&resultId=${firstResultId}`)
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Something went wrong')
-      setIsLoading(false)
-    }
+  //     const firstResultId = newResults[0].id
+  //     setIsLoading(false)
+  //     router.push(`/projects/results?projectId=${currentProject.id}&resultId=${firstResultId}`)
+  //   } catch (e) {
+  //     setError(e instanceof Error ? e.message : 'Something went wrong')
+  //     setIsLoading(false)
+  //   }
+  // }
+
+
+  const handleBatchSubmit = () => {
+  const lines = smiles
+    .split('\n')
+    .map(s => s.trim())
+    .filter(Boolean)
+
+  if (lines.length === 0) {
+    setError('Please enter at least one SMILES string.')
+    return
   }
+
+  setError(null)
+
+  // Redirect to the new results page
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('last-submitted-smiles', JSON.stringify(lines))
+  }
+
+  router.push('/projects/results')
+  
+}
+
+
+
+
+
 
   return (
     <SidebarProvider>

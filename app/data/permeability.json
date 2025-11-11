@@ -1,0 +1,3404 @@
+[
+  {
+    "PUBCHEM_SID": "124876702",
+    "PUBCHEM_CID": "563972",
+    "SMILES_ISO": "CSC1=NC2=C(C3=CC=CC=C3N2CCC4=CC=CC=C4)N=N1",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "124876734",
+    "PUBCHEM_CID": "766793",
+    "SMILES_ISO": "CCN(CC)C(=O)N1C2=CC=CC=C2C=CC3=CC=CC=C31",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "14742988",
+    "PUBCHEM_CID": "2021006",
+    "SMILES_ISO": "C1=CC=C(C=C1)CN2C(=C(C3=NC4=CC=CC=C4N=C32)S(=O)(=O)C5=CC=CS5)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24817107",
+    "PUBCHEM_CID": "1075912",
+    "SMILES_ISO": "C1=CC=C2C(=C1)C=C(C(=O)O2)C3=CSC(=N3)NC4=CC(=C(C=C4)C(=O)O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "74.15"
+  },
+  {
+    "PUBCHEM_SID": "49728050",
+    "PUBCHEM_CID": "6460634",
+    "SMILES_ISO": "CCOC1=C(C=C(C=C1)S(=O)(=O)NCC2=CN=CC=C2)NC(=O)C3=CC=CC=C3F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "278.38"
+  },
+  {
+    "PUBCHEM_SID": "92763348",
+    "PUBCHEM_CID": "434973",
+    "SMILES_ISO": "CC(=O)NC1CCC2=CC(=C(C(=C2C3=CC=C(C(=O)C=C13)SC)OC)OC)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "20.66"
+  },
+  {
+    "PUBCHEM_SID": "92763396",
+    "PUBCHEM_CID": "426728",
+    "SMILES_ISO": "COC1=C(C(=C2C(=C1)CCC(C3=CC(=O)C(=CC=C32)SC)N)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "55.04"
+  },
+  {
+    "PUBCHEM_SID": "124877629",
+    "PUBCHEM_CID": "667466",
+    "SMILES_ISO": "CN(C)CC/C=C/1\\C2=CC=CC=C2SC3=C1C=C(C=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "530.72"
+  },
+  {
+    "PUBCHEM_SID": "174006272",
+    "PUBCHEM_CID": "53276",
+    "SMILES_ISO": "CCOC(=O)NC1=C(N=C(C=C1)NCC2=CC=C(C=C2)F)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "141.95"
+  },
+  {
+    "PUBCHEM_SID": "124880296",
+    "PUBCHEM_CID": "3559",
+    "SMILES_ISO": "C1CN(CCC1(C2=CC=C(C=C2)Cl)O)CCCC(=O)C3=CC=C(C=C3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "396.03"
+  },
+  {
+    "PUBCHEM_SID": "124880521",
+    "PUBCHEM_CID": "133633",
+    "SMILES_ISO": "C1CN(CCC1(C2=CC=C(C=C2)Cl)O)CC3=CNC4=CC=CC=C43",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "418.75"
+  },
+  {
+    "PUBCHEM_SID": "90341259",
+    "PUBCHEM_CID": "4658",
+    "SMILES_ISO": "COC1=CC=CC=C1N2CCN(CC2)CCN(C3=CC=CC=N3)C(=O)C4=CC=C(C=C4)I",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "758.19"
+  },
+  {
+    "PUBCHEM_SID": "124880630",
+    "PUBCHEM_CID": "6603915",
+    "SMILES_ISO": "COC1=CC=CC=C1N2CCN(CC2)CCN(C3=CC=CC=N3)C(=O)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "73.05"
+  },
+  {
+    "PUBCHEM_SID": "170466409",
+    "PUBCHEM_CID": "16363",
+    "SMILES_ISO": "C1CN(CCC1N2C3=CC=CC=C3NC2=O)CCCC(=O)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "98.19"
+  },
+  {
+    "PUBCHEM_SID": "384567961",
+    "PUBCHEM_CID": "4030",
+    "SMILES_ISO": "COC(=O)NC1=NC2=C(N1)C=C(C=C2)C(=O)C3=CC=CC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "455.49"
+  },
+  {
+    "PUBCHEM_SID": "124882688",
+    "PUBCHEM_CID": "180081",
+    "SMILES_ISO": "C[C@@]12C3=CC=CC=C3C[C@@H](N1)C4=CC=CC=C24",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "72.84"
+  },
+  {
+    "PUBCHEM_SID": "50100539",
+    "PUBCHEM_CID": "6604471",
+    "SMILES_ISO": "CC(C)SC1=CC2=C(C=C1)N=C(N2)NC(=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "510.17"
+  },
+  {
+    "PUBCHEM_SID": "170465786",
+    "PUBCHEM_CID": "3627",
+    "SMILES_ISO": "CN1CCCN(CC1)C(C2=CC=CC=C2)C3=CC=C(C=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384568009",
+    "PUBCHEM_CID": "10607",
+    "SMILES_ISO": "COC1=CC(=CC(=C1OC)OC)[C@H]2[C@@H]3[C@H](COC3=O)[C@H](C4=CC5=C(C=C24)OCO5)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "262"
+  },
+  {
+    "PUBCHEM_SID": "384568026",
+    "PUBCHEM_CID": "10219",
+    "SMILES_ISO": "CC[C@H]1CN2CCC3=CC(=C(C=C3[C@@H]2C[C@@H]1C[C@@H]4C5=CC(=C(C=C5CCN4)OC)OC)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "22.02"
+  },
+  {
+    "PUBCHEM_SID": "363676529",
+    "PUBCHEM_CID": "3689",
+    "SMILES_ISO": "CC(C(C1=CC=C(C=C1)O)O)N2CCC(CC2)CC3=CC=CC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "40.59"
+  },
+  {
+    "PUBCHEM_SID": "363676531",
+    "PUBCHEM_CID": "2396",
+    "SMILES_ISO": "CN(C)CCCN1C=C(C2=CC=CC=C21)C3=C(C(=O)NC3=O)C4=CNC5=CC=CC=C54",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "39.28"
+  },
+  {
+    "PUBCHEM_SID": "384568034",
+    "PUBCHEM_CID": "108092",
+    "SMILES_ISO": "CCN(CC)CCOC1=CC=C(C=C1)CC2=CC=CC=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "236"
+  },
+  {
+    "PUBCHEM_SID": "384568052",
+    "PUBCHEM_CID": "6167",
+    "SMILES_ISO": "CC(=O)N[C@H]1CCC2=CC(=C(C(=C2C3=CC=C(C(=O)C=C13)OC)OC)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "4.51"
+  },
+  {
+    "PUBCHEM_SID": "104223766",
+    "PUBCHEM_CID": "664510",
+    "SMILES_ISO": "CNC1=C(N=C(O1)C2=CC=CC3=CC=CC=C32)C#N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "644.7"
+  },
+  {
+    "PUBCHEM_SID": "124888972",
+    "PUBCHEM_CID": "663191",
+    "SMILES_ISO": "CN(C)C1=CC=C(C=C1)C2=NN3C(=NN=C3S2)C4=CC=CC=C4OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "104222051",
+    "PUBCHEM_CID": "790407",
+    "SMILES_ISO": "C1=CC(=CN=C1)NC(=O)C2=CC=CS2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "181.35"
+  },
+  {
+    "PUBCHEM_SID": "7965064",
+    "PUBCHEM_CID": "1265525",
+    "SMILES_ISO": "COC1=CC(=CC(=C1OC)OC)C(=O)N2CCN(CC2)C3=C(C=CC(=C3)Cl)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384568104",
+    "PUBCHEM_CID": "2159",
+    "SMILES_ISO": "CCN1CCCC1CNC(=O)C2=CC(=C(C=C2OC)N)S(=O)(=O)CC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "6.63"
+  },
+  {
+    "PUBCHEM_SID": "24271784",
+    "PUBCHEM_CID": "3237082",
+    "SMILES_ISO": "CC1=CC=CC=C1NC(=O)NC2=CC=CS2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "208.73"
+  },
+  {
+    "PUBCHEM_SID": "24272350",
+    "PUBCHEM_CID": "15991077",
+    "SMILES_ISO": "COC1=CC=CC(=C1)C(=O)NC2=CC3=C(C=C2)OC(=N3)C4=CC5=CC=CC=C5C=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "755.8"
+  },
+  {
+    "PUBCHEM_SID": "24272467",
+    "PUBCHEM_CID": "1725261",
+    "SMILES_ISO": "CC1=C(C2=C(O1)C=CC(=C2)N(C(=O)OC3=CC=CC=C3)S(=O)(=O)C4=CC=CC=C4)C(=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24273695",
+    "PUBCHEM_CID": "15991223",
+    "SMILES_ISO": "CC1=CC=C(C=C1)CN2C3=CC=CC=C3C(C2=O)(CC(=O)C4=CC=C(C=C4)C)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "626.07"
+  },
+  {
+    "PUBCHEM_SID": "24273859",
+    "PUBCHEM_CID": "1205402",
+    "SMILES_ISO": "CC1=C(C2=C(N1C3=CC=C(C=C3)OC)C=CC(=C2)OC(=O)COC4=CC=CC=C4)C(=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24274428",
+    "PUBCHEM_CID": "6407314",
+    "SMILES_ISO": "CC(=O)NC1=CC=C(C=C1)NC2=NN=C(C3=CC=CC=C32)C4=CC=C(C=C4)OCC#C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "265.44"
+  },
+  {
+    "PUBCHEM_SID": "24274975",
+    "PUBCHEM_CID": "1017166",
+    "SMILES_ISO": "CCOC1=C(C=CC(=C1)CNC2=CC=C(C=C2)O)OCC3=CC=C(C=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "186.69"
+  },
+  {
+    "PUBCHEM_SID": "24275611",
+    "PUBCHEM_CID": "15991364",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)OC3=C(C2=O)C(N(C3=O)CCCN4CCOCC4)C5=CC(=CC=C5)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "2.62"
+  },
+  {
+    "PUBCHEM_SID": "24275613",
+    "PUBCHEM_CID": "15991365",
+    "SMILES_ISO": "CC1=CC2=C(C=C1C)OC3=C(C2=O)C(N(C3=O)CCCN4CCOCC4)C5=CC(=C(C=C5)O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "25.29"
+  },
+  {
+    "PUBCHEM_SID": "24275635",
+    "PUBCHEM_CID": "15991372",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)OC3=C(C2=O)C(N(C3=O)CCCN(C)C)C4=CC=C(C=C4)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "3.9"
+  },
+  {
+    "PUBCHEM_SID": "24275639",
+    "PUBCHEM_CID": "15991374",
+    "SMILES_ISO": "CCCCOC1=C(C=C(C=C1)C2C3=C(C(=O)N2CCCN(C)C)OC4=C(C3=O)C=C(C=C4)C)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "273.18"
+  },
+  {
+    "PUBCHEM_SID": "24275915",
+    "PUBCHEM_CID": "15991449",
+    "SMILES_ISO": "C1CCCN(CC1)C2=C(N=C(O2)C3=CC=C(C=C3)F)S(=O)(=O)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24276017",
+    "PUBCHEM_CID": "4229355",
+    "SMILES_ISO": "CCC1=CC=C(C=C1)C2N=C(NC3=NC4=CC=CC=C4N23)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.54"
+  },
+  {
+    "PUBCHEM_SID": "24276087",
+    "PUBCHEM_CID": "2983992",
+    "SMILES_ISO": "C1=CC(=C(C=C1C#N)F)C(=O)NC2=CC(=C(C=C2)Cl)C3=NC4=C(O3)C=CC(=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "678.9"
+  },
+  {
+    "PUBCHEM_SID": "24276115",
+    "PUBCHEM_CID": "2982228",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)N=C(O2)C3=C(C=CC(=C3)NC(=O)C4=CC5=C(C=C4)OCCO5)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "28.63"
+  },
+  {
+    "PUBCHEM_SID": "24276118",
+    "PUBCHEM_CID": "3122421",
+    "SMILES_ISO": "CC1=CC=CC=C1NC(=O)CSC2=C(C(=CC(=N2)C3=CC=CC=C3)C4=CC=C(C=C4)OC)C#N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "586.84"
+  },
+  {
+    "PUBCHEM_SID": "24276283",
+    "PUBCHEM_CID": "15991500",
+    "SMILES_ISO": "CC1=NC2=C(C(=NN2C(=C1)C3=CC=C(C=C3)OC)C)C4=CC(=C(C=C4)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24276434",
+    "PUBCHEM_CID": "1252213",
+    "SMILES_ISO": "CN1C2=CN(C(=C2C(=O)N(C1=O)C)C3=CC=C(C=C3)Cl)CCC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "762.26"
+  },
+  {
+    "PUBCHEM_SID": "24276494",
+    "PUBCHEM_CID": "5297518",
+    "SMILES_ISO": "CCOC(=O)C1=CC=C(C=C1)NC(=O)CSC2=NC3=C(C=C2C#N)N4CCC3CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "236.48"
+  },
+  {
+    "PUBCHEM_SID": "24276516",
+    "PUBCHEM_CID": "4898908",
+    "SMILES_ISO": "C1CN2CCC1C3=C2C=C4C(=C(SC4=N3)C(=O)NC5=CC=C(C=C5)Cl)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "139.82"
+  },
+  {
+    "PUBCHEM_SID": "24276518",
+    "PUBCHEM_CID": "5297522",
+    "SMILES_ISO": "CCOC(=O)C1=CC=C(C=C1)NC(=O)C2=C(C3=CC4=C(C5CCN4CC5)N=C3S2)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "720.42"
+  },
+  {
+    "PUBCHEM_SID": "24267292",
+    "PUBCHEM_CID": "4368645",
+    "SMILES_ISO": "CC1=CC(=C(C=C1Cl)OC)NC2=C3CCCC3=NC4=CC=CC=C42",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24267784",
+    "PUBCHEM_CID": "15987880",
+    "SMILES_ISO": "CCC1=CC(=CC=C1)NC(=O)C(CC2=CC=CC=C2)NS(=O)(=O)C3=CC=CS3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24267786",
+    "PUBCHEM_CID": "15987881",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)NC(=O)C(CC2=CC=CC=C2)NS(=O)(=O)C3=CC=CS3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "570.44"
+  },
+  {
+    "PUBCHEM_SID": "24267852",
+    "PUBCHEM_CID": "9551517",
+    "SMILES_ISO": "CCN1C=C(C2=CC(=C(C=C2C1=O)OC)OC)C(=O)N3CCN(CC3)C4=CC(=CC=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "809.63"
+  },
+  {
+    "PUBCHEM_SID": "24267952",
+    "PUBCHEM_CID": "15987948",
+    "SMILES_ISO": "C1CN(CCN1C2=CC(=CC=C2)Cl)C(=O)CCCCN3C(=O)C4=C(C=CS4)NC3=O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "718.99"
+  },
+  {
+    "PUBCHEM_SID": "24268074",
+    "PUBCHEM_CID": "4753688",
+    "SMILES_ISO": "CCCCCN1C2=CC=CC=C2N=C1CCCNC(=O)C3=CC=CC=C3OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "491.28"
+  },
+  {
+    "PUBCHEM_SID": "377663928",
+    "PUBCHEM_CID": "15988512",
+    "SMILES_ISO": "CCC1=CC(=CC=C1)NC(=O)CSC2=NC3=CC=CC=C3N=C2N4CCCCC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "350.84"
+  },
+  {
+    "PUBCHEM_SID": "24268731",
+    "PUBCHEM_CID": "15988552",
+    "SMILES_ISO": "CC1(CC2=C(C=C(C(=O)N2C3=C(C=CC(=C3)OC)OC)C4=NC(=CS4)C5=CC=C(C=C5)Cl)C(=O)C1)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "331.1"
+  },
+  {
+    "PUBCHEM_SID": "24268872",
+    "PUBCHEM_CID": "15988674",
+    "SMILES_ISO": "C1=CC=C(C=C1)C(C(=O)NC2=CC=C(C=C2)Cl)NS(=O)(=O)C3=CC=CS3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "443.46"
+  },
+  {
+    "PUBCHEM_SID": "24268876",
+    "PUBCHEM_CID": "15988676",
+    "SMILES_ISO": "CC1=C(C=CC(=C1)Br)NC(=O)C(C2=CC=CC=C2)NS(=O)(=O)C3=CC=CS3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "79.41"
+  },
+  {
+    "PUBCHEM_SID": "24269929",
+    "PUBCHEM_CID": "15989508",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)NC(=O)NCC2CCN(CC2)CC3=CC(=CC=C3)Cl)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24269957",
+    "PUBCHEM_CID": "15989530",
+    "SMILES_ISO": "C1CN(CCC1CNC(=O)NC2=CC(=C(C=C2)F)Cl)CC3=CC(=CC=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "637.64"
+  },
+  {
+    "PUBCHEM_SID": "24269971",
+    "PUBCHEM_CID": "15989544",
+    "SMILES_ISO": "CCOC1=CC(=C(C=C1)OCC)NC(=O)C(C2=CC=CC=C2)NS(=O)(=O)C3=CC=C(S3)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "636.72"
+  },
+  {
+    "PUBCHEM_SID": "24269973",
+    "PUBCHEM_CID": "15989546",
+    "SMILES_ISO": "CC(=O)NC1=CC=C(C=C1)NC(=O)C(C2=CC=CC=C2)NS(=O)(=O)C3=CC=C(S3)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "16.25"
+  },
+  {
+    "PUBCHEM_SID": "24269975",
+    "PUBCHEM_CID": "15989548",
+    "SMILES_ISO": "CCN(C1=CC(=C(C=C1)C)C)C(=O)C(C2=CC=CC=C2)NS(=O)(=O)C3=CC=C(S3)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "109.62"
+  },
+  {
+    "PUBCHEM_SID": "24269987",
+    "PUBCHEM_CID": "15989558",
+    "SMILES_ISO": "CC1=CC(=C(C=C1)C)CN2CCC(CC2)CNC(=O)NC3=C(C=C(C=C3)Br)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "979.44"
+  },
+  {
+    "PUBCHEM_SID": "24270400",
+    "PUBCHEM_CID": "2973056",
+    "SMILES_ISO": "COC1=C(C(=CC(=C1)C2CC(=O)NC3=CC4=C(C=C23)OCCO4)Br)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24270448",
+    "PUBCHEM_CID": "15989880",
+    "SMILES_ISO": "CC(C)OC1=CC=CC(=C1)C2CC(=O)NC3=CC4=C(C=C23)OCO4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "785.46"
+  },
+  {
+    "PUBCHEM_SID": "24270611",
+    "PUBCHEM_CID": "15990000",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)NC2=C(C(=O)C3=CC=CC=C32)C4=CC=C(C=C4)C(F)(F)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "574"
+  },
+  {
+    "PUBCHEM_SID": "24270631",
+    "PUBCHEM_CID": "8088003",
+    "SMILES_ISO": "CCN(C1=CC=CC=C1)S(=O)(=O)C2=C(N=C3N(C2=O)C(=CS3)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "478.66"
+  },
+  {
+    "PUBCHEM_SID": "24270768",
+    "PUBCHEM_CID": "15990148",
+    "SMILES_ISO": "CC1=C(C(=CC=C1)N2CCN(CC2)C3=NC4=CC=CC=C4C5=NN=C(N53)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24270817",
+    "PUBCHEM_CID": "15990190",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C(=O)NC2=C(N=C(N=C2NC3=CC=C(C=C3)C)NC4=CC=C(C=C4)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "6.76"
+  },
+  {
+    "PUBCHEM_SID": "24270930",
+    "PUBCHEM_CID": "15990297",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)NC2=NC(=NC(=C2NC(=O)C3=CC=C(C=C3)C)C)NC4=CC=C(C=C4)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "59"
+  },
+  {
+    "PUBCHEM_SID": "24270984",
+    "PUBCHEM_CID": "15990342",
+    "SMILES_ISO": "CCC1=NC2=C(C=CC(=C2)C(=O)NCCCOC)SC3=C1C=C(C=C3)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24271060",
+    "PUBCHEM_CID": "15990397",
+    "SMILES_ISO": "CN1C2=CC=CC=C2N=C(C1=O)C(=O)NC3=CC(=C(C(=C3)OC)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "151.35"
+  },
+  {
+    "PUBCHEM_SID": "24271069",
+    "PUBCHEM_CID": "15990405",
+    "SMILES_ISO": "C1COC2=C(O1)C=CC(=C2)NC(=O)CSC3=C(NC(=N3)C4=CC=C(C=C4)F)C5=CC=C(C=C5)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "585"
+  },
+  {
+    "PUBCHEM_SID": "24271228",
+    "PUBCHEM_CID": "15990550",
+    "SMILES_ISO": "CCC1=NC2=C(C=CC(=C2)C(=O)NC3CCCC3)SC4=C1C=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "639.9"
+  },
+  {
+    "PUBCHEM_SID": "24271658",
+    "PUBCHEM_CID": "15990919",
+    "SMILES_ISO": "CCOC(=O)C1=CC=C(C=C1)N2C(C3=C(NN=C3C2=O)C4=CC=CS4)C5=C(C=C(C=C5)Cl)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "315.67"
+  },
+  {
+    "PUBCHEM_SID": "24271662",
+    "PUBCHEM_CID": "15990923",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)C2C3=C(NN=C3C(=O)N2C4=CC=C(C=C4)C(=O)OCC)C5=CC=CS5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "448.13"
+  },
+  {
+    "PUBCHEM_SID": "24398403",
+    "PUBCHEM_CID": "16020134",
+    "SMILES_ISO": "CCN(CC1=CC=CC=C1)CC2=C(C(NC(=O)N2)C3=CC=C(C=C3)OC(C)C)C(=O)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24398415",
+    "PUBCHEM_CID": "16020144",
+    "SMILES_ISO": "CCOC(=O)C1=CC=C(C=C1)N2C(C3=C(NN=C3C2=O)C4=CC=CO4)C5=CC=C(C=C5)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "231.48"
+  },
+  {
+    "PUBCHEM_SID": "24398802",
+    "PUBCHEM_CID": "15999416",
+    "SMILES_ISO": "COC1=CC(=C(C=C1)OC)NC2=C3CCCC3=NC4=CC=CC=C42",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "129.3"
+  },
+  {
+    "PUBCHEM_SID": "24383549",
+    "PUBCHEM_CID": "16007397",
+    "SMILES_ISO": "CC1=CC(=C(C=C1)OC)NC2=C3CCCC3=NC4=CC=CC=C42",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "292.9"
+  },
+  {
+    "PUBCHEM_SID": "24384235",
+    "PUBCHEM_CID": "16008054",
+    "SMILES_ISO": "CC1=CC(=C(C=C1)C)CN2C3=C(C=CC(=C3)C(=O)N4CCN(CC4)C5=CC=CC=C5F)S(=O)C6=CC=CC=C6C2=O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "932.21"
+  },
+  {
+    "PUBCHEM_SID": "24385481",
+    "PUBCHEM_CID": "4917871",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)NC(=O)CC2C(=O)N(C(=O)N2CCC3=C(C=CS3)C)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "830.61"
+  },
+  {
+    "PUBCHEM_SID": "24386250",
+    "PUBCHEM_CID": "2151568",
+    "SMILES_ISO": "COC1=CC=C(C=C1)C2=NC3=C(CC4=CC=CC=C4O3)C(=N2)SCC(=O)NC5=CC=C(C=C5)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "36.62"
+  },
+  {
+    "PUBCHEM_SID": "24386633",
+    "PUBCHEM_CID": "16010131",
+    "SMILES_ISO": "CCCNC(=O)C1=CC2=C(C=C1)SC3=C(C=CC(=C3C(=N2)C)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24386639",
+    "PUBCHEM_CID": "16010137",
+    "SMILES_ISO": "CC1=C2C(=NC3=C(C=CC(=C3)C(=O)NCCC4=CC=CC=C4)SC2=C(C=C1)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "466.05"
+  },
+  {
+    "PUBCHEM_SID": "24387064",
+    "PUBCHEM_CID": "16010530",
+    "SMILES_ISO": "CN(C1=CC=C(C=C1)OC)C(=O)C2=CC3=C(S2)C4=CC=CC=C4OC3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "963.08"
+  },
+  {
+    "PUBCHEM_SID": "24387423",
+    "PUBCHEM_CID": "16010865",
+    "SMILES_ISO": "CCC1=CC2=C(C(=CN=C2C=C1)C(=O)C3=CC(=C(C=C3)C)C)N4CCC(CC4)C(=O)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "653.08"
+  },
+  {
+    "PUBCHEM_SID": "24387738",
+    "PUBCHEM_CID": "16011163",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C2=NC(=C(O2)C)CN3C4=C(C=C3C(=O)OC)OC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "256.88"
+  },
+  {
+    "PUBCHEM_SID": "24389898",
+    "PUBCHEM_CID": "1243964",
+    "SMILES_ISO": "CN1C2=C(C=C(C=C2)NC(=O)C3=CC(=CC=C3)Br)N=C1CN4CCCCC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "178.44"
+  },
+  {
+    "PUBCHEM_SID": "24390124",
+    "PUBCHEM_CID": "16013207",
+    "SMILES_ISO": "COC1=CC=C(C=C1)C2=NOC(=N2)CSC3=NN=C(N3C4=CC=C(C=C4)F)CC5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24391630",
+    "PUBCHEM_CID": "6485805",
+    "SMILES_ISO": "CC1=C(C(=O)N2C(=N1)N=C(N2)NC(=O)C3=CC=C(C=C3)C(C)(C)C)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "83.87"
+  },
+  {
+    "PUBCHEM_SID": "377659287",
+    "PUBCHEM_CID": "16014174",
+    "SMILES_ISO": "C1=CC=C(C=C1)CNC(=O)C2=NC(=NC=C2Cl)S(=O)(=O)CC3=CC=C(C=C3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "295.97"
+  },
+  {
+    "PUBCHEM_SID": "24391725",
+    "PUBCHEM_CID": "16014186",
+    "SMILES_ISO": "C1=CC=C(C(=C1)CS(=O)(=O)C2=NC=C(C(=N2)C(=O)NC3=CC=CC=C3F)Cl)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "505"
+  },
+  {
+    "PUBCHEM_SID": "24391907",
+    "PUBCHEM_CID": "16014337",
+    "SMILES_ISO": "CCC1=NN=C(S1)NC(=O)C2=NC(=NC=C2Cl)S(=O)(=O)CC3=CC=C(C=C3)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "710.55"
+  },
+  {
+    "PUBCHEM_SID": "24392250",
+    "PUBCHEM_CID": "16014640",
+    "SMILES_ISO": "CCCCCN1C=C2C(=C1C3=CC=C(C=C3)Br)C(=O)N(C(=O)N2C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "945.87"
+  },
+  {
+    "PUBCHEM_SID": "377679993",
+    "PUBCHEM_CID": "16014644",
+    "SMILES_ISO": "CCCCN1C=C2C(=C1C3=CC=C(C=C3)Br)C(=O)N(C(=O)N2C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24392272",
+    "PUBCHEM_CID": "16014662",
+    "SMILES_ISO": "CN1C2=CN(C(=C2C(=O)N(C1=O)C)C3=CC=C(C=C3)Br)CCC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "590.74"
+  },
+  {
+    "PUBCHEM_SID": "24392503",
+    "PUBCHEM_CID": "16014853",
+    "SMILES_ISO": "CCS(=O)(=O)C1=NC=C(C(=N1)C(=O)NC2=C(C=CC(=C2)C)C)N(CC3=CC=C(C=C3)F)CC4=CC=CO4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "696"
+  },
+  {
+    "PUBCHEM_SID": "377664250",
+    "PUBCHEM_CID": "16015040",
+    "SMILES_ISO": "CCOC(=O)N1CCN(CC1)CC2=NC3=C(N2C(C)C)C=CC(=C3)NC(=O)C4=CC=C(C=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "808.19"
+  },
+  {
+    "PUBCHEM_SID": "377712643",
+    "PUBCHEM_CID": "16015257",
+    "SMILES_ISO": "CCC1=CC=C(C=C1)OC(C)C(=O)N2CCC(CC2)C3=NC4=CC=CC=C4O3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24393159",
+    "PUBCHEM_CID": "16015431",
+    "SMILES_ISO": "CN(C1=CC=CC=C1)C(=O)CSC2=NC3=C(S2)C=C(C=C3)NC(=O)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "900.54"
+  },
+  {
+    "PUBCHEM_SID": "24394075",
+    "PUBCHEM_CID": "7661054",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)C2=NN=C(O2)SCC(=O)NCC3=CC=CC=C3Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "2"
+  },
+  {
+    "PUBCHEM_SID": "24394152",
+    "PUBCHEM_CID": "135546828",
+    "SMILES_ISO": "CCC1=CC=C(C=C1)N2C3=C(C(SCC(=O)N3)C4=CC=CC=C4C)C(=N2)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "706.67"
+  },
+  {
+    "PUBCHEM_SID": "24395522",
+    "PUBCHEM_CID": "16017615",
+    "SMILES_ISO": "COC1=CC=CC(=C1)C(=O)NC2=NN=C(S2)S(=O)(=O)N3CCOCC3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "786.8"
+  },
+  {
+    "PUBCHEM_SID": "24395988",
+    "PUBCHEM_CID": "16018041",
+    "SMILES_ISO": "CC(C)OC1=CC=C(C=C1)CNC(=O)C2CCN(CC2)C(=O)N3CCOC4=C3C=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "859.51"
+  },
+  {
+    "PUBCHEM_SID": "24396173",
+    "PUBCHEM_CID": "16018226",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)CCNC(=O)CN2C3=C(C=CC(=C3)F)N4C=CC=C4C2=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "317.04"
+  },
+  {
+    "PUBCHEM_SID": "24396266",
+    "PUBCHEM_CID": "16018319",
+    "SMILES_ISO": "CCN(CC)CCCNC(=O)C1=CC2=C(C=C1)N3C=C(N=C3S2)C4=CC=C(C=C4)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "114.22"
+  },
+  {
+    "PUBCHEM_SID": "24396388",
+    "PUBCHEM_CID": "135546945",
+    "SMILES_ISO": "COC1=CC(=CC(=C1OC)OC)NC(=O)C2=CC(=NO2)C3=CC=CC=C3O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24396621",
+    "PUBCHEM_CID": "16018629",
+    "SMILES_ISO": "COC1=CC2=C(C=C1)C(=C(N2CC3=CC=C(C=C3)C=C)C(=O)O)CNC4CCCCC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "702.5"
+  },
+  {
+    "PUBCHEM_SID": "24397051",
+    "PUBCHEM_CID": "16019052",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)N2C(=O)C3=C(C4=CC=CC=C4O3)N(C2=O)CC(=O)NC5=CC(=C(C=C5)F)Cl)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "582.9"
+  },
+  {
+    "PUBCHEM_SID": "24397142",
+    "PUBCHEM_CID": "16019143",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C2=C(SC=C2CN3CCN(CC3)C4=CC=CC(=C4)C(F)(F)F)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "35.02"
+  },
+  {
+    "PUBCHEM_SID": "24397412",
+    "PUBCHEM_CID": "8099609",
+    "SMILES_ISO": "CC1=CC(=C(C=C1Cl)OC)NS(=O)(=O)C2=C(N=C3N(C2=O)C=CS3)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "801.59"
+  },
+  {
+    "PUBCHEM_SID": "24397414",
+    "PUBCHEM_CID": "8099624",
+    "SMILES_ISO": "CC1=C(C(=O)N2C=CSC2=N1)S(=O)(=O)NC3=CC=C(C=C3)C(=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "412.73"
+  },
+  {
+    "PUBCHEM_SID": "24397943",
+    "PUBCHEM_CID": "16019899",
+    "SMILES_ISO": "CC(C)CCN1C(=O)C2=C(C=CS2)N3C1=NN=C3CCCC(=O)NC4=CC(=C(C=C4)OC)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24398886",
+    "PUBCHEM_CID": "16020541",
+    "SMILES_ISO": "CC1CCCN(C1)C2=C(C=C3C(=C2)N(C=C(C3=O)S(=O)(=O)C4=CC=CC(=C4)C)CC5=CC=CC=C5)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "832"
+  },
+  {
+    "PUBCHEM_SID": "24398888",
+    "PUBCHEM_CID": "16020543",
+    "SMILES_ISO": "CC1CCCCN1C2=C(C=C3C(=C2)N(C=C(C3=O)S(=O)(=O)C4=CC=CC(=C4)C)CC5=CC=CC=C5)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "485.18"
+  },
+  {
+    "PUBCHEM_SID": "24400515",
+    "PUBCHEM_CID": "16022130",
+    "SMILES_ISO": "CC1=CC(=C(C=C1)NC(=O)C2=C(C3=C(N2C)C=CC(=C3)C)N4CCCC4=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24401057",
+    "PUBCHEM_CID": "16022668",
+    "SMILES_ISO": "CC1=CC=C(C=C1)N2C(=C3C(=NN(C(=O)C3=N2)CCCC(=O)NC(C)C4=CC=CC=C4)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "561.83"
+  },
+  {
+    "PUBCHEM_SID": "24401072",
+    "PUBCHEM_CID": "16022683",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)C(=C(N2CC3=CC=C(C=C3)OC)C(=O)O)CNCC4=CC=CO4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "617.63"
+  },
+  {
+    "PUBCHEM_SID": "24401074",
+    "PUBCHEM_CID": "16022685",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)C(=C(N2CC3=CC=C(C=C3)OC)C(=O)O)CNCC4=CC(=CC=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "931.16"
+  },
+  {
+    "PUBCHEM_SID": "24401079",
+    "PUBCHEM_CID": "16022690",
+    "SMILES_ISO": "CC1=CC=C(C=C1)N2C(=C3C(=NN(C(=O)C3=N2)CCCC(=O)NCC4=CC=CC=C4OC)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "236.54"
+  },
+  {
+    "PUBCHEM_SID": "24401083",
+    "PUBCHEM_CID": "16022694",
+    "SMILES_ISO": "CC1=CC=C(C=C1)N2C(=C3C(=NN(C(=O)C3=N2)CCCC(=O)NCC4=CC=CC=C4F)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "290.89"
+  },
+  {
+    "PUBCHEM_SID": "24401085",
+    "PUBCHEM_CID": "16022696",
+    "SMILES_ISO": "CC1=CC=C(C=C1)N2C(=C3C(=NN(C(=O)C3=N2)CCCC(=O)NCC4=CC(=C(C=C4)OC)OC)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "159.09"
+  },
+  {
+    "PUBCHEM_SID": "24401087",
+    "PUBCHEM_CID": "16022698",
+    "SMILES_ISO": "CC1=CC=C(C=C1)N2C(=C3C(=NN(C(=O)C3=N2)CCCC(=O)NCC4=C(C(=CC=C4)OC)OC)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "445.62"
+  },
+  {
+    "PUBCHEM_SID": "24401089",
+    "PUBCHEM_CID": "16022700",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)CNC(=O)CCCN2C(=O)C3=NN(C(=C3C(=N2)C)C)C4=CC=C(C=C4)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "581.68"
+  },
+  {
+    "PUBCHEM_SID": "24401402",
+    "PUBCHEM_CID": "16023012",
+    "SMILES_ISO": "CC1=CC=C(C=C1)CCNC(=O)C2CCCN(C2)C3=NN=C(C4=C(N(N=C43)C5=CC=C(C=C5)OC)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "467.03"
+  },
+  {
+    "PUBCHEM_SID": "24401491",
+    "PUBCHEM_CID": "16023100",
+    "SMILES_ISO": "CC1=CC(=CC=C1)N(C)C2=NC3=CC=CC=C3C4=NN=C(N42)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24401675",
+    "PUBCHEM_CID": "135410423",
+    "SMILES_ISO": "CC1=CC(=CC=C1)NC(=O)C2=C3NC(=C(C(N3N=C2)C4=CC=CC=C4Cl)C(=O)NC5=CC=CC=C5OC)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "156"
+  },
+  {
+    "PUBCHEM_SID": "24401679",
+    "PUBCHEM_CID": "135410425",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)C2C(=C(NC3=C(C=NN23)C(=O)NC4=CC=CC(=C4)C)C)C(=O)NC5=CC=CC=C5OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "170"
+  },
+  {
+    "PUBCHEM_SID": "24401705",
+    "PUBCHEM_CID": "135410430",
+    "SMILES_ISO": "CCC1=CC=C(C=C1)C2C(=C(NC3=C(C=NN23)C(=O)NC4=CC=C(C=C4)C)C)C(=O)NC5=CC=CC=C5OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "288"
+  },
+  {
+    "PUBCHEM_SID": "24401972",
+    "PUBCHEM_CID": "16023573",
+    "SMILES_ISO": "CC1=NOC2=NC=NC(=C12)NCC3=C(C=CC(=C3)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "249.71"
+  },
+  {
+    "PUBCHEM_SID": "24401984",
+    "PUBCHEM_CID": "16023585",
+    "SMILES_ISO": "CC1=NOC2=NC=NC(=C12)NCCC3=C(C=C(C=C3)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "539.59"
+  },
+  {
+    "PUBCHEM_SID": "24402305",
+    "PUBCHEM_CID": "16023905",
+    "SMILES_ISO": "CC1=CC=C(C=C1)N2C(=C(C=N2)C(=O)NCCC3=CNC4=C3C=C(C=C4)OC)C5CCN(CC5)C(=O)OC(C)(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "689.27"
+  },
+  {
+    "PUBCHEM_SID": "24402427",
+    "PUBCHEM_CID": "16024023",
+    "SMILES_ISO": "COC1=CC=CC(=C1)CNCC2=CC=CN2C3=NN=C(S3)N4CCN(CC4)C5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "923.92"
+  },
+  {
+    "PUBCHEM_SID": "24404058",
+    "PUBCHEM_CID": "16025620",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)C2=CC(=NO2)C)S(=O)(=O)NCC3CCN(CC3)CC4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "485.51"
+  },
+  {
+    "PUBCHEM_SID": "24404064",
+    "PUBCHEM_CID": "16025626",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)OCCN2S(=O)(=O)C3=C(C=CC(=C3)C4=C(C(=NO4)C)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "226"
+  },
+  {
+    "PUBCHEM_SID": "24404134",
+    "PUBCHEM_CID": "16025693",
+    "SMILES_ISO": "CC1=C(N=NN1C2=CC=CC=C2C(F)(F)F)C3=NSC(=N3)NC(=O)C4=CC(=CC=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "834.49"
+  },
+  {
+    "PUBCHEM_SID": "24404274",
+    "PUBCHEM_CID": "16025831",
+    "SMILES_ISO": "CC1=CC(=CC=C1)CN2C(=C(C(=N2)SC)S(=O)(=O)C3=CC=CC=C3)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "878.48"
+  },
+  {
+    "PUBCHEM_SID": "24405034",
+    "PUBCHEM_CID": "16026577",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)N2CC(CC2=O)C3=NC(=NO3)C4=CC(=C(C(=C4)OC)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24406458",
+    "PUBCHEM_CID": "16027973",
+    "SMILES_ISO": "COC1=CC=CC=C1CNS(=O)(=O)C2=CC=C(C=C2)C3=CN=C(O3)C4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24406490",
+    "PUBCHEM_CID": "16028005",
+    "SMILES_ISO": "CC1=CC(=C(C=C1)OC)NS(=O)(=O)C2=CC=C(C=C2)C3=CN=C(O3)C4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "882.8"
+  },
+  {
+    "PUBCHEM_SID": "24406518",
+    "PUBCHEM_CID": "16028031",
+    "SMILES_ISO": "CCOC1=CC=CC=C1CNS(=O)(=O)C2=CC=C(C=C2)C3=CN=C(O3)C4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24406580",
+    "PUBCHEM_CID": "7498662",
+    "SMILES_ISO": "CC1=CC=CC=C1C(=O)NC2=CC3=C(C=C2)N(CCC3)C(=O)C4=CC=CS4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "561.17"
+  },
+  {
+    "PUBCHEM_SID": "24406584",
+    "PUBCHEM_CID": "7498666",
+    "SMILES_ISO": "CC(C)OC1=CC=C(C=C1)C(=O)NC2=CC3=C(C=C2)N(CCC3)C(=O)C4=CC=CS4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "800.03"
+  },
+  {
+    "PUBCHEM_SID": "24406614",
+    "PUBCHEM_CID": "16028117",
+    "SMILES_ISO": "CC(C)(C)C1=CC=C(C=C1)C(=O)NC2=CC3=C(C=C2)N(CCC3)C(=O)C4=CC=CS4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "883.85"
+  },
+  {
+    "PUBCHEM_SID": "24406691",
+    "PUBCHEM_CID": "16028187",
+    "SMILES_ISO": "CCN1CCN(CC1)C2=NC=C3CN(CCC3=N2)CC4=CC(=CS4)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "77.11"
+  },
+  {
+    "PUBCHEM_SID": "24406701",
+    "PUBCHEM_CID": "16028197",
+    "SMILES_ISO": "COC1=CC=CC(=C1)N2CCN(CC2)C3=NC=C4CN(CCC4=N3)CC5=CC=C(C=C5)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "938.64"
+  },
+  {
+    "PUBCHEM_SID": "24406969",
+    "PUBCHEM_CID": "16028421",
+    "SMILES_ISO": "CCCCOC1=CC=C(C=C1)CNC(=O)C2=NN3CCCN(C(=O)C3=C2)CC4=CC=C(C=C4)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "867.15"
+  },
+  {
+    "PUBCHEM_SID": "377677992",
+    "PUBCHEM_CID": "16029337",
+    "SMILES_ISO": "CCN(CCN(C)C)C(=O)C1CCN(CC1)S(=O)(=O)C2=C(ON=C2C)/C=C/C3=CC=CC=C3F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "564.98"
+  },
+  {
+    "PUBCHEM_SID": "24408362",
+    "PUBCHEM_CID": "16029644",
+    "SMILES_ISO": "CN1C2=C(CN(CC2)CC3=CC=C(C=C3)OC)C(=O)N4C1=C(C=N4)C(=O)N5CCN(CC5)C6=CC=CC=C6OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "323.51"
+  },
+  {
+    "PUBCHEM_SID": "24409243",
+    "PUBCHEM_CID": "16030494",
+    "SMILES_ISO": "COC1=CC=CC=C1C(=O)NC2=NN=C(S2)SCC3=CC(=O)C4=CC=CC=C4N3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "401.87"
+  },
+  {
+    "PUBCHEM_SID": "24409593",
+    "PUBCHEM_CID": "16030748",
+    "SMILES_ISO": "CC1=CC(=CC=C1)C2=NN(C(=C2)NC(=O)C3=CC=CC=C3C)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "785.73"
+  },
+  {
+    "PUBCHEM_SID": "24409969",
+    "PUBCHEM_CID": "16031040",
+    "SMILES_ISO": "CCOC(=O)C1=C(C(=C(N1)C)CCC(=O)N2CCN(CC2)C3=C(C=CC(=C3)C)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24410177",
+    "PUBCHEM_CID": "16031229",
+    "SMILES_ISO": "C1CN(CCN1C2=CC=CC=C2)S(=O)(=O)C3=CN=C(N=C3)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "6.73"
+  },
+  {
+    "PUBCHEM_SID": "24410653",
+    "PUBCHEM_CID": "16031687",
+    "SMILES_ISO": "CC1=C(C=CC=C1Cl)NC(=O)CNS(=O)(=O)C2=CC=CS2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "458.11"
+  },
+  {
+    "PUBCHEM_SID": "24410732",
+    "PUBCHEM_CID": "16031764",
+    "SMILES_ISO": "CC1CCN(CC1)S(=O)(=O)C2=CC3=C(C=C2)N(C(=O)C=C3)CC(=O)NCC4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "828.1"
+  },
+  {
+    "PUBCHEM_SID": "24410855",
+    "PUBCHEM_CID": "7080326",
+    "SMILES_ISO": "CC1=C(N=C2N1C=CC=N2)C3=CC(=CC=C3)NC(=O)C4=CC(=C(C=C4)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "710.11"
+  },
+  {
+    "PUBCHEM_SID": "24411542",
+    "PUBCHEM_CID": "16032111",
+    "SMILES_ISO": "C1=CC=C(C=C1)OCC(=O)NCC(C2=CC=CS2)S(=O)(=O)C3=CC=C(C=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "855.37"
+  },
+  {
+    "PUBCHEM_SID": "24411547",
+    "PUBCHEM_CID": "4705986",
+    "SMILES_ISO": "CN(C)CCCN1C(C2=C(C1=O)OC3=C(C2=O)C=C(C=C3)Cl)C4=CC(=C(C=C4)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "7.76"
+  },
+  {
+    "PUBCHEM_SID": "24412196",
+    "PUBCHEM_CID": "7287095",
+    "SMILES_ISO": "CC1=C(SC2=NC(=NN12)C3=CC=C(C=C3)OC)CCNC(=O)C(C)(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "657.26"
+  },
+  {
+    "PUBCHEM_SID": "24412895",
+    "PUBCHEM_CID": "16033040",
+    "SMILES_ISO": "CC(C)(C)C1=CC=C(C=C1)S(=O)(=O)N2CCC(CC2)C3=CC=NC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "753.95"
+  },
+  {
+    "PUBCHEM_SID": "24412997",
+    "PUBCHEM_CID": "16033135",
+    "SMILES_ISO": "C1CCN(CC1)C2CCN(CC2)C3=C(C=C(C=C3)NC(=O)C4=CC=C(C=C4)Br)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "7.15"
+  },
+  {
+    "PUBCHEM_SID": "24413059",
+    "PUBCHEM_CID": "16033196",
+    "SMILES_ISO": "CCCCNC(=O)CN1CCN(CC1)C2=C(C=C(C=N2)NC(=O)C3=CC=C(C=C3)Cl)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.92"
+  },
+  {
+    "PUBCHEM_SID": "24413540",
+    "PUBCHEM_CID": "16033636",
+    "SMILES_ISO": "CC(=O)NC1=CC=C(C=C1)C(=O)NC2=CC3=C(C=C2)SC4=CC=CC=C4C(=O)N3C5CCCC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "510.8"
+  },
+  {
+    "PUBCHEM_SID": "24414107",
+    "PUBCHEM_CID": "16033831",
+    "SMILES_ISO": "CC1=CC(=CC=C1)CN2C3=C(C4=C(S3)CN(CC4)C(=O)C)C(=O)N(C2=O)C5=CC=CC=C5Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "686.93"
+  },
+  {
+    "PUBCHEM_SID": "24414133",
+    "PUBCHEM_CID": "16033843",
+    "SMILES_ISO": "CC1=C(C=CC=C1Cl)N2C(=O)C3=C(N(C2=O)CC4=CC(=CC=C4)OC)SC5=C3CCN(C5)C(=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24414158",
+    "PUBCHEM_CID": "4189771",
+    "SMILES_ISO": "CC1=C(C(=NN1)C)CCC2=NN3C(=N2)C4=CC=CC=C4N=C3SCC(=O)NC5=CC=C(C=C5)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "382.67"
+  },
+  {
+    "PUBCHEM_SID": "24414166",
+    "PUBCHEM_CID": "4640646",
+    "SMILES_ISO": "CCC(C(=O)NC1=CC=C(C=C1)F)SC2=NC3=CC=CC=C3C4=NC(=NN42)CCC5=C(NN=C5C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "205.02"
+  },
+  {
+    "PUBCHEM_SID": "24414195",
+    "PUBCHEM_CID": "4107705",
+    "SMILES_ISO": "CCC1=CC=CC=C1NC2=C3C=NN(C3=NC=N2)C4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "100"
+  },
+  {
+    "PUBCHEM_SID": "24414538",
+    "PUBCHEM_CID": "16033976",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)N2C3=NC=NC(=C3C=N2)NCCCN4C=CN=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "558.87"
+  },
+  {
+    "PUBCHEM_SID": "24416135",
+    "PUBCHEM_CID": "135437057",
+    "SMILES_ISO": "CCC1=CC=CC=C1N2C(=N)C3=C(NN=C3N=C2SCC(=O)NC4=CC=C(C=C4)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "24416313",
+    "PUBCHEM_CID": "16034384",
+    "SMILES_ISO": "COC1=CC(=CC(=C1)NC(=O)CN2C3=C(C=C(C=C3)S(=O)(=O)N4CCCCCC4)OC2=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "372"
+  },
+  {
+    "PUBCHEM_SID": "24416441",
+    "PUBCHEM_CID": "16034426",
+    "SMILES_ISO": "CCOC1=CC=C(C=C1)C2C3=C(C(=O)N2CCCN(C)C)OC4=C(C3=O)C=C(C=C4)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "29.58"
+  },
+  {
+    "PUBCHEM_SID": "24416554",
+    "PUBCHEM_CID": "3136596",
+    "SMILES_ISO": "CC1=CC=C(C=C1)NC(=O)CN(C2=CC=C(C=C2)C)S(=O)(=O)C3=CC(=C(C=C3)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "662.98"
+  },
+  {
+    "PUBCHEM_SID": "24417129",
+    "PUBCHEM_CID": "5300038",
+    "SMILES_ISO": "C1CN2CCC1C3=C2C=C4C(=C(SC4=N3)C(=O)NC5=CC=CC(=C5)C#N)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "285.4"
+  },
+  {
+    "PUBCHEM_SID": "24417337",
+    "PUBCHEM_CID": "16034817",
+    "SMILES_ISO": "CC1=CC2=C(C=C1)OC3=C(C2=O)C(N(C3=O)CCCN4CCOCC4)C5=CC(=C(C=C5)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "19.21"
+  },
+  {
+    "PUBCHEM_SID": "24417443",
+    "PUBCHEM_CID": "7312224",
+    "SMILES_ISO": "CCCC1=C(C2=C(O1)C=CC(=C2)NS(=O)(=O)C3=CC=C(C=C3)OC)C(=O)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.84"
+  },
+  {
+    "PUBCHEM_SID": "363676592",
+    "PUBCHEM_CID": "392622",
+    "SMILES_ISO": "CC(C)C1=NC(=CS1)CN(C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CC2=CC=CC=C2)C[C@@H]([C@H](CC3=CC=CC=C3)NC(=O)OCC4=CN=CS4)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "843.83"
+  },
+  {
+    "PUBCHEM_SID": "29215515",
+    "PUBCHEM_CID": "123767",
+    "SMILES_ISO": "C1CCC(C(=O)C1)(C2=CC=CC=C2Cl)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "11.11"
+  },
+  {
+    "PUBCHEM_SID": "29215522",
+    "PUBCHEM_CID": "9872740",
+    "SMILES_ISO": "C[C@H](CNC(C)(C)CC(=O)N[C@@H]1CCC2=CC=CC=C2N(C1=O)CC3=CC=C(C=C3)C4=CC=CC=C4C5=NNN=N5)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.85"
+  },
+  {
+    "PUBCHEM_SID": "170465938",
+    "PUBCHEM_CID": "16351",
+    "SMILES_ISO": "CN1CCN(CC1)C2=NC3=CC=CC=C3SC4=C2C=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "886.96"
+  },
+  {
+    "PUBCHEM_SID": "170466638",
+    "PUBCHEM_CID": "65776",
+    "SMILES_ISO": "CC1=C(N(C2=C1C=C(C=C2)C(=O)OCCN(C)C)CC3=CC=CC=C3)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "144205424",
+    "PUBCHEM_CID": "5708341",
+    "SMILES_ISO": "CCN(CC)CCCC(C)NC1=C2C=CC(=CC2=NC(=C1)/C=C/C3=CC=CC=C3Cl)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "82.94"
+  },
+  {
+    "PUBCHEM_SID": "144205434",
+    "PUBCHEM_CID": "68363",
+    "SMILES_ISO": "CCOC1=CC(=CC(=C1OCC)OCC)C2=NC=CC3=CC(=C(C=C32)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "26754698",
+    "PUBCHEM_CID": "5283451",
+    "SMILES_ISO": "CC/C=C\\C/C=C\\C/C=C\\C/C=C\\C/C=C\\C/C=C\\CCC(=O)NCCO",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "19.5"
+  },
+  {
+    "PUBCHEM_SID": "170466591",
+    "PUBCHEM_CID": "6917728",
+    "SMILES_ISO": "CCC1=CC(=C(C(=C1O)C(=O)NC[C@@H]2CCCN2CC)OC)Cl.Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "899.17"
+  },
+  {
+    "PUBCHEM_SID": "90340867",
+    "PUBCHEM_CID": "33036",
+    "SMILES_ISO": "CN(C)CC[C@@H](C1=CC=C(C=C1)Cl)C2=CC=CC=N2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "82.5"
+  },
+  {
+    "PUBCHEM_SID": "50111292",
+    "PUBCHEM_CID": "128563",
+    "SMILES_ISO": "CC(=O)O[C@H]1C[C@H]([C@@]2(CC[C@H]3C(=O)O[C@@H](C[C@@]3([C@H]2C1=O)C)C4=COC=C4)C)C(=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "380.65"
+  },
+  {
+    "PUBCHEM_SID": "174007039",
+    "PUBCHEM_CID": "72303",
+    "SMILES_ISO": "C=CCC1=CC(=C(C=C1)O)C2=CC(=C(C=C2)O)CC=C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "446.17"
+  },
+  {
+    "PUBCHEM_SID": "384568257",
+    "PUBCHEM_CID": "104850",
+    "SMILES_ISO": "CC1=C(N(N=C1C(=O)NN2CCCCC2)C3=C(C=C(C=C3)Cl)Cl)C4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "404904684",
+    "PUBCHEM_CID": "5329102",
+    "SMILES_ISO": "CCN(CC)CCNC(=O)C1=C(NC(=C1C)/C=C\\2/C3=C(C=CC(=C3)F)NC2=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "53.87"
+  },
+  {
+    "PUBCHEM_SID": "384568294",
+    "PUBCHEM_CID": "10474335",
+    "SMILES_ISO": "COC1=CC=CC2=C1CCCC2CCCN3CCN(CC3)C4CCCCC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "777"
+  },
+  {
+    "PUBCHEM_SID": "384568319",
+    "PUBCHEM_CID": "208908",
+    "SMILES_ISO": "CS(=O)(=O)CCNCC1=CC=C(O1)C2=CC3=C(C=C2)N=CN=C3NC4=CC(=C(C=C4)OCC5=CC(=CC=C5)F)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "69.7"
+  },
+  {
+    "PUBCHEM_SID": "384568321",
+    "PUBCHEM_CID": "3081361",
+    "SMILES_ISO": "CN1CCC(CC1)COC2=C(C=C3C(=C2)N=CN=C3NC4=C(C=C(C=C4)Br)F)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "97.29"
+  },
+  {
+    "PUBCHEM_SID": "384568324",
+    "PUBCHEM_CID": "636411",
+    "SMILES_ISO": "CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=C(N2)C=CC(=N3)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "49.75"
+  },
+  {
+    "PUBCHEM_SID": "90341833",
+    "PUBCHEM_CID": "11224758",
+    "SMILES_ISO": "CSC1=CC=CC=C1N2CCN(CC2)CCCCCC(=O)NC3CCCC4=CC=CC=C34",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "627.93"
+  },
+  {
+    "PUBCHEM_SID": "124893357",
+    "PUBCHEM_CID": "540335",
+    "SMILES_ISO": "CN1CCN(CC1)C2=CC=C(C=C2)NC3=C4C=CC=CC4=NC5=CC=CC=C53",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "3.75"
+  },
+  {
+    "PUBCHEM_SID": "124398492",
+    "PUBCHEM_CID": "619526",
+    "SMILES_ISO": "C1=CC2=C(C=C1Cl)NC(=O)C3=CSC=C3N2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "63.34"
+  },
+  {
+    "PUBCHEM_SID": "363676681",
+    "PUBCHEM_CID": "11219835",
+    "SMILES_ISO": "C1=CC=C(C(=C1)C2=NC(=NO2)C3=CC(=CC=C3)C(=O)O)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "891.55"
+  },
+  {
+    "PUBCHEM_SID": "363676921",
+    "PUBCHEM_CID": "428373",
+    "SMILES_ISO": "CCC(C)C1C(=O)N(C(C(=O)N(C(C(=O)NCCC(=O)OC(C(=O)N2CCCC2C(=O)N1)CC(C)C)C)C)C(C)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "74"
+  },
+  {
+    "PUBCHEM_SID": "50124081",
+    "PUBCHEM_CID": "72287",
+    "SMILES_ISO": "C[C@@H](CN1C2=CC=CC=C2SC3=C1C=C(C=C3)OC)CN(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "722.7"
+  },
+  {
+    "PUBCHEM_SID": "170465871",
+    "PUBCHEM_CID": "92178",
+    "SMILES_ISO": "CN1CCN(CC1)CCCN2C3=CC=CC=C3SC4=C2C=C(C=C4)S(=O)(=O)N(C)C.CS(=O)(=O)O.CS(=O)(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "730.49"
+  },
+  {
+    "PUBCHEM_SID": "50125355",
+    "PUBCHEM_CID": "24871224",
+    "SMILES_ISO": "CC[C@H]1CN2CCC3CC(C(CC3[C@@H]2C[C@@H]1C[C@@H]4C5=C(CCN4)CC(=C(C5)OC)O)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "17.93"
+  },
+  {
+    "PUBCHEM_SID": "57288372",
+    "PUBCHEM_CID": "25181364",
+    "SMILES_ISO": "C1=CNC(=O)C(=C1C2=CC=NC=C2)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "2.72"
+  },
+  {
+    "PUBCHEM_SID": "57288373",
+    "PUBCHEM_CID": "25181365",
+    "SMILES_ISO": "C1=CC=C(C=C1)C2=C(C(=O)NC=C2)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "76.76"
+  },
+  {
+    "PUBCHEM_SID": "57288374",
+    "PUBCHEM_CID": "25181366",
+    "SMILES_ISO": "CN(C)C1=CC=C(C=C1)C2=C(C(=O)NC=C2)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "170.53"
+  },
+  {
+    "PUBCHEM_SID": "384568407",
+    "PUBCHEM_CID": "24180125",
+    "SMILES_ISO": "C1CN(CCN1)CC2=CSC3=NC(=CN23)C4=CC=CC=C4NC(=O)C5=NC6=CC=CC=C6N=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "342.03"
+  },
+  {
+    "PUBCHEM_SID": "170466021",
+    "PUBCHEM_CID": "2515",
+    "SMILES_ISO": "CCN(CC(C)O)C1=NN=C(C=C1)NNC(=O)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "8.57"
+  },
+  {
+    "PUBCHEM_SID": "170465934",
+    "PUBCHEM_CID": "5736",
+    "SMILES_ISO": "CN(C)CCOC1=CC2=CC=CC=C2SC3=C1C=C(C=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "857.48"
+  },
+  {
+    "PUBCHEM_SID": "124893814",
+    "PUBCHEM_CID": "3136131",
+    "SMILES_ISO": "CCC(=O)NC(C1=CC=C(C=C1)OC)C2=CC(=C3C=CC=NC3=C2O)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.75"
+  },
+  {
+    "PUBCHEM_SID": "89650062",
+    "PUBCHEM_CID": "44825271",
+    "SMILES_ISO": "CN1C(=NN=N1)SC2=NC=NC3=C2C(=CS3)C4=CC=CC=C4F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "450.78"
+  },
+  {
+    "PUBCHEM_SID": "89650099",
+    "PUBCHEM_CID": "44142144",
+    "SMILES_ISO": "CN1C(=NN=N1)SC2=NC=NC3=C2C(=CS3)C4=CC5=CC=CC=C5O4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "52.83"
+  },
+  {
+    "PUBCHEM_SID": "144206868",
+    "PUBCHEM_CID": "27901",
+    "SMILES_ISO": "CN1CCC(CC1)N(CC2=CC=CS2)C3=CC=CC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "253.95"
+  },
+  {
+    "PUBCHEM_SID": "85267871",
+    "PUBCHEM_CID": "3915663",
+    "SMILES_ISO": "CC1=CC=C(C=C1)CNCC2=C(NN=C2)C3=CC=C(C=C3)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "410"
+  },
+  {
+    "PUBCHEM_SID": "363677104",
+    "PUBCHEM_CID": "656668",
+    "SMILES_ISO": "CC1=C([C@H](C(=C(N1)C)C(=O)O[C@@H]2CCCN(C2)CC3=CC=CC=C3)C4=CC(=CC=C4)[N+](=O)[O-])C(=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "103061604",
+    "PUBCHEM_CID": "49787093",
+    "SMILES_ISO": "CN1CCN(CC1)C2=CC=C(C=C2)NC3=NN4C(=O)C5=CC=CC=C5N=C4S3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.91"
+  },
+  {
+    "PUBCHEM_SID": "99367964",
+    "PUBCHEM_CID": "46907663",
+    "SMILES_ISO": "C1CN(CCC1C(=O)N)C2=NC=CC(=N2)C3=CC4=C(C=C3)OCCO4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "190.7"
+  },
+  {
+    "PUBCHEM_SID": "99367978",
+    "PUBCHEM_CID": "46907687",
+    "SMILES_ISO": "CCOC(=O)C1CCN(CC1)C2=NC=C(S2)C3=CC4=C(C=C3)OCCCO4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "99367980",
+    "PUBCHEM_CID": "46907666",
+    "SMILES_ISO": "C1COC2=C(C=C(C=C2)C3=CN=C(S3)N4CCC(CC4)C(=O)O)OC1",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "104224268",
+    "PUBCHEM_CID": "49853131",
+    "SMILES_ISO": "CC1=CC(=NC=C1)NC(=S)N2CCN(CC2)C3=CC=C(C=C3)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "4.13"
+  },
+  {
+    "PUBCHEM_SID": "104224270",
+    "PUBCHEM_CID": "701529",
+    "SMILES_ISO": "C1=CC=C(C=C1)CCN2C3=CC=CC=C3NC2=S",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "903.08"
+  },
+  {
+    "PUBCHEM_SID": "385842039",
+    "PUBCHEM_CID": "25256849",
+    "SMILES_ISO": "CC(C(C)(C)C)NCC1=CC2=C(C=C1)N(C(=N2)NC(=O)C3=CC=C(S3)C4=CNN=C4)CC(C)(C)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "4.16"
+  },
+  {
+    "PUBCHEM_SID": "87915648",
+    "PUBCHEM_CID": "44634872",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)Cl)NS(=O)(=O)C2=C(C=C3C(=C2)CCC(=O)N3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "616.9"
+  },
+  {
+    "PUBCHEM_SID": "87915649",
+    "PUBCHEM_CID": "44634868",
+    "SMILES_ISO": "CC1=C(C=CC(=C1)NS(=O)(=O)C2=CC3=C(C=C2)NC(=O)CC3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "462.83"
+  },
+  {
+    "PUBCHEM_SID": "87915650",
+    "PUBCHEM_CID": "7601970",
+    "SMILES_ISO": "C1CC(=O)NC2=C1C=C(C=C2)S(=O)(=O)NC3=CC(=C(C=C3)F)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "662.78"
+  },
+  {
+    "PUBCHEM_SID": "384568456",
+    "PUBCHEM_CID": "10127622",
+    "SMILES_ISO": "CN1C=NC2=C1C=C(C(=C2F)NC3=C(C=C(C=C3)Br)Cl)C(=O)NOCCO",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "150.97"
+  },
+  {
+    "PUBCHEM_SID": "103061644",
+    "PUBCHEM_CID": "49787080",
+    "SMILES_ISO": "CN(C)[C@@H]1CCN(C1)C2=CC=CC(=C2)NC3=NN4C(=O)C5=CC=CC=C5N=C4S3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "24.87"
+  },
+  {
+    "PUBCHEM_SID": "104224471",
+    "PUBCHEM_CID": "49853213",
+    "SMILES_ISO": "C1CNCCC1C2=CC=C(C=C2)NCC3=CC=C(O3)C4=CC=C(C=C4)C#N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "236.42"
+  },
+  {
+    "PUBCHEM_SID": "99431346",
+    "PUBCHEM_CID": "46926065",
+    "SMILES_ISO": "CC1=C(C(N=C(N1)NC2=NC3=CC=CC=C3O2)C4=C(C=NN4)Cl)C(=O)NC5=NC6=CC=CC=C6S5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "15.6"
+  },
+  {
+    "PUBCHEM_SID": "124948829",
+    "PUBCHEM_CID": "45166426",
+    "SMILES_ISO": "CC1=CN=C(N=C1C2CCCN(C2)C(=O)C3=C4CCCCC4=CS3)SCC5=CC=CC=N5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "124949023",
+    "PUBCHEM_CID": "45166656",
+    "SMILES_ISO": "CC(COC)NCC1=C(N=C2C=C(C=CC2=C1)OC)N3CCN(CC3)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "576.43"
+  },
+  {
+    "PUBCHEM_SID": "104224537",
+    "PUBCHEM_CID": "49852898",
+    "SMILES_ISO": "CN1CCN(CC1)C2=CC3=C(C=CC(=C3N=C2)O)C(=O)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "80.08"
+  },
+  {
+    "PUBCHEM_SID": "377020233",
+    "PUBCHEM_CID": "3038525",
+    "SMILES_ISO": "C1=CC(=C(C(=C1)Cl)C2=C3C=CC(=NN3C=NC2=O)SC4=C(C=C(C=C4)F)F)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "792.9"
+  },
+  {
+    "PUBCHEM_SID": "99460846",
+    "PUBCHEM_CID": "46947861",
+    "SMILES_ISO": "CCOC1=C(C=C(C=C1)CCNC(=O)C2=CC3=CC=CC=C3N2C)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "99460863",
+    "PUBCHEM_CID": "46947870",
+    "SMILES_ISO": "CCOC1=C(C=C(C=C1)CCNC(=O)C2=CC=CC(=C2)C(=O)C3=CC=CC=C3)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "144206383",
+    "PUBCHEM_CID": "13493",
+    "SMILES_ISO": "CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OCC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "285.07"
+  },
+  {
+    "PUBCHEM_SID": "161003880",
+    "PUBCHEM_CID": "4620214",
+    "SMILES_ISO": "CC1=CC=C(C=C1)S(=O)(=O)NC2=CC=CC=C2C(=O)NC3=NC(=CS3)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "144116857",
+    "PUBCHEM_CID": "60167830",
+    "SMILES_ISO": "C1=CC=C(C(=C1)C2=NC3=CC=CC=C3C(=N2)NCC4=CC=C(C=C4)C5=CN=CC=C5)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "711.6"
+  },
+  {
+    "PUBCHEM_SID": "144116891",
+    "PUBCHEM_CID": "60167877",
+    "SMILES_ISO": "CC1=CC=CC=C1C2=NC3=CC=CC=C3C(=N2)NCC4=CC=C(C=C4)C5=CN=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "144116899",
+    "PUBCHEM_CID": "60167920",
+    "SMILES_ISO": "CC(C)C1=CC=CC=C1C2=NC3=CC=CC=C3C(=N2)NCC4=CC=C(C=C4)C5=CN=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "144116904",
+    "PUBCHEM_CID": "60167825",
+    "SMILES_ISO": "C1=CC=C2C(=C1)C(=NC(=N2)C3=CC=CC=C3F)NCC4=CC=C(C=C4)C5=CN=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "134225117",
+    "PUBCHEM_CID": "56593345",
+    "SMILES_ISO": "CCOC1=CC=CC=C1C(=O)NC2=C(C=NC=C2)C(=O)NC3=CC(=CC=C3)S(=O)(=O)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "139.03"
+  },
+  {
+    "PUBCHEM_SID": "134225118",
+    "PUBCHEM_CID": "56593309",
+    "SMILES_ISO": "CCOC1=CC=CC=C1C(=O)NC2=C(C=CC=N2)C(=O)NC3=CC(=CC=C3)S(=O)(=O)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "656.29"
+  },
+  {
+    "PUBCHEM_SID": "144116910",
+    "PUBCHEM_CID": "60167932",
+    "SMILES_ISO": "CC(C)C1=CC=CC=C1C2=NC3=C(CNC3)C(=N2)NCC4=CC=C(C=C4)C5=CN=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "98.67"
+  },
+  {
+    "PUBCHEM_SID": "144116917",
+    "PUBCHEM_CID": "60167795",
+    "SMILES_ISO": "COC1=CC=CC=C1C2=NC3=CC=CC=C3C(=N2)NCC4=CC=C(C=C4)C5=CN=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "726.8"
+  },
+  {
+    "PUBCHEM_SID": "384568539",
+    "PUBCHEM_CID": "10077147",
+    "SMILES_ISO": "C1CCN(C1)C(=O)NC2=CC=CC(=C2)NC3=NC=C(C(=N3)NCCCNC(=O)C4=CC=CS4)I",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "233.72"
+  },
+  {
+    "PUBCHEM_SID": "384568558",
+    "PUBCHEM_CID": "25022668",
+    "SMILES_ISO": "C1CCC(C1)C2=C(C=CC(=C2)C3=CNC4=C3C=C(C=N4)C5=CC=CC=C5)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "400.29"
+  },
+  {
+    "PUBCHEM_SID": "144116927",
+    "PUBCHEM_CID": "60167883",
+    "SMILES_ISO": "CC1=NC=C(C=C1)C2=CC=C(C=C2)CNC3=NC(=NC4=CC=CC=C43)C5=CC=CC=C5C(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "857.48"
+  },
+  {
+    "PUBCHEM_SID": "384568572",
+    "PUBCHEM_CID": "60167849",
+    "SMILES_ISO": "CC1=CN=C(N=C1NCC2=CC=C(C=C2)N3C=CN=N3)C4=CC=CC=C4C(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "663.04"
+  },
+  {
+    "PUBCHEM_SID": "160844121",
+    "PUBCHEM_CID": "70701462",
+    "SMILES_ISO": "CNC1=C(N=C(O1)C2=C(C(=CC=C2)Cl)Cl)C#N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "589.39"
+  },
+  {
+    "PUBCHEM_SID": "384568599",
+    "PUBCHEM_CID": "178024",
+    "SMILES_ISO": "CC(C)(C(=O)N[C@H](COCC1=CC=CC=C1)C(=O)N2CCC3(CC2)CN(C4=CC=CC=C34)S(=O)(=O)C)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "27.54"
+  },
+  {
+    "PUBCHEM_SID": "363677239",
+    "PUBCHEM_CID": "22049997",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)C(=O)NC)N2C(=CC(=C(C2=O)Br)OCC3=C(C=C(C=C3)F)F)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "627.1"
+  },
+  {
+    "PUBCHEM_SID": "363677269",
+    "PUBCHEM_CID": "57519531",
+    "SMILES_ISO": "C[C@@]1(CN(C[C@@]1(C)CO)C2=NC=C(C(=C2)C(=O)NC3=CC4=C(CCC5=C4N(N=C5C(=O)N)C6=CC=C(C=C6)F)C=C3)Cl)CO",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "45.61"
+  },
+  {
+    "PUBCHEM_SID": "404904703",
+    "PUBCHEM_CID": "49836027",
+    "SMILES_ISO": "CCC(=O)N1CCN(CC1)C2=C(C=C(C=C2)N3C(=O)C=CC4=CN=C5C=CC(=CC5=C43)C6=CC7=CC=CC=C7N=C6)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "536.52"
+  },
+  {
+    "PUBCHEM_SID": "363677296",
+    "PUBCHEM_CID": "70701426",
+    "SMILES_ISO": "COC1=CC=CC(=C1O)CNC2=CC=C(C=C2)S(=O)(=O)NC3=NC4=CC=CC=C4S3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "392.64"
+  },
+  {
+    "PUBCHEM_SID": "170465287",
+    "PUBCHEM_CID": "64722",
+    "SMILES_ISO": "CN1CCCC(C1)CC2C3=CC=CC=C3SC4=CC=CC=C24.Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384568708",
+    "PUBCHEM_CID": "9968854",
+    "SMILES_ISO": "C1COCCN1CC2=CC=C(C=C2)C3=CC(=C(S3)C(=O)N)NC(=O)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.19"
+  },
+  {
+    "PUBCHEM_SID": "363677311",
+    "PUBCHEM_CID": "4823",
+    "SMILES_ISO": "CC1CC(=O)NN=C1C2=CC3=C(C=C2)N=C(N3)C4=CC=C(C=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "232.2"
+  },
+  {
+    "PUBCHEM_SID": "384568713",
+    "PUBCHEM_CID": "71668132",
+    "SMILES_ISO": "C1CN(CCN1)C2=CC(=O)N3C(=N2)SC(=N3)C4=CC(=CN=C4)NC(=O)CN",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.07"
+  },
+  {
+    "PUBCHEM_SID": "377660805",
+    "PUBCHEM_CID": "1497027",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)C(=O)NC2=CC3=C(C=C2)OC(=N3)C4=CN=CC=C4)[N+](=O)[O-]",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "693.35"
+  },
+  {
+    "PUBCHEM_SID": "377714310",
+    "PUBCHEM_CID": "3614652",
+    "SMILES_ISO": "CC1=CC=C(C=C1)S(=O)(=O)NC2=NC3=C(C=C(C=C3)C)N=C2NC4=CC5=C(C=C4)OCO5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "333.68"
+  },
+  {
+    "PUBCHEM_SID": "377708173",
+    "PUBCHEM_CID": "9368465",
+    "SMILES_ISO": "CC1=CC=C(C=C1)S(=O)(=O)N2CCN(CC2)C(=O)C3=CC4=C(S3)CCC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "160844145",
+    "PUBCHEM_CID": "70701468",
+    "SMILES_ISO": "CNC1=C(N=C(S1)C2=CC=CC3=CC=CC=C32)C#N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "268"
+  },
+  {
+    "PUBCHEM_SID": "377656179",
+    "PUBCHEM_CID": "139106",
+    "SMILES_ISO": "C1=CC=C(C=C1)C2=CNN=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "51.23"
+  },
+  {
+    "PUBCHEM_SID": "363677344",
+    "PUBCHEM_CID": "71304818",
+    "SMILES_ISO": "CC(C)CNC1=NC(=NC=C1)NCC2=CSC(=N2)C3=CC=CC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "164755758",
+    "PUBCHEM_CID": "71771062",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)NC(=O)C2=CC=CN2)[S+](=O)(NC3=CC=C(C=C3)Br)[O-]",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "363677371",
+    "PUBCHEM_CID": "21081761",
+    "SMILES_ISO": "C1=CN(C(=O)C(=C1)C(=O)NC2=CC(=C(C=C2)OC3=C4C=CNC4=NC=C3)F)C5=CC=C(C=C5)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "9.36"
+  },
+  {
+    "PUBCHEM_SID": "384568834",
+    "PUBCHEM_CID": "11175137",
+    "SMILES_ISO": "C1CNCCC1(C2=CC=C(C=C2)C3=CNN=C3)C4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "3.6"
+  },
+  {
+    "PUBCHEM_SID": "384568905",
+    "PUBCHEM_CID": "11978790",
+    "SMILES_ISO": "CN1C2=CN=C3C=CC(=CC3=C2N(C1=O)C4=CC(=C(C=C4)N5CCNCC5)C(F)(F)F)C6=CN=C(C=C6)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "152.65"
+  },
+  {
+    "PUBCHEM_SID": "384568948",
+    "PUBCHEM_CID": "46215815",
+    "SMILES_ISO": "C[C@@H]1CC[C@@H](CN1C2=NC(=NC(=C2)C3=CC4=C(C=C3)C(=NN4)N)NC)C(=O)NC5CCCCC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "26.05"
+  },
+  {
+    "PUBCHEM_SID": "384568967",
+    "PUBCHEM_CID": "9934347",
+    "SMILES_ISO": "CNC(=O)C1=CC=CC=C1NC2=NC(=NC=C2Cl)NC3=C(C=C(C=C3)N4CCOCC4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "145.14"
+  },
+  {
+    "PUBCHEM_SID": "384568981",
+    "PUBCHEM_CID": "676352",
+    "SMILES_ISO": "C1=CC=C(C=C1)CNC2=NC(=NC3=CC=CC=C32)NCC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "190.14"
+  },
+  {
+    "PUBCHEM_SID": "384569018",
+    "PUBCHEM_CID": "135565082",
+    "SMILES_ISO": "CN1C(=NC=N1)[C@@H]2[C@H](NC3=CC(=CC4=C3C2=NNC4=O)F)C5=CC=C(C=C5)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "46.17"
+  },
+  {
+    "PUBCHEM_SID": "312523666",
+    "PUBCHEM_CID": "118796328",
+    "SMILES_ISO": "CC1=CC(=NC(=C1)NC(=S)N2CCN(CC2)CC3=CC=C(C=C3)C(F)(F)F)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384569024",
+    "PUBCHEM_CID": "71533725",
+    "SMILES_ISO": "COC1=NC(=NC=C1C2=CC3=NC=C(C(=C3C=C2)NC4=CC(=CC(=C4)C(=O)O)OC5=CC(=CC(=C5)F)F)S(=O)(=O)NC6CC6)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.2"
+  },
+  {
+    "PUBCHEM_SID": "384569031",
+    "PUBCHEM_CID": "66613669",
+    "SMILES_ISO": "C1=CC(=CC(=C1)S(=O)(=O)C2=CC=C(C=C2)CNC(=O)C3=CN=C4C(=C3)C=NN4)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "361.97"
+  },
+  {
+    "PUBCHEM_SID": "363677885",
+    "PUBCHEM_CID": "1474853",
+    "SMILES_ISO": "COC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=C(C=C3)OC4=CC=CC=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "981.09"
+  },
+  {
+    "PUBCHEM_SID": "363677940",
+    "PUBCHEM_CID": "16195554",
+    "SMILES_ISO": "C1=CC=C(C=C1)C2=C/C(=C\\C3=CC=C(O3)C4=CC=C(C=C4)[N+](=O)[O-])/C(=O)N2C5=CC=C(C=C5)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "37.5"
+  },
+  {
+    "PUBCHEM_SID": "363678001",
+    "PUBCHEM_CID": "5311096",
+    "SMILES_ISO": "C1CC(CCC1CCN2CCC3=C(C2)C=CC(=C3)C#N)NC(=O)C4=CC=NC5=CC=CC=C45",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "83.9"
+  },
+  {
+    "PUBCHEM_SID": "363678018",
+    "PUBCHEM_CID": "9901086",
+    "SMILES_ISO": "C1CN(CCN1)C2=CN=CC(=N2)OCC3=CC(=CC=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "741.67"
+  },
+  {
+    "PUBCHEM_SID": "363678023",
+    "PUBCHEM_CID": "44402523",
+    "SMILES_ISO": "C1=CC(=CC=C1/C=C/C(=O)NC2=C(C=C(C=C2)C3=NC4=C(O3)C=CC(=C4)CC(=O)O)F)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "405.46"
+  },
+  {
+    "PUBCHEM_SID": "363678054",
+    "PUBCHEM_CID": "1791111",
+    "SMILES_ISO": "CC1=CC(=NC(=N1)NS(=O)(=O)C2=CC=C(C=C2)NC(=S)NC(=O)COC3=C(C=C(C=C3)Br)Cl)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375814661",
+    "PUBCHEM_CID": "134791303",
+    "SMILES_ISO": "CC1=CC=CC=C1N(C)C2CN(C2)[S+](=O)(C3=CC=CC(=C3)C(F)(F)F)[O-]",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "924"
+  },
+  {
+    "PUBCHEM_SID": "375813303",
+    "PUBCHEM_CID": "134788517",
+    "SMILES_ISO": "CC(C)C1=NC2=C(CCN(CC2)CC3=CC=C(C=C3)NC(=O)C)C(=N1)C4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "476.41"
+  },
+  {
+    "PUBCHEM_SID": "375814614",
+    "PUBCHEM_CID": "134789541",
+    "SMILES_ISO": "CN(C)C(=O)C1=NC(=C2N1C=CN=C2)C3=C(C=C(C=C3)Cl)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375818081",
+    "PUBCHEM_CID": "63268833",
+    "SMILES_ISO": "C1=COC(=C1)C2=NC3=C(N2)C=NC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.56"
+  },
+  {
+    "PUBCHEM_SID": "384569053",
+    "PUBCHEM_CID": "59473233",
+    "SMILES_ISO": "C1COCCN1C2=CC=C(C=C2)NC3=NC(=CN4C3=NC=C4)C5=CC6=C(C=C5)C=NN6",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384569059",
+    "PUBCHEM_CID": "9810929",
+    "SMILES_ISO": "CC[C@H](C)[C@@H]([C@@H](CC(=O)N1CCC[C@H]1[C@@H]([C@@H](C)C(=O)N[C@@H](CC2=CC=CC=C2)C3=NC=CS3)OC)OC)N(C)C(=O)[C@H](C(C)C)NC(=O)[C@H](C(C)C)N(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "224.15"
+  },
+  {
+    "PUBCHEM_SID": "363678175",
+    "PUBCHEM_CID": "11497983",
+    "SMILES_ISO": "CCN(CCCOC1=CC2=C(C=C1)C(=NC=N2)NC3=NNC(=C3)CC(=O)NC4=CC(=CC=C4)F)CCOP(=O)(O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "3.64"
+  },
+  {
+    "PUBCHEM_SID": "363678194",
+    "PUBCHEM_CID": "44464263",
+    "SMILES_ISO": "C1CC(C1)C(=O)NCCCNC2=NC(=NC=C2C3CC3)NC4=CC=CC(=C4)CN5CCOCC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "8.82"
+  },
+  {
+    "PUBCHEM_SID": "363678316",
+    "PUBCHEM_CID": "11154555",
+    "SMILES_ISO": "CN(C)C(=O)NC1CCC(CC1)CCN2CCN(CC2)C3=C(C(=CC=C3)Cl)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "349.57"
+  },
+  {
+    "PUBCHEM_SID": "387065820",
+    "PUBCHEM_CID": "66552906",
+    "SMILES_ISO": "COC1=CC=CC(=C1)N2C(=CC(=N2)C(=O)O)C3=CC(=C(C=C3)C4CCCCC4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "401.32"
+  },
+  {
+    "PUBCHEM_SID": "363679169",
+    "PUBCHEM_CID": "136959977",
+    "SMILES_ISO": "CN1C=C(N=C1)C2=NC=CC3=C2N=C(NC3=O)OCCCC(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "78.65"
+  },
+  {
+    "PUBCHEM_SID": "363679173",
+    "PUBCHEM_CID": "71566751",
+    "SMILES_ISO": "CN1CCN(CC1)CC2=C(C=C(C=C2)NC(=O)CC3=CC=C(C=C3)OC4=NC=NC(=C4)NC(=O)C5CC5)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "19.33"
+  },
+  {
+    "PUBCHEM_SID": "363679204",
+    "PUBCHEM_CID": "1715",
+    "SMILES_ISO": "COC1=CC2=C(C=C1)SCCN(C2)C(=O)CCN3CCC(CC3)CC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "806.84"
+  },
+  {
+    "PUBCHEM_SID": "363680161",
+    "PUBCHEM_CID": "56846693",
+    "SMILES_ISO": "CC(C)(C1=CC(=NO1)NC(=O)NC2=CC(=CC=C2)OC3=NC=NC4=CC(=C(C=C43)OC)OC)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "136.63"
+  },
+  {
+    "PUBCHEM_SID": "363680214",
+    "PUBCHEM_CID": "52936849",
+    "SMILES_ISO": "CCOC(=O)C1=CN=C2N1C=C(C=C2)C3=CC(=CN=C3)NS(=O)(=O)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "545.57"
+  },
+  {
+    "PUBCHEM_SID": "363680625",
+    "PUBCHEM_CID": "24857242",
+    "SMILES_ISO": "C1=CC=C(C(=C1)CNCC2=CC=C(C=C2)C3=C4C=CNC4=NC=C3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "266.12"
+  },
+  {
+    "PUBCHEM_SID": "363680986",
+    "PUBCHEM_CID": "90407809",
+    "SMILES_ISO": "CN1C=NC(=C1C2=CC=C(C=C2)OC)C3=NC=CC(=C3)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "2.67"
+  },
+  {
+    "PUBCHEM_SID": "375808060",
+    "PUBCHEM_CID": "71693092",
+    "SMILES_ISO": "CC1=C[C@H]([C@@H](C[C@H]1CC2=NC3=C(N2)C=CC(=N3)OC)C(C)C)CNCC4=CC=CC=C4O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "738.55"
+  },
+  {
+    "PUBCHEM_SID": "375808579",
+    "PUBCHEM_CID": "40780407",
+    "SMILES_ISO": "CC1=C(C(=NN1C2=CC=C(C=C2)OC)C)[C@H]3C[C@@H](C=C3)NCC4=CC(=CC=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "772.9"
+  },
+  {
+    "PUBCHEM_SID": "375807600",
+    "PUBCHEM_CID": "26742466",
+    "SMILES_ISO": "CC1=NC(=CC(=N1)[C@H]2CN3CC[C@H]2C[C@@H]3CNC(=O)NC4CCCCC4)C5=CC=CO5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "4.96"
+  },
+  {
+    "PUBCHEM_SID": "375808655",
+    "PUBCHEM_CID": "75411313",
+    "SMILES_ISO": "C1CCC(C1)C(=O)NC[C@H]2CN3C(=NC=C3C4=CC=C(C=C4)Cl)CO2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "19.4"
+  },
+  {
+    "PUBCHEM_SID": "375809859",
+    "PUBCHEM_CID": "75367182",
+    "SMILES_ISO": "CC1=CC=C(C=C1)CN2CCOC[C@H]2C3=NC=C(N3)C4=CC(=CC=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "994.81"
+  },
+  {
+    "PUBCHEM_SID": "375809101",
+    "PUBCHEM_CID": "26743389",
+    "SMILES_ISO": "CC1=C(C(=NN1C2=CC=C(C=C2)OC)C)[C@H]3C[C@@H](C=C3)NCC4=CC=C(C=C4)N(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375807228",
+    "PUBCHEM_CID": "40776995",
+    "SMILES_ISO": "CCC(CC)C1=NC(=NC(=C1)[C@H]2CN3CC[C@H]2C[C@@H]3CNC(=O)C)C4=CC=NC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "14.92"
+  },
+  {
+    "PUBCHEM_SID": "375809655",
+    "PUBCHEM_CID": "45360472",
+    "SMILES_ISO": "CC1=NC(=CC(=N1)[C@H]2CN3CC[C@H]2C[C@@H]3CNC4CCOCC4)C5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "12.95"
+  },
+  {
+    "PUBCHEM_SID": "375802635",
+    "PUBCHEM_CID": "38030950",
+    "SMILES_ISO": "CC1=C[C@H]([C@@H](C[C@H]1CC2=NN=C(O2)C3=CC=C(C=C3)[N+](=O)[O-])C(C)C)CNCC4=CN=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "983.68"
+  },
+  {
+    "PUBCHEM_SID": "375805435",
+    "PUBCHEM_CID": "38030234",
+    "SMILES_ISO": "CC1=C[C@H]([C@@H](C[C@H]1CC2=NN=C(O2)C3=CC=CC=C3)C(C)C)CNCCNC(=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "25.77"
+  },
+  {
+    "PUBCHEM_SID": "375806667",
+    "PUBCHEM_CID": "26745074",
+    "SMILES_ISO": "CC1=CC(=CC=C1)C2=NOC(=N2)[C@@H]3CC4=C(CN3C(=O)CC(C)(C)CC(=O)O)NC=N4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "46.74"
+  },
+  {
+    "PUBCHEM_SID": "375799806",
+    "PUBCHEM_CID": "71693149",
+    "SMILES_ISO": "CCC(CC)C(=O)NC[C@@H]1C=C([C@@H](C[C@H]1C(C)C)CC2=NC3=C(C=CC=C3N2)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375800456",
+    "PUBCHEM_CID": "40777002",
+    "SMILES_ISO": "CCC(CC)C1=NC(=NC(=C1)[C@H]2CN3CC[C@H]2C[C@@H]3CNS(=O)(=O)C4=CC=CS4)C5=CC=NC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "749.69"
+  },
+  {
+    "PUBCHEM_SID": "375798497",
+    "PUBCHEM_CID": "28961069",
+    "SMILES_ISO": "CC1=CC(=CC=C1)C2=NOC(=N2)[C@@H]3CC4=C(CN3)NC=N4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "169.41"
+  },
+  {
+    "PUBCHEM_SID": "375798652",
+    "PUBCHEM_CID": "7142438",
+    "SMILES_ISO": "C1CN2[C@H](CN1C(=O)COC3=CC=CC=C3)C(=O)NC4=C(C2=O)C=C(C=C4)C5=CC(=CC=C5)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "859"
+  },
+  {
+    "PUBCHEM_SID": "375806391",
+    "PUBCHEM_CID": "26742366",
+    "SMILES_ISO": "CCC(CC)C1=NC(=NC(=C1)[C@H]2CN3CC[C@H]2C[C@@H]3CNC(=O)CC4=CC=CS4)C5=CC=NC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "319.54"
+  },
+  {
+    "PUBCHEM_SID": "375803848",
+    "PUBCHEM_CID": "26745136",
+    "SMILES_ISO": "COC1=CC=C(C=C1)C2=NOC(=N2)[C@@H]3CC4=C(CN3C(=O)NC5CCCCC5)NC=N4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "58.16"
+  },
+  {
+    "PUBCHEM_SID": "375803232",
+    "PUBCHEM_CID": "26761883",
+    "SMILES_ISO": "CCOC(=O)C1=CC=C(C=C1)NC(=O)N2CC3=C(C[C@H]2C4=NC(=NO4)C(C)C)N=CN3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "16.23"
+  },
+  {
+    "PUBCHEM_SID": "375800677",
+    "PUBCHEM_CID": "45783916",
+    "SMILES_ISO": "CC1=C[C@H]([C@@H](C[C@H]1CC2=NN=C(O2)C3=CC=NC=C3)C(C)C)CNC(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "41.32"
+  },
+  {
+    "PUBCHEM_SID": "377020432",
+    "PUBCHEM_CID": "49878590",
+    "SMILES_ISO": "CCOC(=O)N1CCN(CC1)C(=O)CN2C(=O)C3=C(S2)N=C(C=C3C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "19.05"
+  },
+  {
+    "PUBCHEM_SID": "375885383",
+    "PUBCHEM_CID": "134805851",
+    "SMILES_ISO": "COC1=NC=C(C=N1)C2=NNC3=C2CC(=O)N(C3)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "42.5"
+  },
+  {
+    "PUBCHEM_SID": "375890128",
+    "PUBCHEM_CID": "134810595",
+    "SMILES_ISO": "C1CN(CC2=C1C(=O)N(N2CC3=CN=CC=C3)CCC4=CC=CC=C4)C(=O)C5=CC6=CC=CC=C6N5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "229"
+  },
+  {
+    "PUBCHEM_SID": "375884825",
+    "PUBCHEM_CID": "134805294",
+    "SMILES_ISO": "CN(C)C1=CC=C(C=C1)CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "106.54"
+  },
+  {
+    "PUBCHEM_SID": "375885182",
+    "PUBCHEM_CID": "134805651",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NC3=CC=CC=C3)CC4=CC=CS4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "105.92"
+  },
+  {
+    "PUBCHEM_SID": "375884446",
+    "PUBCHEM_CID": "134804915",
+    "SMILES_ISO": "COC1=NC=C(C=C1)CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "2.38"
+  },
+  {
+    "PUBCHEM_SID": "375885834",
+    "PUBCHEM_CID": "134806302",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "3.07"
+  },
+  {
+    "PUBCHEM_SID": "375886179",
+    "PUBCHEM_CID": "134806647",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NC3=CC=CC=C3)CC4=CSC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "15.28"
+  },
+  {
+    "PUBCHEM_SID": "375886492",
+    "PUBCHEM_CID": "134806960",
+    "SMILES_ISO": "COC1=CC=CC=C1CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "22.34"
+  },
+  {
+    "PUBCHEM_SID": "375887020",
+    "PUBCHEM_CID": "134807488",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NCC3=CC=C(C=C3)F)CC4=CC=NC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "14.31"
+  },
+  {
+    "PUBCHEM_SID": "375889125",
+    "PUBCHEM_CID": "134809592",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NC3=CC=CC=C3)CC4=CC(=C(C=C4)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "340.2"
+  },
+  {
+    "PUBCHEM_SID": "375888561",
+    "PUBCHEM_CID": "134809029",
+    "SMILES_ISO": "COC1=CC(=C(C=C1)OC)CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "2.33"
+  },
+  {
+    "PUBCHEM_SID": "375886750",
+    "PUBCHEM_CID": "134807218",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NCC3=CC=CC=C3)CC4=CN=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "15.8"
+  },
+  {
+    "PUBCHEM_SID": "375885513",
+    "PUBCHEM_CID": "134805981",
+    "SMILES_ISO": "COC1=CC=C(C=C1)CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "119"
+  },
+  {
+    "PUBCHEM_SID": "375888838",
+    "PUBCHEM_CID": "134809305",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NC3=CC=CC=C3)CC4=CC(=CC=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.74"
+  },
+  {
+    "PUBCHEM_SID": "375889127",
+    "PUBCHEM_CID": "134809594",
+    "SMILES_ISO": "COC1=CC=CC(=C1)CN2CCNC3=CC(=NC=C3C2)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "187.32"
+  },
+  {
+    "PUBCHEM_SID": "375888840",
+    "PUBCHEM_CID": "134809307",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NC3=CC=CC=C3)CC4=CC=CC=C4O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "23.15"
+  },
+  {
+    "PUBCHEM_SID": "375887878",
+    "PUBCHEM_CID": "134808346",
+    "SMILES_ISO": "C1CN(CC2=CN=C(C=C2N1)NC3=CC=CC=C3)CC4=CC=C(C=C4)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "21.11"
+  },
+  {
+    "PUBCHEM_SID": "375885197",
+    "PUBCHEM_CID": "134805666",
+    "SMILES_ISO": "CC(C)(C)CN1CCNC2=CC(=NC=C2C1)NC3=CC=CC=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "42.16"
+  },
+  {
+    "PUBCHEM_SID": "375886531",
+    "PUBCHEM_CID": "134806999",
+    "SMILES_ISO": "C1=CC2=C(C(=C1)C3=CN4C=NC=C4C(=C3)C5=CC=NC=C5)NN=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "20.29"
+  },
+  {
+    "PUBCHEM_SID": "375885879",
+    "PUBCHEM_CID": "134806347",
+    "SMILES_ISO": "C1=CC(=C2C=CNC2=C1)C3=CN4C=NC=C4C(=C3)C5=CC=NC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "21.71"
+  },
+  {
+    "PUBCHEM_SID": "375884537",
+    "PUBCHEM_CID": "134805006",
+    "SMILES_ISO": "CC1=C(C(=NO1)C)C2=CC(=CN3C2=CN=C3)C4=CC5=C(CNC5=O)C=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "64.45"
+  },
+  {
+    "PUBCHEM_SID": "375885245",
+    "PUBCHEM_CID": "134805713",
+    "SMILES_ISO": "CC(=O)NC1=CC=CC(=C1)C2=CN3C=NC=C3C(=C2)C4=CN=C(C=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "45.43"
+  },
+  {
+    "PUBCHEM_SID": "375887915",
+    "PUBCHEM_CID": "134808383",
+    "SMILES_ISO": "C1=CC(=CN=C1)CNC(=O)CC2=CNC3=C2C=C(C=N3)C4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "817.79"
+  },
+  {
+    "PUBCHEM_SID": "375888602",
+    "PUBCHEM_CID": "134809070",
+    "SMILES_ISO": "CN1CCN(CC1)C(=O)CC2=CNC3=C2C=C(C=N3)C4=CC=CC=C4OC5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "578.38"
+  },
+  {
+    "PUBCHEM_SID": "375887302",
+    "PUBCHEM_CID": "134807770",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)C2=NN3C(=NC=C3NC4=CC=NC=C4)C=C2)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "26.17"
+  },
+  {
+    "PUBCHEM_SID": "375887945",
+    "PUBCHEM_CID": "134808413",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)C2=NN3C(=NC=C3NC4=CC=C(C=C4)C(=O)N)C=C2)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "81.8"
+  },
+  {
+    "PUBCHEM_SID": "375886771",
+    "PUBCHEM_CID": "134807239",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)C2=NN3C(=NC=C3NC4=CC=CC=C4OC)C=C2)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "620.68"
+  },
+  {
+    "PUBCHEM_SID": "375884531",
+    "PUBCHEM_CID": "134805000",
+    "SMILES_ISO": "COC1=NC=C(C=C1)C2=NN3C(=NC=C3NC4=C(N=CC=C4)OC)C=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "757.55"
+  },
+  {
+    "PUBCHEM_SID": "375888608",
+    "PUBCHEM_CID": "134809076",
+    "SMILES_ISO": "COC1=CC=C(C=C1)NC2=CN=C3N2N=C(C=C3)C4=CC(=C(C=C4)OC)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "821.17"
+  },
+  {
+    "PUBCHEM_SID": "375888881",
+    "PUBCHEM_CID": "134809348",
+    "SMILES_ISO": "COCCNC1=NC=C(C2=C1OCC2)C3=CC(=CC=C3)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "77.03"
+  },
+  {
+    "PUBCHEM_SID": "375884909",
+    "PUBCHEM_CID": "134805378",
+    "SMILES_ISO": "CN(C)C1=CC=CC(=C1)C2=CN=C(C3=C2CCO3)NC4=CN=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375887037",
+    "PUBCHEM_CID": "134807505",
+    "SMILES_ISO": "CN(C)C1=CC=CC(=C1)C2=CN=C(C3=C2CCO3)NC4=CC(=CC=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375889090",
+    "PUBCHEM_CID": "134809557",
+    "SMILES_ISO": "COCCNC(=O)C1=CC=C(C=C1)C2=NC=C3N2C=C(N=C3)C4=CC(=CC=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "282.78"
+  },
+  {
+    "PUBCHEM_SID": "375890161",
+    "PUBCHEM_CID": "134810628",
+    "SMILES_ISO": "C1=CC(=CC(=C1)F)C2=CN3C(=CN=C3C4=CC=C(C=C4)C(=O)N)C=N2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "135.02"
+  },
+  {
+    "PUBCHEM_SID": "375890154",
+    "PUBCHEM_CID": "134810621",
+    "SMILES_ISO": "CC(=O)NCCNC(=O)C1=CC=C(C=C1)C2=NC=C3N2C=C(N=C3)C4=CC(=CC=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "7.62"
+  },
+  {
+    "PUBCHEM_SID": "375888127",
+    "PUBCHEM_CID": "134808595",
+    "SMILES_ISO": "C1=CC(=CC(=C1)F)C2=CN3C(=CN=C3C4=CC=C(C=C4)C(=O)NCCCO)C=N2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "21.23"
+  },
+  {
+    "PUBCHEM_SID": "375890180",
+    "PUBCHEM_CID": "134810647",
+    "SMILES_ISO": "C1CC(=O)N(C1)CCCNC(=O)C2=CC=C(C=C2)C3=NC=C4N3C=C(N=C4)C5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "192.97"
+  },
+  {
+    "PUBCHEM_SID": "375890158",
+    "PUBCHEM_CID": "134810625",
+    "SMILES_ISO": "C1CS(=O)(=O)CCN1C(=O)C2=CC=C(C=C2)C3=NC=C4N3C=C(N=C4)C5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "22.79"
+  },
+  {
+    "PUBCHEM_SID": "375890183",
+    "PUBCHEM_CID": "134810650",
+    "SMILES_ISO": "CNC(=O)C1CCN(CC1)C(=O)C2=CC=C(C=C2)C3=NC=C4N3C=C(N=C4)C5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "30.13"
+  },
+  {
+    "PUBCHEM_SID": "375889102",
+    "PUBCHEM_CID": "134809569",
+    "SMILES_ISO": "C1=CC(=CC(=C1)F)C2=CN3C(=CN=C3C4=CC=C(C=C4)C(=O)NCCC5=CN=CN5)C=N2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.09"
+  },
+  {
+    "PUBCHEM_SID": "375885464",
+    "PUBCHEM_CID": "134805932",
+    "SMILES_ISO": "CC(C)C1=CC=C(C=C1)OCC2=NC3=C(N2CC4=CC=CC=C4)C(=O)N(CCN3)CC5CCOCC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "643.42"
+  },
+  {
+    "PUBCHEM_SID": "375888517",
+    "PUBCHEM_CID": "134808985",
+    "SMILES_ISO": "C1C(C2(CN1C(=O)CC3=CC=C(C=C3)O)CN(C2)C4=CC=CC=C4)CNC5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "615.89"
+  },
+  {
+    "PUBCHEM_SID": "375884757",
+    "PUBCHEM_CID": "134805226",
+    "SMILES_ISO": "C1C(C2(CN1CC3=CC=C(C=C3)O)CN(C2)C4=CC=CC=C4)CNC5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375886361",
+    "PUBCHEM_CID": "134806829",
+    "SMILES_ISO": "CN(C)C1=CC(=CC=C1)OC2=C(C=C3C(=C2)NC(=O)C34CCN(CC4)C5=NC=CN=C5)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375888011",
+    "PUBCHEM_CID": "134808479",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C2=NC3=C(NN=C3N=C2)C4=CC=CC=C4OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.92"
+  },
+  {
+    "PUBCHEM_SID": "375888678",
+    "PUBCHEM_CID": "134809146",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)C2=C3C(=NN2)N=CC(=N3)C4=CC=C(C=C4)CO)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "428.14"
+  },
+  {
+    "PUBCHEM_SID": "375888711",
+    "PUBCHEM_CID": "134809178",
+    "SMILES_ISO": "CN1CC2=C(N=C(C=C2C1=O)N3CCOCC3)C4=CC=CC=C4OC(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375889261",
+    "PUBCHEM_CID": "134809728",
+    "SMILES_ISO": "CC(C)C1=CC=C(C=C1)CC(=O)N2CCCC3=C2C=C(C=N3)C(=O)NC4=CN=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "932.39"
+  },
+  {
+    "PUBCHEM_SID": "375889260",
+    "PUBCHEM_CID": "134809727",
+    "SMILES_ISO": "CC1=NN2CCCN(C2=C1C3=CC=CC=C3OCC4=CC=CC=C4)C(=O)CC5=CC6=C(C=C5)OCO6",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375888446",
+    "PUBCHEM_CID": "134808914",
+    "SMILES_ISO": "CC1=NN2CCCN(C2=C1C3=CC=CC=C3C4=CC=CC=C4)CC5CC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375885702",
+    "PUBCHEM_CID": "134806170",
+    "SMILES_ISO": "CC1=NN2CCCN(C2=C1C3=CC=CC=C3C4=CC=CC=C4)CCC(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "349.65"
+  },
+  {
+    "PUBCHEM_SID": "375886668",
+    "PUBCHEM_CID": "134807136",
+    "SMILES_ISO": "CC1=NN2CCCN(C2=C1C3=CC=CC=C3OC4=CC=CC=C4)CC5=CC=CC=C5O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "878.77"
+  },
+  {
+    "PUBCHEM_SID": "375886946",
+    "PUBCHEM_CID": "134807414",
+    "SMILES_ISO": "CC1=NN2CCCN(C2=C1C3=CC=CC=C3C4=CC=CC=C4)CC5=CC=C(S5)C(=O)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "522.76"
+  },
+  {
+    "PUBCHEM_SID": "375887195",
+    "PUBCHEM_CID": "134807663",
+    "SMILES_ISO": "CC1=NN2CCCN(C2=C1C3=CC=CC=C3C4=CC=CC=C4)CC5=CC=C(C=C5)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "117.9"
+  },
+  {
+    "PUBCHEM_SID": "375799543",
+    "PUBCHEM_CID": "40776966",
+    "SMILES_ISO": "CCC(CC)C1=NC(=NC(=C1)[C@H]2CN3CC[C@H]2C[C@@H]3CNC(=O)COC4=CC=CC=C4)C5=CC=NC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "374.02"
+  },
+  {
+    "PUBCHEM_SID": "375801701",
+    "PUBCHEM_CID": "40780411",
+    "SMILES_ISO": "CC1=C(C(=NN1C2=CC=C(C=C2)OC)C)[C@H]3C[C@@H](C=C3)NCC4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "482.07"
+  },
+  {
+    "PUBCHEM_SID": "375863579",
+    "PUBCHEM_CID": "16764695",
+    "SMILES_ISO": "C1C(C2=C(NC1=O)N=C(S2)N)C3=C(C=C(C=C3)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5"
+  },
+  {
+    "PUBCHEM_SID": "375855543",
+    "PUBCHEM_CID": "51053056",
+    "SMILES_ISO": "CNC1=NC2=C(S1)C(CC(=O)N2)C3=CC=C(C=C3)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "204.16"
+  },
+  {
+    "PUBCHEM_SID": "375845526",
+    "PUBCHEM_CID": "51138561",
+    "SMILES_ISO": "CNC1=NC2=C(S1)C(CC(=O)N2)C3=CC=CC=C3F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "60.26"
+  },
+  {
+    "PUBCHEM_SID": "375876556",
+    "PUBCHEM_CID": "91767277",
+    "SMILES_ISO": "CC1=C(NC2=CC=CC=C12)CN(C)C3=NC(=NC(=C3)C4CC(C4)O)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "44.82"
+  },
+  {
+    "PUBCHEM_SID": "375852621",
+    "PUBCHEM_CID": "71705536",
+    "SMILES_ISO": "C1C(CN(C1=O)C2=NNC3=C2C=CC(=C3)Br)C(=O)NCCC4=CC=CC=N4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "11.46"
+  },
+  {
+    "PUBCHEM_SID": "375838471",
+    "PUBCHEM_CID": "75466029",
+    "SMILES_ISO": "C1CN(CCC1C2=NOC3=C2C=CC(=C3)F)C(=O)C4CC(=O)N(C4)C5=NNC6=CC=CC=C65",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "635.18"
+  },
+  {
+    "PUBCHEM_SID": "375852584",
+    "PUBCHEM_CID": "91913176",
+    "SMILES_ISO": "CC1=CC(=NC=C1)NC(=O)C2CC(=O)N(C2)C3=NNC4=C3C=CC(=C4)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "62.8"
+  },
+  {
+    "PUBCHEM_SID": "375842535",
+    "PUBCHEM_CID": "71705501",
+    "SMILES_ISO": "C1COCCC1CNC(=O)C2CC(=O)N(C2)C3=NNC4=C3C=CC(=C4)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "10.62"
+  },
+  {
+    "PUBCHEM_SID": "375870877",
+    "PUBCHEM_CID": "11173800",
+    "SMILES_ISO": "C1CC(C2=C(C1)C3=CC=CC=C3N2)NC(=O)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "680.09"
+  },
+  {
+    "PUBCHEM_SID": "375850542",
+    "PUBCHEM_CID": "75490816",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)C(=O)NC2CCCC3=C2NC4=CC=CC=C34)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "237.75"
+  },
+  {
+    "PUBCHEM_SID": "375850553",
+    "PUBCHEM_CID": "71829149",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)C(=O)NC2CCCC3=C2NC4=C3C=CC=C4Cl)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "482.69"
+  },
+  {
+    "PUBCHEM_SID": "375846501",
+    "PUBCHEM_CID": "71829145",
+    "SMILES_ISO": "COC1=CC=CC=C1C(=O)NC2CCCC3=C2NC4=C3C=CC=C4Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "606.93"
+  },
+  {
+    "PUBCHEM_SID": "375854627",
+    "PUBCHEM_CID": "75490814",
+    "SMILES_ISO": "COC1=CC(=CC(=C1OC)OC)C(=O)NC2CCCC3=C2NC4=CC=CC=C34",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "925.85"
+  },
+  {
+    "PUBCHEM_SID": "375842479",
+    "PUBCHEM_CID": "90489340",
+    "SMILES_ISO": "COC1=CC(=CC(=C1OC)OC)C(=O)NC2CCCC3=C2NC4=C3C=CC=C4Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "383.65"
+  },
+  {
+    "PUBCHEM_SID": "375846567",
+    "PUBCHEM_CID": "71828900",
+    "SMILES_ISO": "C1CC(C2=C(C1)C3=C(N2)C(=CC=C3)Cl)NC(=O)C4=CC5=C(C=C4)OCO5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "190.01"
+  },
+  {
+    "PUBCHEM_SID": "375858633",
+    "PUBCHEM_CID": "91903489",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C2=NC(=C(S2)C(=O)NC3=CC4=C(C=C3)NC(=O)[C@@H]5CCCN5C4=O)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "48.19"
+  },
+  {
+    "PUBCHEM_SID": "375862599",
+    "PUBCHEM_CID": "53137387",
+    "SMILES_ISO": "CC1=CC(=CC(=C1)C(=O)NC2=CC3=C(C=C2)C(=NC=N3)N4CCCC4)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "505.69"
+  },
+  {
+    "PUBCHEM_SID": "375868775",
+    "PUBCHEM_CID": "53137434",
+    "SMILES_ISO": "C1CCN(CC1)C2=NC=NC3=C2C=CC(=C3)NC(=O)C4=CC(=CC(=C4)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "816.65"
+  },
+  {
+    "PUBCHEM_SID": "375856591",
+    "PUBCHEM_CID": "53137515",
+    "SMILES_ISO": "C1COCCN1C2=NC=NC3=C2C=CC(=C3)NC(=O)C4=CC(=CC=C4)Br",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "653.78"
+  },
+  {
+    "PUBCHEM_SID": "375870856",
+    "PUBCHEM_CID": "91903748",
+    "SMILES_ISO": "CC1=CC=CC=C1S(=O)(=O)N2CCCC(C2)CCC(=O)NCCN(C)C3CCCCC3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "32.84"
+  },
+  {
+    "PUBCHEM_SID": "375861991",
+    "PUBCHEM_CID": "53140285",
+    "SMILES_ISO": "CN1C=C2CCN(CC3=C2C1=CC=C3)C(=O)C4=CC(=C(C=C4)F)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "823.73"
+  },
+  {
+    "PUBCHEM_SID": "375851988",
+    "PUBCHEM_CID": "53143674",
+    "SMILES_ISO": "CC1=CC(=C(C=C1)OC)NC(=O)C2=CN=C(N=C2C3=CC=NC=C3)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "925.51"
+  },
+  {
+    "PUBCHEM_SID": "375847930",
+    "PUBCHEM_CID": "53143698",
+    "SMILES_ISO": "COC(=O)C1=CC(=CC=C1)NC(=O)C2=CN=C(N=C2C3=CC=NC=C3)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "670.52"
+  },
+  {
+    "PUBCHEM_SID": "375879134",
+    "PUBCHEM_CID": "45226889",
+    "SMILES_ISO": "CC1=C(C(=CC=C1)N2C3=C(C=N2)C(CCC3)NC(=O)C4=C(C=CC(=C4F)F)F)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "551.93"
+  },
+  {
+    "PUBCHEM_SID": "375866176",
+    "PUBCHEM_CID": "53158961",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C(=O)N2CCC3=C(C2)C=C(S3)C(=O)NC(C)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "425"
+  },
+  {
+    "PUBCHEM_SID": "375844078",
+    "PUBCHEM_CID": "53160384",
+    "SMILES_ISO": "CCCCC1=CC=C(C=C1)NC(=O)C2=CC3=C(CCN3S(=O)(=O)C)C=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "385.38"
+  },
+  {
+    "PUBCHEM_SID": "375875666",
+    "PUBCHEM_CID": "46990893",
+    "SMILES_ISO": "CCN1N=CC(=N1)NC(=O)CN2C3=C(C=C(C=C3)C4=CC(=CC=C4)OC)C=N2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "853.32"
+  },
+  {
+    "PUBCHEM_SID": "375871810",
+    "PUBCHEM_CID": "56715543",
+    "SMILES_ISO": "C1CC(CN(C1)C2=NC(=NC3=C2CCC3)C4=CC=CC=C4)C(=O)N5CCC(CC5)N",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "7.56"
+  },
+  {
+    "PUBCHEM_SID": "375842572",
+    "PUBCHEM_CID": "90488048",
+    "SMILES_ISO": "C1=CC(=CC=C1C2=NC=C(C(=N2)C3=CC=NC=C3)C(=O)O)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "38.32"
+  },
+  {
+    "PUBCHEM_SID": "375854679",
+    "PUBCHEM_CID": "71839006",
+    "SMILES_ISO": "CCOC1=CC=CC=C1C(=O)NC2CCN(C2=O)C3=CC(=CC(=C3)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375846594",
+    "PUBCHEM_CID": "87051521",
+    "SMILES_ISO": "CCCCN(C)C(=O)C1=C(SC2=C1C(=O)N(C=C2)CCC)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "112.65"
+  },
+  {
+    "PUBCHEM_SID": "375882407",
+    "PUBCHEM_CID": "72846657",
+    "SMILES_ISO": "CC1=C(C=CC(=C1)F)N2CCC(CC2)N3C[C@@H]([C@H](C3)NC(=O)C)C4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "143.92"
+  },
+  {
+    "PUBCHEM_SID": "375845721",
+    "PUBCHEM_CID": "91904528",
+    "SMILES_ISO": "CCOC1=CC(=O)N2CCCCC2=C1C(=O)NC3=CC(=C(C=C3OC)Cl)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "68.66"
+  },
+  {
+    "PUBCHEM_SID": "375879261",
+    "PUBCHEM_CID": "56886853",
+    "SMILES_ISO": "C1CN(CCN(C1)C2=CC=C(C=C2)F)CC3[C@H]4[C@@H]3CNC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "48.82"
+  },
+  {
+    "PUBCHEM_SID": "375879869",
+    "PUBCHEM_CID": "70726807",
+    "SMILES_ISO": "C1CC(CN(C1)C(=O)N)C(=O)N2CCCN(CC2)C3=CC=C(C=C3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "96.15"
+  },
+  {
+    "PUBCHEM_SID": "375845614",
+    "PUBCHEM_CID": "91887902",
+    "SMILES_ISO": "C1CC(CN(C1)C2=NNC(=C2)C3=CC=C(C=C3)F)NC(=O)C4=CC5=C(C=C4)N=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375845589",
+    "PUBCHEM_CID": "87051912",
+    "SMILES_ISO": "C[C@H]1CN(C[C@@H]1C2=NC(=NO2)C3=CN=CC=C3)C(=O)C4=NN(C5=CC=CC=C54)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "739.05"
+  },
+  {
+    "PUBCHEM_SID": "375869899",
+    "PUBCHEM_CID": "87051947",
+    "SMILES_ISO": "C[C@H]1CN(C[C@@H]1C2=NC(=NO2)C3=CC=NC=C3)C(=O)C4=NN(C5=CC=CC=C54)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "666.52"
+  },
+  {
+    "PUBCHEM_SID": "375865736",
+    "PUBCHEM_CID": "91653956",
+    "SMILES_ISO": "C[C@H]1CN(C[C@@H]1C2=NC(=NO2)C3=CC=CC=C3)C(=O)NC4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "808.94"
+  },
+  {
+    "PUBCHEM_SID": "375857652",
+    "PUBCHEM_CID": "87051999",
+    "SMILES_ISO": "C[C@H]1CN(C[C@@H]1C2=NC(=NO2)C3=CC=CC=C3)C(=O)NC4=C(C=C(C=C4)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "917.2"
+  },
+  {
+    "PUBCHEM_SID": "375841555",
+    "PUBCHEM_CID": "87052427",
+    "SMILES_ISO": "C1CN(CC2=C1C(=O)N3C(=N2)C=CN3)C(=O)C4=CC5=C(C=C4)N=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "5.6"
+  },
+  {
+    "PUBCHEM_SID": "375867775",
+    "PUBCHEM_CID": "53183866",
+    "SMILES_ISO": "CC1=NC=C(C=C1)C(=O)N2CCC3=C(C2)N=C4C=C(NN4C3=O)C5=CC=CC=C5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "1.2"
+  },
+  {
+    "PUBCHEM_SID": "375873932",
+    "PUBCHEM_CID": "70756727",
+    "SMILES_ISO": "CC1=NOC(=C1)CNC(=O)C2=CC3=C(C=C2)N(C(=O)N3CC4CC4)C5CCCCC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "870.43"
+  },
+  {
+    "PUBCHEM_SID": "375862375",
+    "PUBCHEM_CID": "87052503",
+    "SMILES_ISO": "COC1=CC2=C(C=C1)C3=NNC(=C3CC2)C(=O)N4CCC5=C(C4)N=C6C=C(NN6C5=O)C7=CC=CC=C7",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "15.75"
+  },
+  {
+    "PUBCHEM_SID": "375858341",
+    "PUBCHEM_CID": "87052505",
+    "SMILES_ISO": "CC1=C(C(=NO1)C)CC2=CC=C(O2)C(=O)N3CCC4=C(C3)N=C5C=C(NN5C4=O)C6=CC=CC=C6",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "9.03"
+  },
+  {
+    "PUBCHEM_SID": "375866379",
+    "PUBCHEM_CID": "87052512",
+    "SMILES_ISO": "C1CN(CC2=C1C(=O)N3C(=N2)C=C(N3)C4=CC=CC=C4)C(=O)CCC(=O)N5CC(=O)NC6=CC=CC=C65",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Inactive",
+    "Permeability": "6.84"
+  },
+  {
+    "PUBCHEM_SID": "375866399",
+    "PUBCHEM_CID": "136665503",
+    "SMILES_ISO": "C1CN(CCC2=C1C(=O)NC(=N2)N3CCOCC3)CC4=C(C=CC(=C4)Cl)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "46.29"
+  },
+  {
+    "PUBCHEM_SID": "375854302",
+    "PUBCHEM_CID": "136665504",
+    "SMILES_ISO": "C1CN(CCC2=C1C(=O)NC(=N2)N3CCOCC3)CC4=C(C=C(C=C4)Cl)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "71.19"
+  },
+  {
+    "PUBCHEM_SID": "375872997",
+    "PUBCHEM_CID": "70766183",
+    "SMILES_ISO": "CCC1=C(C2=C(N1)C=CC(=C2)CNC(=O)CC3=CN=C4N3C=CC=C4C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "32.17"
+  },
+  {
+    "PUBCHEM_SID": "375881590",
+    "PUBCHEM_CID": "70777500",
+    "SMILES_ISO": "CN(C)C1CCN(C1)CC2=C(N=C3C=C(C(=CC3=C2)OC)OC)C4=CC(=CC=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "243"
+  },
+  {
+    "PUBCHEM_SID": "375856522",
+    "PUBCHEM_CID": "91916716",
+    "SMILES_ISO": "C1CN(CCC1CC2=NC(=NO2)C3=NC=CN=C3)C(=O)C4=CC5=C(C=C4)OCO5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "43.97"
+  },
+  {
+    "PUBCHEM_SID": "375874769",
+    "PUBCHEM_CID": "74244241",
+    "SMILES_ISO": "CC(C)(C#N)C1=CC=C(C=C1)C2=NC=C(C=C2)CN3CCN(CC3)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "47.3"
+  },
+  {
+    "PUBCHEM_SID": "375844348",
+    "PUBCHEM_CID": "91890680",
+    "SMILES_ISO": "CCCCOC1=CC=C(C=C1)C(=O)N2CCC(CC2)C3=NNC(=O)N3C4=CC=C(C=C4)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375861696",
+    "PUBCHEM_CID": "136665405",
+    "SMILES_ISO": "CCC1=CC(=CC=C1)NC(=O)C2=CC(=NN2)C3=CC=CN3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "90.22"
+  },
+  {
+    "PUBCHEM_SID": "375847692",
+    "PUBCHEM_CID": "136665409",
+    "SMILES_ISO": "COC1=C(C=C(C=C1)NC(=O)C2=CC(=NN2)C3=CC=CN3)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "203.05"
+  },
+  {
+    "PUBCHEM_SID": "375857688",
+    "PUBCHEM_CID": "136665413",
+    "SMILES_ISO": "C1=CC(=CC(=C1)F)NC(=O)C2=CC(=NN2)C3=CC=CN3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "75.63"
+  },
+  {
+    "PUBCHEM_SID": "375845678",
+    "PUBCHEM_CID": "136665415",
+    "SMILES_ISO": "C1=CNC(=C1)C2=NNC(=C2)C(=O)NC3=C(C=C(C=C3)F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "166.14"
+  },
+  {
+    "PUBCHEM_SID": "375847672",
+    "PUBCHEM_CID": "136665423",
+    "SMILES_ISO": "C1=CC(=CC(=C1)OC(F)(F)F)NC(=O)C2=CC(=NN2)C3=CC=CN3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "102.83"
+  },
+  {
+    "PUBCHEM_SID": "375849698",
+    "PUBCHEM_CID": "136665425",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)NC(=O)C2=CC(=NN2)C3=CC=CN3)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "234.63"
+  },
+  {
+    "PUBCHEM_SID": "375835083",
+    "PUBCHEM_CID": "91909359",
+    "SMILES_ISO": "C1=CC=C(C=C1)C2=NN3C(=NN=C3CNC(=O)CC4=CC=CS4)C=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "55.91"
+  },
+  {
+    "PUBCHEM_SID": "375832297",
+    "PUBCHEM_CID": "110196975",
+    "SMILES_ISO": "COCCNC(=O)[C@H]1C[C@@H](CN1CC2=CC3=C(C=C2)NC=C3)OC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "186.25"
+  },
+  {
+    "PUBCHEM_SID": "375861246",
+    "PUBCHEM_CID": "110197656",
+    "SMILES_ISO": "CC1=C(C(=NO1)C)S(=O)(=O)N2CCC3(CC2)C4=C(CCN3)C5=C(N4)C=CC(=C5)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "160.58"
+  },
+  {
+    "PUBCHEM_SID": "375863122",
+    "PUBCHEM_CID": "110202952",
+    "SMILES_ISO": "CC1=NOC(=N1)[C@@H]2CN(C[C@H]2CO)C(=O)C3=NN(C4=CC=CC=C43)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "91.55"
+  },
+  {
+    "PUBCHEM_SID": "375851432",
+    "PUBCHEM_CID": "124050542",
+    "SMILES_ISO": "CC1=NOC(=N1)[C@@H]2CN(C[C@H]2COC)C(=O)C3=NNC4=CC=CC=C43",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "37.81"
+  },
+  {
+    "PUBCHEM_SID": "375855233",
+    "PUBCHEM_CID": "124050558",
+    "SMILES_ISO": "CC1=NOC(=N1)[C@@H]2CN(C[C@H]2COC)C(=O)C3=NN(C4=CC=CC=C43)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "65.34"
+  },
+  {
+    "PUBCHEM_SID": "375829491",
+    "PUBCHEM_CID": "91911826",
+    "SMILES_ISO": "CC1=C(C=C(C=C1)C(=O)NC2CCN(CC2)C3=CC(=O)N(N=C3)CC4CC4)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "497.53"
+  },
+  {
+    "PUBCHEM_SID": "375837494",
+    "PUBCHEM_CID": "91925560",
+    "SMILES_ISO": "COC1=CC=C(C=C1)C(=O)N[C@@H]2CCC[C@@H]2C(=O)N3CCC(CC3)CC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375853249",
+    "PUBCHEM_CID": "71959602",
+    "SMILES_ISO": "CCCN1C2=C(C=C(C=C2)NC(=O)C3=CC=CS3)S(=O)(=O)N=C1CC(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "274.56"
+  },
+  {
+    "PUBCHEM_SID": "375859106",
+    "PUBCHEM_CID": "71959588",
+    "SMILES_ISO": "CCCN1C2=C(C=C(C=C2)NC(=O)C3=CC=CO3)S(=O)(=O)N=C1CC(C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "238.65"
+  },
+  {
+    "PUBCHEM_SID": "375841251",
+    "PUBCHEM_CID": "46058622",
+    "SMILES_ISO": "CCNC(=O)C1=COC(=N1)COC2=CC3=C(CCN(C3C4=CC=C(C=C4)F)C(=O)CC(C)C)C=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375853231",
+    "PUBCHEM_CID": "46059187",
+    "SMILES_ISO": "CCN(CC)C(=O)C1=COC(=N1)COC2=CC3=C(CCN(C3C4=CC(=CC=C4)F)C(=O)C(C)C)C=C2",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375817816",
+    "PUBCHEM_CID": "137299399",
+    "SMILES_ISO": "C1CCC(CC1)CN2CCCC(C2)C3=NN(C(=O)N3)C4=CC=C(C=C4)Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375817885",
+    "PUBCHEM_CID": "137299434",
+    "SMILES_ISO": "COC1=CC=C(C=C1)C(=O)N2CCCC(C2)C3=NN(C(=O)N3)C4=CC=C(C=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "254.76"
+  },
+  {
+    "PUBCHEM_SID": "375817886",
+    "PUBCHEM_CID": "137299435",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)C(=O)CC4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "524.15"
+  },
+  {
+    "PUBCHEM_SID": "375817968",
+    "PUBCHEM_CID": "137299474",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)C(=O)C4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "108.61"
+  },
+  {
+    "PUBCHEM_SID": "375817790",
+    "PUBCHEM_CID": "137299390",
+    "SMILES_ISO": "C1CN(CCC1C2=NN(C(=O)N2)C3=CC=C(C=C3)F)C(=O)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "521.17"
+  },
+  {
+    "PUBCHEM_SID": "375817855",
+    "PUBCHEM_CID": "137299421",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCN(CC3)C(=O)C4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "250.02"
+  },
+  {
+    "PUBCHEM_SID": "375817889",
+    "PUBCHEM_CID": "137299438",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCN(CC3)[S+](=O)(C4=CC=CC(=C4)C(F)(F)F)[O-]",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "433.92"
+  },
+  {
+    "PUBCHEM_SID": "375817917",
+    "PUBCHEM_CID": "137299452",
+    "SMILES_ISO": "CC1=C(C(=NO1)C)[S+](=O)(N2CCC(CC2)C3=NN(C(=O)N3)C4=CC=C(C=C4)OC)[O-]",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "308.22"
+  },
+  {
+    "PUBCHEM_SID": "375817948",
+    "PUBCHEM_CID": "137299467",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCN(CC3)C(=O)C4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "130.36"
+  },
+  {
+    "PUBCHEM_SID": "375817981",
+    "PUBCHEM_CID": "137299468",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCN(CC3)C(=O)CC4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "410.34"
+  },
+  {
+    "PUBCHEM_SID": "375820357",
+    "PUBCHEM_CID": "137291230",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)CC4CCCCC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "321.69"
+  },
+  {
+    "PUBCHEM_SID": "375820358",
+    "PUBCHEM_CID": "137291231",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)C(=O)CC4=CC=CC=N4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "71.43"
+  },
+  {
+    "PUBCHEM_SID": "375818692",
+    "PUBCHEM_CID": "137299525",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)C(=O)C4=CC(=CC=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "430.64"
+  },
+  {
+    "PUBCHEM_SID": "375818693",
+    "PUBCHEM_CID": "137299526",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)C(=O)NC4=CC=CC=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "315.39"
+  },
+  {
+    "PUBCHEM_SID": "375818818",
+    "PUBCHEM_CID": "137299529",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)[S+](=O)(C4=CC=CC(=C4)C(F)(F)F)[O-]",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "564.42"
+  },
+  {
+    "PUBCHEM_SID": "375819053",
+    "PUBCHEM_CID": "137299536",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C(=O)N2CCCC(C2)C3=NN(C(=O)N3)C4=CC=C(C=C4)OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "602.95"
+  },
+  {
+    "PUBCHEM_SID": "375819054",
+    "PUBCHEM_CID": "137299537",
+    "SMILES_ISO": "COC1=CC=C(C=C1)N2C(=O)NC(=N2)C3CCCN(C3)C(=O)C4=CC=CC=C4F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "341.38"
+  },
+  {
+    "PUBCHEM_SID": "375816917",
+    "PUBCHEM_CID": "137299202",
+    "SMILES_ISO": "C1CC1C2=NC3=C(CCN(CC3)CC4=CC=C(C=C4)F)C(=N2)C5=CC=C(C=C5)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "421.05"
+  },
+  {
+    "PUBCHEM_SID": "375817303",
+    "PUBCHEM_CID": "137299235",
+    "SMILES_ISO": "C1CCC(CC1)CN2CCC3=C(CC2)N=C(N=C3C4=CC=C(C=C4)O)C5CC5",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "189.98"
+  },
+  {
+    "PUBCHEM_SID": "363681148",
+    "PUBCHEM_CID": "118170767",
+    "SMILES_ISO": "C[C@@H]1CN(S(=O)(=O)C2=CC=CC=C2O1)CC3=C(C=CC(=C3)[C@H](CC(=O)O)C4=CC5=C(C(=C4)OC)N(N=N5)C)C",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "898.06"
+  },
+  {
+    "PUBCHEM_SID": "363681205",
+    "PUBCHEM_CID": "72710568",
+    "SMILES_ISO": "CC1=C(SC(=N1)[C@@](C)(CO)O)C2=CC(=C(N=C2)N)O[C@H](C)C3=C(C=CC(=C3)F)N4N=CC=N4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "322.37"
+  },
+  {
+    "PUBCHEM_SID": "363681262",
+    "PUBCHEM_CID": "5284645",
+    "SMILES_ISO": "C[C@H]1CCC[C@@H](CCC/C=C/C2=C(C(=CC(=C2)O)O)C(=O)O1)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "795.2"
+  },
+  {
+    "PUBCHEM_SID": "363681279",
+    "PUBCHEM_CID": "133053814",
+    "SMILES_ISO": "C[C@H]1C/C=C/C2[C@@H](C(=C)[C@H](C3[C@@]2([C@H](/C=C/[C@](C1)(C)O)OC(=O)C)C(=O)N[C@H]3CC4=CC=CC=C4)C)O",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "55"
+  },
+  {
+    "PUBCHEM_SID": "375823984",
+    "PUBCHEM_CID": "134798059",
+    "SMILES_ISO": "CC1=CC=C(C=C1)C(=O)N2CCN(CC2)C3=NC=CC(=N3)NC4=CC=CC=C4OC",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375824087",
+    "PUBCHEM_CID": "134798255",
+    "SMILES_ISO": "COC1=CC=CC=C1NC2=NC(=NC=C2)N3CCN(CC3)C(=O)C4=CC=C(C=C4)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "853.05"
+  },
+  {
+    "PUBCHEM_SID": "375824392",
+    "PUBCHEM_CID": "134799894",
+    "SMILES_ISO": "CC(C)(C)C(=O)N1CCN(CC1)C2=NC=CC(=N2)NC3=CC=CC=C3Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "895.14"
+  },
+  {
+    "PUBCHEM_SID": "375824425",
+    "PUBCHEM_CID": "134797955",
+    "SMILES_ISO": "COC1=CC=CC=C1NC2=NC(=NC=C2)N3CCN(CC3)C(=O)C4=CC=CC=C4Cl",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "35.83"
+  },
+  {
+    "PUBCHEM_SID": "376241546",
+    "PUBCHEM_CID": "11740730",
+    "SMILES_ISO": "CN1C(=O)C2=C[C@]3([C@@H](N2C(=O)C1=O)NC4=CC=CC=C43)C5=CNC6=CC=CC=C65",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "986.22"
+  },
+  {
+    "PUBCHEM_SID": "384569289",
+    "PUBCHEM_CID": "118873492",
+    "SMILES_ISO": "C1=CC(=CC(=C1)S(=O)(=O)NC2=C3C(=C(C=C2)C4=CN=CC=C4)C=CC=N3)C(F)(F)F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384569290",
+    "PUBCHEM_CID": "57336276",
+    "SMILES_ISO": "CC1=C(C(=NO1)C2=CC=C(C=C2)F)COC3=NC=C(C=C3)C(=O)N4CCS(=O)(=O)CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "290.67"
+  },
+  {
+    "PUBCHEM_SID": "384569302",
+    "PUBCHEM_CID": "81689696",
+    "SMILES_ISO": "C[C@@]1(C2=C(C=C(C=C2)C3=CNN=C3)C(=O)N1)C4=NC=NC=C4F",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "375825070",
+    "PUBCHEM_CID": "134796226",
+    "SMILES_ISO": "C1CC(N(C1)C(=O)C2=CC=CC(=C2)C3=CC=CC=N3)C(=O)NC4CC4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "76.52"
+  },
+  {
+    "PUBCHEM_SID": "375828433",
+    "PUBCHEM_CID": "134801672",
+    "SMILES_ISO": "CC1=CC=CC=C1C(=O)NC2CCN(CC2)C3=NN4C(=NN=C4C5CC5)C=C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "35.05"
+  },
+  {
+    "PUBCHEM_SID": "384569357",
+    "PUBCHEM_CID": "123132228",
+    "SMILES_ISO": "CS(=O)(=O)C1=CC=C(C=C1)C2=CN=C(N3C2=NN=C3)NCC4=CC=CO4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "13.61"
+  },
+  {
+    "PUBCHEM_SID": "384569358",
+    "PUBCHEM_CID": "71090129",
+    "SMILES_ISO": "CC(C)N1C=C(C2=C(C=CN=C21)NS(=O)(=O)C3=NN(C=C3)C)C4=CC5=C(CCN5C)C=C4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": ">1000"
+  },
+  {
+    "PUBCHEM_SID": "384569392",
+    "PUBCHEM_CID": "72165228",
+    "SMILES_ISO": "C1CN(C[C@@H]1O)C2=C(C=C(C=N2)C(=O)NC3=CC=C(C=C3)OC(F)(F)Cl)C4=CC=NN4",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "16.81"
+  },
+  {
+    "PUBCHEM_SID": "384569537",
+    "PUBCHEM_CID": "90479372",
+    "SMILES_ISO": "CN(CC1=CC=C(C=C1)/C=C/C(=O)NO)CC23CC4CC(C2)CC(C4)C3",
+    "PUBCHEM_ACTIVITY_OUTCOME": "Active",
+    "Permeability": "108.21"
+  }
+]

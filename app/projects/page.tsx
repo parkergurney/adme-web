@@ -15,6 +15,8 @@ export default function ProjectsPage() {
     { id: 'p1', name: 'Project 1', results: [] },
   ])
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(undefined)
+  const [isCreatingProject, setIsCreatingProject] = useState(false)
+  const [newProjectName, setNewProjectName] = useState('')
   
   useEffect(() => {
     const stored = localStorage.getItem('adme-projects')
@@ -46,6 +48,27 @@ export default function ProjectsPage() {
     }
   }
 
+  const handleCreateProject = () => {
+    if (!newProjectName.trim()) return
+    
+    const newProject: Project = {
+      id: `p${Date.now()}`,
+      name: newProjectName,
+      results: []
+    }
+    
+    const updatedProjects = [...projects, newProject]
+    setProjects(updatedProjects)
+    localStorage.setItem('adme-projects', JSON.stringify(updatedProjects))
+    localStorage.setItem('adme-current-project-id', newProject.id)
+    
+    setNewProjectName('')
+    setIsCreatingProject(false)
+    
+    // Redirect to query page
+    router.push('/query')
+  }
+
   return (
     <SidebarProvider>
       <ProjectSidebar
@@ -64,73 +87,38 @@ export default function ProjectsPage() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h1 className="text-3xl font-bold">All Projects</h1>
-                  <p className="text-muted-foreground mt-1">
-                    {projects.length} project{projects.length !== 1 ? 's' : ''} • {totalResults} total result{totalResults !== 1 ? 's' : ''}
-                  </p>
                 </div>
-                <Button onClick={() => router.push('/query')}>
-                  Create New Query
-                </Button>
               </div>
 
               {projects.length === 0 ? (
-                <div className="text-center py-12">
-                  <h2 className="text-2xl font-bold mb-4">No Projects Yet</h2>
-                  <p className="text-muted-foreground mb-6">
-                    Create your first project and start adding queries.
-                  </p>
-                  <Button onClick={() => router.push('/query')}>
-                    Create New Query
-                  </Button>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                  <div
+                    className="aspect-square border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer hover:opacity-80 active:scale-95 transition-all"
+                    style={{ backgroundColor: '#EEEEEE', borderColor: '#EEEEEE' }}
+                    onClick={() => setIsCreatingProject(true)}
+                  >
+                    <span className="text-4xl text-white">+</span>
+                  </div>
                 </div>
               ) : (
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                   {projects.map((project) => {
                     const resultCount = project.results?.length || 0
                     return (
-                      <Card key={project.id} className="hover:shadow-lg transition-shadow">
+                      <Card key={project.id} className="aspect-square hover:shadow-lg transition-shadow cursor-pointer">
                         <CardHeader>
                           <div className="flex items-center justify-between">
-                            <CardTitle>{project.name}</CardTitle>
-                            {project.pinned && (
-                              <span className="text-xs text-muted-foreground">Pinned</span>
-                            )}
+                            <CardTitle className="text-lg">{project.name}</CardTitle>
                           </div>
                           <CardDescription>
                             {resultCount} result{resultCount !== 1 ? 's' : ''}
                           </CardDescription>
                         </CardHeader>
                         <CardContent>
-                          {resultCount === 0 ? (
-                            <p className="text-sm text-muted-foreground mb-4">
-                              No results yet. Create a query to get started.
-                            </p>
-                          ) : (
-                            <div className="space-y-2 mb-4">
-                              {project.results?.slice(0, 3).map((result) => (
-                                <div
-                                  key={result.id}
-                                  className="text-sm p-2 bg-muted rounded cursor-pointer hover:bg-muted/80 transition-colors"
-                                  onClick={() => router.push(`/projects/results?projectId=${project.id}&resultId=${result.id}`)}
-                                >
-                                  <div className="font-medium truncate">{result.label}</div>
-                                  <div className="text-xs text-muted-foreground">
-                                    {result.data?.results?.length || 0} matches
-                                  </div>
-                                </div>
-                              ))}
-                              {resultCount > 3 && (
-                                <div className="text-sm text-muted-foreground text-center">
-                                  +{resultCount - 3} more result{resultCount - 3 !== 1 ? 's' : ''}
-                                </div>
-                              )}
-                            </div>
-                          )}
                           <Button
                             variant="outline"
                             className="w-full"
                             onClick={() => {
-                              // Navigate to results page showing all results for this project
                               if (resultCount > 0) {
                                 router.push(`/projects/results?projectId=${project.id}`)
                               } else {
@@ -138,19 +126,55 @@ export default function ProjectsPage() {
                               }
                             }}
                           >
-                            {resultCount > 0 ? 'View All Results' : 'Create Query'}
+                            {resultCount > 0 ? 'View Results' : 'Create Query'}
                           </Button>
                         </CardContent>
                       </Card>
                     )
                   })}
+                  <div
+                    className="aspect-square border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer hover:opacity-80 active:scale-95 transition-all"
+                    style={{ backgroundColor: '#C8C8C8', borderColor: '#C8C8C8' }}
+                    onClick={() => setIsCreatingProject(true)}
+                  >
+                    <span className="text-4xl text-white">+</span>
+                  </div>
                 </div>
               )}
             </div>
           </main>
         </div>
       </SidebarInset>
+
+      {/* Create Project Dialog */}
+      {isCreatingProject && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => setIsCreatingProject(false)}>
+          <div className="bg-white rounded-lg p-6 w-96 shadow-xl" onClick={(e) => e.stopPropagation()}>
+            <h2 className="text-2xl font-semibold mb-4">Name of Project</h2>
+            <input
+              type="text"
+              value={newProjectName}
+              onChange={(e) => setNewProjectName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  handleCreateProject()
+                }
+              }}
+              placeholder="Enter project name..."
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 text-base"
+              autoFocus
+            />
+            <div className="flex gap-2 justify-end">
+              <Button variant="outline" onClick={() => setIsCreatingProject(false)}>
+                Cancel
+              </Button>
+              <Button onClick={handleCreateProject} disabled={!newProjectName.trim()}>
+                Create
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </SidebarProvider>
   )
 }
-
