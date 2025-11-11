@@ -3,9 +3,11 @@ import React, { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import ProjectSidebar from '@/components/ProjectSidebar'
-import ResultsTable from '@/components/ResultsTable'
+import CompoundList from '@/components/CompoundList'
+import Admet from '@/components/Admet'
 import { Button } from '@/components/ui/button'
-import type { Project, ApiResponse, Selection } from '@/types'
+import { ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react'
+import type { Project, ApiResponse, Selection, SimilarityResult } from '@/types'
 import Header from '@/components/Header'
 
 function ResultsContent() {
@@ -110,6 +112,39 @@ function ResultsContent() {
 
   const projectResults = currentProject?.results || []
 
+  // Compound selection state
+  const [selectedCompoundIndex, setSelectedCompoundIndex] = useState<number | null>(null)
+  const compounds: SimilarityResult[] = selectedData?.results || []
+  const selectedCompound: SimilarityResult | null = 
+    selectedCompoundIndex !== null && compounds[selectedCompoundIndex] !== undefined
+      ? compounds[selectedCompoundIndex]
+      : null
+
+  // Auto-select first compound when data loads
+  useEffect(() => {
+    if (compounds.length > 0 && selectedCompoundIndex === null) {
+      setSelectedCompoundIndex(0)
+    } else if (compounds.length === 0) {
+      setSelectedCompoundIndex(null)
+    }
+  }, [compounds.length, selectedCompoundIndex])
+
+  const handleCompoundSelect = (index: number) => {
+    setSelectedCompoundIndex(index)
+  }
+
+  const handlePreviousCompound = () => {
+    if (selectedCompoundIndex !== null && selectedCompoundIndex > 0) {
+      setSelectedCompoundIndex(selectedCompoundIndex - 1)
+    }
+  }
+
+  const handleNextCompound = () => {
+    if (selectedCompoundIndex !== null && selectedCompoundIndex < compounds.length - 1) {
+      setSelectedCompoundIndex(selectedCompoundIndex + 1)
+    }
+  }
+
   const handleProjectChange = (projectId: string) => {
     setCurrentProjectId(projectId)
     if (typeof window !== 'undefined') {
@@ -133,12 +168,12 @@ function ResultsContent() {
       />
 
       <SidebarInset>
-        <div className="flex w-full flex-col">
+        <div className="flex w-full flex-col h-screen">
           <Header headerTitle={headerTitle} />
 
-          <main className="flex-1 p-4 overflow-auto">
+          <main className="flex-1 overflow-hidden">
             {!selection && (
-              <div className="max-w-6xl mx-auto">
+              <div className="max-w-6xl mx-auto p-4 overflow-auto h-full">
                 <div className="mb-4">
                   <Button
                     variant="outline"
@@ -204,25 +239,67 @@ function ResultsContent() {
             )}
 
             {selection && selectedData && (
-              <div className="max-w-6xl mx-auto">
-                <div className="mb-4">
-                  <Button
-                    variant="outline"
-                    onClick={() => {
-                      const projectId = searchParams.get('projectId')
-                      if (projectId) {
-                        router.push(`/projects/results?projectId=${projectId}`)
-                      } else {
-                        setSelection(null)
-                      }
-                    }}
-                  >
-                    ← Back to All Results
-                  </Button>
+              <div className="flex flex-col h-full">
+                {/* Header with back button and navigation */}
+                <div className="border-b bg-white px-4 py-3 flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        const projectId = searchParams.get('projectId')
+                        if (projectId) {
+                          router.push(`/projects/results?projectId=${projectId}`)
+                        } else {
+                          setSelection(null)
+                        }
+                      }}
+                    >
+                      <ArrowLeft className="h-4 w-4 mr-2" />
+                      Back
+                    </Button>
+                    <span className="text-sm font-medium">Results for</span>
+                    {compounds.length > 0 && (
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handlePreviousCompound}
+                          disabled={selectedCompoundIndex === null || selectedCompoundIndex === 0}
+                          className="h-8 w-8 p-0"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handleNextCompound}
+                          disabled={selectedCompoundIndex === null || selectedCompoundIndex === compounds.length - 1}
+                          className="h-8 w-8 p-0"
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <ResultsTable
-                  results={selectedData.results}
-                />
+
+                {/* Split view: Compound list on left, ADMET on right */}
+                <div className="flex flex-1 overflow-hidden">
+                  {/* Left: Compound List */}
+                  <div className="w-80 shrink-0">
+                    <CompoundList
+                      compounds={compounds}
+                      selectedIndex={selectedCompoundIndex}
+                      onSelect={handleCompoundSelect}
+                    />
+                  </div>
+
+                  {/* Right: ADMET Properties */}
+                  <div className="flex-1 overflow-hidden">
+                    <Admet compound={selectedCompound} />
+                  </div>
+                </div>
               </div>
             )}
 
