@@ -12,25 +12,33 @@ function ResultsContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   
-  // Always start with default values to avoid hydration mismatch
   const [projects, setProjects] = useState<Project[]>([
     { id: 'p1', name: 'Project 1', results: [] },
   ])
+  const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(undefined)
   
-  // Load from localStorage only after mount (client-side only)
   useEffect(() => {
     const storedProjects = localStorage.getItem('adme-projects')
     if (storedProjects) {
       try {
         const parsed = JSON.parse(storedProjects)
         setProjects(parsed)
+        if (parsed.length > 0 && !currentProjectId) {
+          setCurrentProjectId(parsed[0].id)
+        }
       } catch {
         // Keep default
       }
     }
+    
+    const storedCurrentProjectId = localStorage.getItem('adme-current-project-id')
+    if (storedCurrentProjectId) {
+      setCurrentProjectId(storedCurrentProjectId)
+    } else if (projects.length > 0) {
+      setCurrentProjectId(projects[0].id)
+    }
   }, [])
 
-  // Initialize selection from URL params
   const [selection, setSelection] = useState<Selection>(() => {
     const projectId = searchParams.get('projectId')
     const resultId = searchParams.get('resultId')
@@ -41,7 +49,6 @@ function ResultsContent() {
     return null
   })
 
-  // Update selection when URL params change
   useEffect(() => {
     const projectId = searchParams.get('projectId')
     const resultId = searchParams.get('resultId')
@@ -51,10 +58,23 @@ function ResultsContent() {
     } else {
       setSelection(null)
     }
+		
+    if (projectId) {
+      setCurrentProjectId(projectId)
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('adme-current-project-id', projectId)
+      }
+    }
   }, [searchParams])
   
+  useEffect(() => {
+    const urlProjectId = searchParams.get('projectId')
+    if (!urlProjectId && currentProjectId) {
+      router.replace(`/projects/results?projectId=${currentProjectId}`)
+    }
+  }, [currentProjectId, searchParams, router])
+  
 
-  // Update URL when selection changes
   const handleSelectionChange = (newSelection: Selection) => {
     setSelection(newSelection)
     if (newSelection) {
@@ -69,10 +89,10 @@ function ResultsContent() {
     }
   }
 
-  // Get the selected project (from URL or first project)
   const selectedProjectId = searchParams.get('projectId')
-  const currentProject = selectedProjectId
-    ? projects.find(p => p.id === selectedProjectId) || projects[0]
+  const projectIdToUse = selectedProjectId || currentProjectId
+  const currentProject = projectIdToUse
+    ? projects.find(p => p.id === projectIdToUse) || projects[0]
     : projects[0]
 
   const selectedResult = selection
@@ -88,27 +108,27 @@ function ResultsContent() {
     ? `Results for ${selectedResultTitle}`
     : currentProject?.name ?? 'No project'
 
-  // Get all results from the selected project
   const projectResults = currentProject?.results || []
+
+  const handleProjectChange = (projectId: string) => {
+    setCurrentProjectId(projectId)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('adme-current-project-id', projectId)
+    }
+    const resultId = searchParams.get('resultId')
+    if (resultId) {
+      router.push(`/projects/results?projectId=${projectId}&resultId=${resultId}`)
+    } else {
+      router.push(`/projects/results?projectId=${projectId}`)
+    }
+  }
 
   return (
     <SidebarProvider>
       <ProjectSidebar
         projects={projects}
-        selection={selection}
-        onNewProject={() => {
-          const id = `p_${Date.now()}`
-          const newProjects = [...projects, { id, name: `Project ${projects.length + 1}`, results: [] }]
-          setProjects(newProjects)
-          if (typeof window !== 'undefined') {
-            localStorage.setItem('adme-projects', JSON.stringify(newProjects))
-          }
-        }}
-        onPinProject={() => {}}
-        onNewQuery={() => {
-          router.push('/query')
-        }}
-        onOpenResult={(pid, rid) => handleSelectionChange({ projectId: pid, resultId: rid })}
+        currentProjectId={currentProjectId}
+        onProjectChange={handleProjectChange}
         currentUser={{ name: 'User' }}
       />
 

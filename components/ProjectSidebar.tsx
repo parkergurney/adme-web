@@ -25,9 +25,9 @@ const fallbackProjects: Project[] = [
 
 const items = [
 	{
-		label: 'Projects',
+		label: 'Query Results',
 		icon: List,
-		href: '/projects',
+		href: '/projects/results',
 	},
 	{
 		label: 'Create New Query',
@@ -37,34 +37,36 @@ const items = [
 	{
 		label: 'Settings',
 		icon: Settings,
-		href: '/settings',
+		href: '#',
 	},
 ]
 
 interface ProjectSidebarProps {
 	projects?: Project[]
-	selection?: any
-	onNewProject?: () => void
-	onPinProject?: () => void
-	onNewQuery?: () => void
-	onOpenResult?: (projectId: string, resultId: string) => void
+	currentProjectId?: string
+	onProjectChange?: (projectId: string) => void
 	currentUser?: { name: string }
 }
 
 export default function ProjectSidebar({
 	projects,
-	selection,
-	onNewProject,
-	onPinProject,
-	onNewQuery,
-	onOpenResult,
+	currentProjectId,
+	onProjectChange,
 	currentUser,
 }: ProjectSidebarProps) {
 	const router = useRouter()
 	// Use projects from props, fallback to hardcoded projects if none provided
 	const displayProjects = projects && projects.length > 0 ? projects : fallbackProjects
-	const currentProject = displayProjects[0]
-	const handleProjectSelect = () => {}
+	// Find current project by ID, or default to first project
+	const currentProject = currentProjectId
+		? displayProjects.find(p => p.id === currentProjectId) || displayProjects[0]
+		: displayProjects[0]
+	
+	const handleProjectSelect = (projectId: string) => {
+		if (onProjectChange) {
+			onProjectChange(projectId)
+		}
+	}
 
 	return (
 		<ShadSidebar variant="inset">
@@ -78,7 +80,7 @@ export default function ProjectSidebar({
 			<SidebarContent>
 				<SidebarMenu className='gap-y-2 px-2'>
 					<SidebarMenuItem>
-						<SidebarMenuButton onClick={() => router.push('/')}>
+						<SidebarMenuButton onClick={() => router.push('/projects')}>
 							<Folder />
 							<span>All Projects</span>
 						</SidebarMenuButton>
@@ -88,7 +90,7 @@ export default function ProjectSidebar({
 
 					{/* Project switcher dropdown */}
 					<SidebarMenuItem>
-						<DropdownMenu>
+						<DropdownMenu modal={false}>
 							<DropdownMenuTrigger asChild>
 								<SidebarMenuButton className="w-full">
 									<span className="truncate">
@@ -97,14 +99,14 @@ export default function ProjectSidebar({
 									<ChevronDown className="ml-auto size-4" />
 								</SidebarMenuButton>
 							</DropdownMenuTrigger>
-							<DropdownMenuContent align="start" className="w-56">
+							<DropdownMenuContent align="start" className="w-56" sideOffset={4}>
 								{displayProjects.length === 0 ? (
 									<DropdownMenuItem disabled>No projects</DropdownMenuItem>
 								) : (
 									displayProjects.map(p => (
 										<DropdownMenuItem
 											key={p.id}
-											onClick={handleProjectSelect}
+											onClick={() => handleProjectSelect(p.id)}
 										>
 											{p.name}
 										</DropdownMenuItem>

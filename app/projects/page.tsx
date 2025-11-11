@@ -11,46 +11,47 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 export default function ProjectsPage() {
   const router = useRouter()
   
-  // Always start with default values to avoid hydration mismatch
   const [projects, setProjects] = useState<Project[]>([
     { id: 'p1', name: 'Project 1', results: [] },
   ])
+  const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(undefined)
   
-  // Load from localStorage only after mount (client-side only)
   useEffect(() => {
     const stored = localStorage.getItem('adme-projects')
     if (stored) {
       try {
         const parsed = JSON.parse(stored)
         setProjects(parsed)
+        if (parsed.length > 0 && !currentProjectId) {
+          setCurrentProjectId(parsed[0].id)
+        }
       } catch {
-        // Keep default
       }
+    }
+    
+    const storedCurrentProjectId = localStorage.getItem('adme-current-project-id')
+    if (storedCurrentProjectId) {
+      setCurrentProjectId(storedCurrentProjectId)
+    } else if (projects.length > 0) {
+      setCurrentProjectId(projects[0].id)
     }
   }, [])
 
   const totalResults = projects.reduce((sum, p) => sum + (p.results?.length || 0), 0)
 
+  const handleProjectChange = (projectId: string) => {
+    setCurrentProjectId(projectId)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('adme-current-project-id', projectId)
+    }
+  }
+
   return (
     <SidebarProvider>
       <ProjectSidebar
         projects={projects}
-        selection={null}
-        onNewProject={() => {
-          const id = `p_${Date.now()}`
-          const newProjects = [...projects, { id, name: `Project ${projects.length + 1}`, results: [] }]
-          setProjects(newProjects)
-          if (typeof window !== 'undefined') {
-            localStorage.setItem('adme-projects', JSON.stringify(newProjects))
-          }
-        }}
-        onPinProject={() => {}}
-        onNewQuery={() => {
-          router.push('/query')
-        }}
-        onOpenResult={(pid, rid) => {
-          router.push(`/projects/results?projectId=${pid}&resultId=${rid}`)
-        }}
+        currentProjectId={currentProjectId}
+        onProjectChange={handleProjectChange}
         currentUser={{ name: 'User' }}
       />
 
