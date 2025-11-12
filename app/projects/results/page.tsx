@@ -1,9 +1,10 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import ProjectSidebar from '@/components/ProjectSidebar'
 import Header from '@/components/Header'
 import type { Project } from '@/types'
+import { useRouter } from 'next/navigation'
 
 type CompoundData = {
   cid: number
@@ -232,9 +233,9 @@ const similarCompounds: CompoundData[] = [
 function CompoundCard({ compound }: { compound: CompoundData }) {
   // Generate image path from SMILES
   const imagePath = `/images/${compound.smiles}.png`
-  
+  const router = useRouter()
   return (
-    <div className="bg-white rounded shadow-sm p-5 mb-4">
+    <div onClick={() => router.push(`/projects/results/compound?projectId=${compound.cid}&resultId=${compound.cid}`)} className="bg-white rounded shadow-sm p-5 mb-4">
       <div className="flex gap-5">
         <div className="flex-shrink-0 w-32 h-32 bg-gray-50 border border-gray-200 rounded flex items-center justify-center overflow-hidden">
           <img 
@@ -293,7 +294,7 @@ function CompoundCard({ compound }: { compound: CompoundData }) {
   )
 }
 
-export default function ResultsPage() {
+function ResultsPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const [results] = useState<CompoundData[]>(similarCompounds)
   const [projects, setProjects] = useState<Project[]>([
@@ -439,5 +440,13 @@ export default function ResultsPage() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+  )
+}
+
+export default function ResultsPageWithSuspense() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResultsPage />
+    </Suspense>
   )
 }
